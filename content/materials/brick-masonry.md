@@ -2,7 +2,7 @@
 title: "Brick Masonry"
 date: 2022-10-41
 weight: 41
-thumbnail: "/materials/masonry.jpg"
+thumbnail: "/materials/brick-masonry.jpg"
 tags: ["CMU"]
 categories: ["Construction"]
 summary: "Fired clay brick is one of the oldest and most enduring building materials — dimensionally consistent, highly durable, and architecturally expressive in both structural and veneer applications."
