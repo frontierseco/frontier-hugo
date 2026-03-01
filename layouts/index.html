@@ -99,38 +99,33 @@
 
 
 {{/* ═══════════════════════════════════════════════
-  SERVICES — static tiles (edit text here directly)
+  SERVICES — content-driven from content/services/
+  ── HOW TO ADD A SERVICE ──────────────────────
+  Create content/services/my-service.md with:
+    title, weight, thumbnail, link (opt), description
+  Save → push → appears automatically.
 ════════════════════════════════════════════════ */}}
 <section id="services" style="background:white;">
   <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem 1rem;text-align:center;">
     <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2rem,4vw,3rem);margin:2rem 0 .5rem;">Services</h2>
     <span class="divider"></span>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-    <a href="https://frontierstructural.com/s/commercial-building-design/" class="tile" style="text-decoration:none;background-image:url('/services/pexels-pixabay-221502.jpg')">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Colorado</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Designing new facilities to serve a growing city featuring activities, destinations, and opportunities.</p></div>
-    </a>
-    <div class="tile" data-bg="/services/note-scaled.jpg">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Consultation</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Frontier offers schematic design, peer review, and early engineering support.</p></div>
-    </div>
-    <a href="https://frontierstructural.com/s/commercial-building-design/" class="tile" style="text-decoration:none;" data-bg="/services/8218807713_d7057c23e6_4k.jpg">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Commercial Building Design</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Designing new facilities to serve a growing city featuring activities, destinations, and opportunities.</p></div>
-    </a>
-    <div class="tile" data-bg="PLACEHOLDER_construction_admin.jpg" style="background-color:#1c3050;">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Construction Administration</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Continued support from review of shop drawings against the design.</p></div>
-    </div>
-    <div class="tile" data-bg="/services/wall-crack-scaled.jpg">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Forensic</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Objective evaluations to understand structural integrity and a clear path forward.</p></div>
-    </div>
-    <div class="tile" data-bg="/services/temp-structures-scaled.jpg">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Temporary Structures and Construction Support</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Shoring design is often required to get things going on the project under construction.</p></div>
-    </div>
-    <div class="tile" data-bg="/services/gavel-scaled.jpg">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Expert Witness</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Experience counts in report writing and professional opinion. Contact us for a free consultation.</p></div>
-    </div>
-    <div class="tile" data-bg="PLACEHOLDER_adaptive_reuse.jpg" style="background-color:#2a1c10;">
-      <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Adaptive Reuse</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Breathe new life into existing structures — transition older properties into modern, functional spaces.</p></div>
-    </div>
+  <div class="services-grid">
+    {{- $services := where .Site.RegularPages "Section" "services" }}
+    {{- range (sort $services ".Params.weight") }}
+    {{- if .Params.link }}
+    <a href="{{ .Params.link }}" class="tile" style="text-decoration:none;background-color:{{ if .Params.bgColor }}{{ .Params.bgColor }}{{ else }}#2a3a4a{{ end }};">
+    {{- else }}
+    <div class="tile" style="background-color:{{ if .Params.bgColor }}{{ .Params.bgColor }}{{ else }}#2a3a4a{{ end }};">
+    {{- end }}
+      {{- if .Params.thumbnail }}<div class="tile-bg" data-bg="{{ .Params.thumbnail }}"></div>{{- end }}
+      <div class="tile-overlay"></div>
+      <div class="tile-content">
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">{{ .Title }}</h3>
+        <p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">{{ .Params.description }}</p>
+      </div>
+    {{- if .Params.link }}</a>{{- else }}</div>{{- end }}
+    {{- end }}
   </div>
 </section>
 

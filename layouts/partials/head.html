@@ -61,12 +61,19 @@
   .s-arrow:hover { background:rgba(0,0,0,.55); }
   #prev-btn { left:1rem; } #next-btn { right:1rem; }
 
-  /* Service tiles */
-  .tile { position:relative; min-height:300px; background-size:cover; background-position:center; background-color:#2a3a4a; display:flex; align-items:flex-end; overflow:hidden; }
-  .tile::before { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,rgba(0,0,0,.08) 30%,rgba(0,0,0,.65) 100%); transition:opacity .3s; }
-  .tile:hover::before { opacity:.85; }
-  .tile-content { position:relative; z-index:1; padding:1rem; }
-  @media(max-width:640px){ .tile { min-height:220px; } }
+  /* Services grid — 4 cols, 2 rows */
+  .services-grid { display:grid; grid-template-columns:repeat(4,1fr); }
+  @media(max-width:900px){ .services-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:480px){ .services-grid { grid-template-columns:1fr; } }
+
+  /* Service tiles — 2x height, image zoom on hover */
+  .tile { position:relative; min-height:600px; background-color:#2a3a4a; display:flex; align-items:flex-end; overflow:hidden; text-decoration:none; }
+  .tile-bg { position:absolute; inset:0; background-size:cover; background-position:center; transition:transform .5s ease; z-index:0; }
+  .tile:hover .tile-bg { transform:scale(1.1); }
+  .tile-overlay { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(0,0,0,.08) 30%,rgba(0,0,0,.68) 100%); transition:opacity .3s; z-index:1; }
+  .tile:hover .tile-overlay { opacity:.9; }
+  .tile-content { position:relative; z-index:2; padding:1.5rem; }
+  @media(max-width:640px){ .tile { min-height:320px; } }
 
   /* Project cards */
   .pcard { background:white; }

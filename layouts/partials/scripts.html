@@ -57,7 +57,7 @@
     startAuto();
   }
 
-  // Lazy bg images (service tiles)
+  // Lazy bg images — sets background-image on .tile-bg divs (animatable) and legacy elements
   const bgObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
