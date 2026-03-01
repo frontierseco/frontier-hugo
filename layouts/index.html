@@ -182,6 +182,42 @@
 
 
 {{/* ═══════════════════════════════════════════════
+  CONSTRUCTION MATERIALS SLIDER
+  ── HOW TO ADD A MATERIAL ─────────────────────
+  Create content/materials/my-material.md with:
+    title, weight, thumbnail, tags, summary
+  Save → push → appears automatically.
+════════════════════════════════════════════════ */}}
+<section id="materials" style="padding:4rem 0;background:#1a2535;overflow:hidden;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem 1rem;text-align:center;">
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem;">Construction Materials</h2>
+    <span class="divider"></span>
+  </div>
+
+  <div class="mat-wrap">
+    <button class="mat-arrow" id="mat-prev" aria-label="Previous">&#8249;</button>
+    <div class="mat-outer">
+      <div class="mat-track" id="mat-track">
+        {{- $materials := where .Site.RegularPages "Section" "materials" }}
+        {{- range (sort $materials ".Params.weight") }}
+        <a href="{{ .RelPermalink }}" class="mat-card">
+          <div class="mat-card-bg" data-bg="{{ .Params.thumbnail }}"></div>
+          <div class="mat-card-overlay"></div>
+          <div class="mat-card-body">
+            <h3 class="mat-card-title">{{ .Title }}</h3>
+            <p class="mat-card-desc">{{ .Params.summary }}</p>
+            <span class="mat-card-tag">{{ delimit .Params.tags ", " }}</span>
+          </div>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+    <button class="mat-arrow" id="mat-next" aria-label="Next">&#8250;</button>
+  </div>
+</section>
+
+
+{{/* ═══════════════════════════════════════════════
   ARTICLES
   ── HOW TO ADD A FEATURED ARTICLE ────────────
   Create a new file in content/articles/

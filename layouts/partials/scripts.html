@@ -57,6 +57,38 @@
     startAuto();
   }
 
+  // Construction Materials carousel
+  const matTrack = document.getElementById('mat-track');
+  if (matTrack) {
+    const matCards = Array.from(matTrack.children);
+    let matIdx = 0;
+    function matVisible() {
+      if (window.innerWidth >= 1024) return 4;
+      if (window.innerWidth >= 640)  return 2;
+      return 1;
+    }
+    function matUpdate() {
+      const vis = matVisible();
+      const pct = 100 / vis;
+      matCards.forEach(c => c.style.flex = `0 0 ${pct}%`);
+      const max = Math.max(0, matCards.length - vis);
+      matIdx = Math.min(matIdx, max);
+      matTrack.style.transform = `translateX(-${matIdx * pct}%)`;
+    }
+    document.getElementById('mat-prev')?.addEventListener('click', () => {
+      const vis = matVisible();
+      matIdx = matIdx <= 0 ? Math.max(0, matCards.length - vis) : matIdx - 1;
+      matUpdate();
+    });
+    document.getElementById('mat-next')?.addEventListener('click', () => {
+      const vis = matVisible();
+      matIdx = matIdx >= matCards.length - vis ? 0 : matIdx + 1;
+      matUpdate();
+    });
+    window.addEventListener('resize', matUpdate, { passive: true });
+    matUpdate();
+  }
+
   // Lazy bg images — sets background-image on .tile-bg divs (animatable) and legacy elements
   const bgObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
