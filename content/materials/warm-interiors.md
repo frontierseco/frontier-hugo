@@ -1,9 +1,9 @@
 ---
 title: "Warm Interiors"
 date: 2022-10-03
-weight: 3
+weight: 21
 thumbnail: "/materials/warm-interiors.jpg"
-tags: ["Timber"]
+tags: ["Wood"]
 categories: ["Construction"]
 summary: "Exposed timber structures create warm, inviting interiors that are increasingly sought after in commercial and residential design."
 ---

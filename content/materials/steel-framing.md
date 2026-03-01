@@ -1,7 +1,7 @@
 ---
 title: "Steel Framing"
 date: 2022-10-06
-weight: 6
+weight: 10
 thumbnail: "/materials/steel-framing.jpg"
 tags: ["Steel"]
 categories: ["Construction"]

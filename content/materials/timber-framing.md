@@ -1,9 +1,9 @@
 ---
 title: "Timber Framing"
 date: 2022-10-04
-weight: 4
+weight: 20
 thumbnail: "/materials/timber-framing.jpg"
-tags: ["Timber"]
+tags: ["Wood"]
 categories: ["Construction"]
 summary: "Traditional timber framing techniques meet modern engineering to create structures of exceptional character and strength."
 ---

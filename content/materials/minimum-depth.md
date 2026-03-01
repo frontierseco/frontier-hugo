@@ -1,7 +1,7 @@
 ---
 title: "Minimum Depth"
 date: 2022-10-05
-weight: 5
+weight: 30
 thumbnail: "/materials/concrete-decking.jpg"
 tags: ["Concrete"]
 categories: ["Construction"]

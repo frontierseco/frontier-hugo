@@ -1,9 +1,9 @@
 ---
 title: "Carbon Capture"
 date: 2022-10-02
-weight: 2
+weight: 22
 thumbnail: "/materials/carbon-capture.jpg"
-tags: ["Mass Timber"]
+tags: ["Wood"]
 categories: ["Construction"]
 summary: "Carbon capture and warm natural finishes make mass timber an attractive structural option growing rapidly in popularity."
 ---

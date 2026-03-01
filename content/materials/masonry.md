@@ -1,9 +1,9 @@
 ---
 title: "Masonry"
 date: 2022-10-01
-weight: 1
+weight: 40
 thumbnail: "/materials/masonry.jpg"
-tags: ["Masonry"]
+tags: ["CMU"]
 categories: ["Construction"]
 summary: "A very durable and low maintenance material depending on materials used, the quality of the mortar and workmanship, and the pattern in which the units are assembled."
 ---
