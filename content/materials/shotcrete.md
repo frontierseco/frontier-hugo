@@ -1,6 +1,6 @@
 ---
 title: "Shotcrete"
-date: 2022-10-33
+date: 2022-11-02
 weight: 33
 thumbnail: "/materials/concrete-decking.jpg"
 tags: ["Concrete"]

@@ -1,6 +1,6 @@
 ---
 title: "Brick Masonry"
-date: 2022-10-41
+date: 2022-11-10
 weight: 41
 thumbnail: "/materials/brick-masonry.jpg"
 tags: ["CMU"]

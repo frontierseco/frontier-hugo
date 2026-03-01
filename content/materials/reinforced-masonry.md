@@ -1,6 +1,6 @@
 ---
 title: "Reinforced Masonry"
-date: 2022-10-43
+date: 2022-11-12
 weight: 43
 thumbnail: "/materials/masonry.jpg"
 tags: ["CMU"]

@@ -1,6 +1,6 @@
 ---
 title: "Concrete Masonry Unit (CMU)"
-date: 2022-10-42
+date: 2022-11-11
 weight: 42
 thumbnail: "/materials/cmu-block.jpg"
 tags: ["CMU"]
