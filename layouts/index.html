@@ -5,8 +5,15 @@
 ════════════════════════════════════════════════ */}}
 <section class="slider" id="hero" aria-label="Hero slideshow">
 
-  <div class="slide active" id="slide-0"
-       style="background-image:url('/images/articles/jeep-scaled.jpg')">
+  <div class="slide active" id="slide-0" style="background:transparent;">
+    <video
+      class="slide-video"
+      autoplay muted loop playsinline
+      preload="auto"
+      poster="/articles/jeep-scaled.jpg"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+      <source src="/hero/hero.mp4" type="video/mp4">
+    </video>
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <h1 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">
@@ -28,7 +35,7 @@
     </div>
   </div>
 
-  <div class="slide" id="slide-1" data-bg="/images/hero/IMG_20200425_195634418.jpg">
+  <div class="slide" id="slide-1" data-bg="/hero/IMG_20200425_195634418.jpg">
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">The Right Solution</h2>
@@ -39,7 +46,7 @@
     </div>
   </div>
 
-  <div class="slide" id="slide-2" data-bg="/images/hero/kids-scaled.jpg">
+  <div class="slide" id="slide-2" data-bg="/hero/kids-scaled.jpg">
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">Communities We Serve.</h2>
@@ -50,7 +57,7 @@
     </div>
   </div>
 
-  <div class="slide" id="slide-3" data-bg="/images/hero/open.jpg">
+  <div class="slide" id="slide-3" data-bg="/hero/open.jpg">
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">Open for Business.</h2>
@@ -100,25 +107,25 @@
     <span class="divider"></span>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-    <a href="https://frontierstructural.com/s/commercial-building-design/" class="tile" style="text-decoration:none;background-image:url('/images/services/pexels-pixabay-221502.jpg')">
+    <a href="https://frontierstructural.com/s/commercial-building-design/" class="tile" style="text-decoration:none;background-image:url('/services/pexels-pixabay-221502.jpg')">
       <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Colorado</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Designing new facilities to serve a growing city featuring activities, destinations, and opportunities.</p></div>
     </a>
-    <div class="tile" data-bg="/images/services/note-scaled.jpg">
+    <div class="tile" data-bg="/services/note-scaled.jpg">
       <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Consultation</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Frontier offers schematic design, peer review, and early engineering support.</p></div>
     </div>
-    <a href="https://frontierstructural.com/s/commercial-building-design/" class="tile" style="text-decoration:none;" data-bg="/images/services/8218807713_d7057c23e6_4k.jpg">
+    <a href="https://frontierstructural.com/s/commercial-building-design/" class="tile" style="text-decoration:none;" data-bg="/services/8218807713_d7057c23e6_4k.jpg">
       <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Commercial Building Design</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Designing new facilities to serve a growing city featuring activities, destinations, and opportunities.</p></div>
     </a>
     <div class="tile" data-bg="PLACEHOLDER_construction_admin.jpg" style="background-color:#1c3050;">
       <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Construction Administration</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Continued support from review of shop drawings against the design.</p></div>
     </div>
-    <div class="tile" data-bg="/images/services/wall-crack-scaled.jpg">
+    <div class="tile" data-bg="/services/wall-crack-scaled.jpg">
       <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Forensic</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Objective evaluations to understand structural integrity and a clear path forward.</p></div>
     </div>
-    <div class="tile" data-bg="/images/services/temp-structures-scaled.jpg">
+    <div class="tile" data-bg="/services/temp-structures-scaled.jpg">
       <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Temporary Structures and Construction Support</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Shoring design is often required to get things going on the project under construction.</p></div>
     </div>
-    <div class="tile" data-bg="/images/services/gavel-scaled.jpg">
+    <div class="tile" data-bg="/services/gavel-scaled.jpg">
       <div class="tile-content"><h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">Expert Witness</h3><p style="color:white;font-size:.875rem;line-height:1.5;margin:0;">Experience counts in report writing and professional opinion. Contact us for a free consultation.</p></div>
     </div>
     <div class="tile" data-bg="PLACEHOLDER_adaptive_reuse.jpg" style="background-color:#2a1c10;">

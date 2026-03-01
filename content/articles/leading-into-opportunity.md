@@ -3,7 +3,7 @@ title: "Leading Into Opportunity"
 date: 2022-02-01
 featured: true
 categories: ["Articles"]
-thumbnail: "/images/articles/jeep-scaled.jpg"
+thumbnail: "/articles/jeep-scaled.jpg"
 summary: "\"Go ahead!\" — Davy Crockett. There is a bit of an adventurer in each of us who love to go where there's opportunity. Being at the frontier means going ahead where not many have gone, making the way a little easier for others."
 ---
 
