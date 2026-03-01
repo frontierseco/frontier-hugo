@@ -3,7 +3,7 @@
   command = "hugo --minify"
 
 [build.environment]
-  HUGO_VERSION = "0.124.0"
+  HUGO_VERSION = "0.135.0"
 
 # Redirect www → non-www (optional, uncomment when you add custom domain)
 # [[redirects]]
