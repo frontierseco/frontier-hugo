@@ -2,7 +2,7 @@
 title: "Shotcrete"
 date: 2022-11-02
 weight: 33
-thumbnail: "/materials/concrete-decking.jpg"
+thumbnail: "/materials/shotcrete.jpg"
 tags: ["Concrete"]
 categories: ["Construction"]
 summary: "Shotcrete — concrete pneumatically applied at high velocity — conforms to any surface, making it ideal for retaining walls, pools, tunnels, and structural repairs without conventional formwork."

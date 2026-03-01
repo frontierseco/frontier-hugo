@@ -2,7 +2,7 @@
 title: "Cast-in-Place Concrete"
 date: 2022-10-31
 weight: 31
-thumbnail: "/materials/concrete-decking.jpg"
+thumbnail: "/materials/cast-in-place.jpg"
 tags: ["Concrete"]
 categories: ["Construction"]
 summary: "Cast-in-place concrete offers a monolithic, durable structural system for foundations, walls, and slabs — formed, reinforced, and poured on-site for site-specific performance."

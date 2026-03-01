@@ -2,7 +2,7 @@
 title: "Precast Concrete"
 date: 2022-11-01
 weight: 32
-thumbnail: "/materials/concrete-decking.jpg"
+thumbnail: "/materials/precast-concrete.jpg"
 tags: ["Concrete"]
 categories: ["Construction"]
 summary: "Precast concrete members are precision-cast off-site and erected with cranes, delivering consistent quality, rapid installation, and long-span capability for floors, parking structures, and facades."

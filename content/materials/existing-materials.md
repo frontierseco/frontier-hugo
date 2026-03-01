@@ -2,7 +2,7 @@
 title: "Existing Materials"
 date: 2022-12-01
 weight: 50
-thumbnail: "/materials/existing-materials.jpg"
+thumbnail: "/materials/mass-stone.jpg"
 tags: ["Existing"]
 categories: ["Construction"]
 summary: "Mass stone, full-size dimensional lumber, 1x board sheathing, and other legacy materials define the existing building stock — evaluated, preserved, and upgraded under IEBC for renovation and adaptive reuse projects."
