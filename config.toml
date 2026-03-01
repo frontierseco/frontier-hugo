@@ -1,0 +1,17 @@
+baseURL = "https://your-site.netlify.app/"
+languageCode = "en-us"
+title = "Frontier Structural Engineering | Serving Colorado and California"
+
+# When you add your custom domain later, change baseURL to:
+# baseURL = "https://frontierstructural.com/"
+
+[params]
+  description  = "Frontier Structural Engineering — experienced structural engineers and drafters partnering with architects, contractors, and developers to bring vision to life."
+  logoURL      = "https://frontierstructural.com/wp-content/uploads/2021/12/Colored-Logo.png"
+  newProjectURL = "https://frontierstructural.com/new-project-info/"
+  linkedinURL  = "https://www.linkedin.com/company/frontier-structural-engineering"
+  instagramURL = "https://www.instagram.com/frontierstructuralengineering"
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"

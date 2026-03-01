@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  command = "hugo --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.124.0"
+
+# Redirect www → non-www (optional, uncomment when you add custom domain)
+# [[redirects]]
+#   from = "https://www.frontierstructural.com/*"
+#   to   = "https://frontierstructural.com/:splat"
+#   status = 301

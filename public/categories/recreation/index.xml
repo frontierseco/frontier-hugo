@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recreation on Frontier Structural Engineering | Serving Colorado and California</title>
+    <link>http://localhost:1313/categories/recreation/</link>
+    <description>Recent content in Recreation on Frontier Structural Engineering | Serving Colorado and California</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/recreation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gripstone Climbing Gym Expansion</title>
+      <link>http://localhost:1313/projects/gripstone-climbing-gym/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/gripstone-climbing-gym/</guid>
+      <description>&lt;p&gt;Structural design for a major expansion of the Gripstone Climbing Gym, adding new wall sections and support structures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

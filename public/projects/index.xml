@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Frontier Structural Engineering | Serving Colorado and California</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Frontier Structural Engineering | Serving Colorado and California</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gripstone Climbing Gym Expansion</title>
+      <link>http://localhost:1313/projects/gripstone-climbing-gym/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/gripstone-climbing-gym/</guid>
+      <description>&lt;p&gt;Structural design for a major expansion of the Gripstone Climbing Gym, adding new wall sections and support structures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Denver Multi-use Project</title>
+      <link>http://localhost:1313/projects/denver-multi-use/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/denver-multi-use/</guid>
+      <description>&lt;p&gt;Consultation and structural design for a mixed-use development in Denver, Colorado.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Construction Support, Temporary Structures and Shoring</title>
+      <link>http://localhost:1313/projects/construction-support/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/construction-support/</guid>
+      <description>&lt;p&gt;Temporary structure and shoring design to keep construction projects moving safely and on schedule.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deck Cover</title>
+      <link>http://localhost:1313/projects/deck-cover/</link>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/deck-cover/</guid>
+      <description>&lt;p&gt;Covered deck addition — structural design for a new covered outdoor living space on an existing residential deck.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deck Replacement</title>
+      <link>http://localhost:1313/projects/deck-replacement/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/deck-replacement/</guid>
+      <description>&lt;p&gt;Residential deck replacement — structural assessment and design for a safe, code-compliant new deck structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sasquatch Cookies</title>
+      <link>http://localhost:1313/projects/sasquatch-cookies/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/sasquatch-cookies/</guid>
+      <description>&lt;p&gt;Retail tenant improvement — structural review and support for a new retail bakery location.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

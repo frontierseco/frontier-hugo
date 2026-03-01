@@ -1,0 +1,38 @@
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white">
+  <nav class="max-w-7xl mx-auto px-4 md:px-8 py-2 flex items-center justify-between gap-4">
+
+    <ul class="hidden md:flex items-center gap-6 list-none m-0 p-0">
+      <li><a href="/" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Home</a></li>
+      <li><a href="/#services" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Services</a></li>
+      <li><a href="/#projects" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Projects</a></li>
+    </ul>
+
+    <a href="/" style="flex-shrink:0;">
+      <img src="{{ .Site.Params.logoURL }}" alt="Frontier Structural Engineering" width="160" height="60" style="height:56px;width:auto;display:block;">
+    </a>
+
+    <ul class="hidden md:flex items-center gap-6 list-none m-0 p-0">
+      <li><a href="/#articles" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Articles</a></li>
+      <li><a href="/#about" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">About</a></li>
+      <li><a href="/#contact" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Contact</a></li>
+    </ul>
+
+    <button id="mobile-btn" class="md:hidden p-2 ml-auto border-0 bg-transparent cursor-pointer" aria-label="Menu" aria-expanded="false">
+      <svg width="24" height="24" fill="none" stroke="#1a1a1a" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" style="display:none;background:white;border-top:1px solid #f0f0f0;">
+    <ul style="list-style:none;margin:0;padding:1rem 1.5rem;display:flex;flex-direction:column;gap:.75rem;">
+      <li><a href="/"         onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">Home</a></li>
+      <li><a href="/#services" onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">Services</a></li>
+      <li><a href="/#projects" onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">Projects</a></li>
+      <li><a href="/#articles" onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">Articles</a></li>
+      <li><a href="/#about"    onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">About</a></li>
+      <li><a href="/#contact"  onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">Contact</a></li>
+    </ul>
+  </div>
+</header>
+<div style="height:72px;"></div>
