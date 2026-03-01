@@ -1,12 +1,15 @@
 <script>
 (() => {
   'use strict';
+
+  /* ── Header scroll shadow ── */
   const header = document.getElementById('site-header');
   if (header) {
     window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
   }
 
-  const mBtn = document.getElementById('mobile-btn');
+  /* ── Mobile menu ── */
+  const mBtn  = document.getElementById('mobile-btn');
   const mMenu = document.getElementById('mobile-menu');
   if (mBtn && mMenu) {
     mBtn.addEventListener('click', () => {
@@ -17,14 +20,14 @@
   }
   window.closeMob = () => { if (mMenu) mMenu.style.display = 'none'; };
 
-  // Slider (only runs if slider exists on page)
+  /* ── Hero slider ── */
   const slides = Array.from(document.querySelectorAll('.slide'));
   if (slides.length) {
     const dots = Array.from(document.querySelectorAll('.dot'));
     let cur = 0, autoplay;
 
     function loadSlide(i) {
-      const s = slides[i];
+      const s  = slides[i];
       const bg = s.dataset.bg;
       if (bg && !bg.startsWith('PLACEHOLDER') && !s.style.backgroundImage) {
         const img = new Image();
@@ -35,10 +38,10 @@
 
     function goTo(i) {
       slides[cur].classList.remove('active');
-      dots[cur].classList.remove('active');
+      dots[cur]  && dots[cur].classList.remove('active');
       cur = ((i % slides.length) + slides.length) % slides.length;
       slides[cur].classList.add('active');
-      dots[cur].classList.add('active');
+      dots[cur]  && dots[cur].classList.add('active');
       loadSlide((cur + 1) % slides.length);
     }
 
@@ -57,39 +60,8 @@
     startAuto();
   }
 
-  // Construction Materials carousel
-  const matTrack = document.getElementById('mat-track');
-  if (matTrack) {
-    const matCards = Array.from(matTrack.children);
-    let matIdx = 0;
-    function matVisible() {
-      if (window.innerWidth >= 1024) return 4;
-      if (window.innerWidth >= 640)  return 2;
-      return 1;
-    }
-    function matUpdate() {
-      const vis = matVisible();
-      const pct = 100 / vis;
-      matCards.forEach(c => c.style.flex = `0 0 ${pct}%`);
-      const max = Math.max(0, matCards.length - vis);
-      matIdx = Math.min(matIdx, max);
-      matTrack.style.transform = `translateX(-${matIdx * pct}%)`;
-    }
-    document.getElementById('mat-prev')?.addEventListener('click', () => {
-      const vis = matVisible();
-      matIdx = matIdx <= 0 ? Math.max(0, matCards.length - vis) : matIdx - 1;
-      matUpdate();
-    });
-    document.getElementById('mat-next')?.addEventListener('click', () => {
-      const vis = matVisible();
-      matIdx = matIdx >= matCards.length - vis ? 0 : matIdx + 1;
-      matUpdate();
-    });
-    window.addEventListener('resize', matUpdate, { passive: true });
-    matUpdate();
-  }
-
-  // Lazy bg images — sets background-image on .tile-bg divs (animatable) and legacy elements
+  /* ── Lazy background images ── */
+  // Defined here so carousel clones can also be registered
   const bgObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -101,10 +73,13 @@
       }
       bgObs.unobserve(el);
     });
-  }, { rootMargin: '120px 0px' });
-  document.querySelectorAll('[data-bg]').forEach(el => { if (!el.classList.contains('slide')) bgObs.observe(el); });
+  }, { rootMargin: '300px 0px' });
 
-  // Lazy img tags
+  document.querySelectorAll('[data-bg]').forEach(el => {
+    if (!el.classList.contains('slide')) bgObs.observe(el);
+  });
+
+  /* ── Lazy img tags ── */
   const imgObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -114,6 +89,144 @@
     });
   }, { rootMargin: '200px 0px' });
   document.querySelectorAll('img[data-src]').forEach(img => imgObs.observe(img));
+
+  /* ── Construction Materials infinite carousel ── */
+  const matOuter = document.getElementById('mat-outer');
+  const matTrack = document.getElementById('mat-track');
+
+  if (matOuter && matTrack) {
+    // Clone cards to create seamless loop
+    const origCards = Array.from(matTrack.children);
+    origCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      matTrack.appendChild(clone);
+      // Register cloned bg divs for lazy loading
+      clone.querySelectorAll('[data-bg]').forEach(el => bgObs.observe(el));
+    });
+
+    let offset    = 0;        // px scrolled from left
+    let paused    = false;
+    let rafId     = null;
+    let lastTime  = null;
+
+    function cardWidth() {
+      return origCards[0] ? origCards[0].getBoundingClientRect().width : matOuter.offsetWidth / 4;
+    }
+
+    function origWidth() {
+      return cardWidth() * origCards.length;
+    }
+
+    // speed: 1 card = 4 000 ms → px per ms = cardWidth / 4000
+    function speed() {
+      return cardWidth() / 4000;
+    }
+
+    function applyOffset() {
+      matTrack.style.transform = `translateX(${-offset}px)`;
+    }
+
+    function raf(ts) {
+      if (lastTime !== null && !paused) {
+        const dt = Math.min(ts - lastTime, 50); // cap at 50 ms (tab was hidden)
+        offset += speed() * dt;
+        // Wrap seamlessly
+        const ow = origWidth();
+        if (ow > 0 && offset >= ow) offset -= ow;
+        applyOffset();
+      }
+      lastTime = ts;
+      rafId = requestAnimationFrame(raf);
+    }
+
+    rafId = requestAnimationFrame(raf);
+
+    /* Pause on hover */
+    matOuter.addEventListener('mouseenter', () => { paused = true;  });
+    matOuter.addEventListener('mouseleave', () => { paused = false; lastTime = null; });
+
+    /* Mouse wheel scroll */
+    matOuter.addEventListener('wheel', e => {
+      e.preventDefault();
+      offset += e.deltaY * 0.8;
+      const ow = origWidth();
+      if (ow > 0) {
+        offset = ((offset % ow) + ow) % ow;
+      }
+      applyOffset();
+    }, { passive: false });
+
+    /* Mouse drag */
+    let dragStartX  = 0;
+    let dragStartOff = 0;
+    let dragging    = false;
+    let dragMoved   = false;
+
+    matOuter.addEventListener('mousedown', e => {
+      dragging     = true;
+      dragMoved    = false;
+      dragStartX   = e.clientX;
+      dragStartOff = offset;
+      matOuter.classList.add('dragging');
+      paused = true;
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      const dx = dragStartX - e.clientX;
+      if (Math.abs(dx) > 4) dragMoved = true;
+      offset = dragStartOff + dx;
+      const ow = origWidth();
+      if (ow > 0) offset = ((offset % ow) + ow) % ow;
+      applyOffset();
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!dragging) return;
+      dragging = false;
+      matOuter.classList.remove('dragging');
+      paused = false;
+      lastTime = null;
+    });
+
+    // Prevent link navigation when user dragged (not clicked)
+    matOuter.addEventListener('click', e => {
+      if (dragMoved) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
+
+    /* Touch drag */
+    let touchStartX   = 0;
+    let touchStartOff = 0;
+    let touchMoved    = false;
+
+    matOuter.addEventListener('touchstart', e => {
+      touchStartX   = e.touches[0].clientX;
+      touchStartOff = offset;
+      touchMoved    = false;
+      paused        = true;
+    }, { passive: true });
+
+    matOuter.addEventListener('touchmove', e => {
+      const dx = touchStartX - e.touches[0].clientX;
+      if (Math.abs(dx) > 4) touchMoved = true;
+      offset = touchStartOff + dx;
+      const ow = origWidth();
+      if (ow > 0) offset = ((offset % ow) + ow) % ow;
+      applyOffset();
+    }, { passive: true });
+
+    matOuter.addEventListener('touchend', e => {
+      if (touchMoved) {
+        // Suppress link if it was a drag
+        e.preventDefault();
+      }
+      paused   = false;
+      lastTime = null;
+    });
+  }
 
 })();
 </script>
