@@ -5,7 +5,8 @@
   /* ── Header scroll shadow ── */
   const header = document.getElementById('site-header');
   if (header) {
-    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
+    window.addEventListener('scroll', () =>
+      header.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
   }
 
   /* ── Mobile menu ── */
@@ -35,21 +36,18 @@
         img.src = bg;
       }
     }
-
     function goTo(i) {
       slides[cur].classList.remove('active');
-      dots[cur]  && dots[cur].classList.remove('active');
+      dots[cur] && dots[cur].classList.remove('active');
       cur = ((i % slides.length) + slides.length) % slides.length;
       slides[cur].classList.add('active');
-      dots[cur]  && dots[cur].classList.add('active');
+      dots[cur] && dots[cur].classList.add('active');
       loadSlide((cur + 1) % slides.length);
     }
-
     function startAuto() {
       clearInterval(autoplay);
       autoplay = setInterval(() => goTo(cur + 1), 6000);
     }
-
     window.addEventListener('load', () => loadSlide(1));
     document.getElementById('prev-btn')?.addEventListener('click', () => { goTo(cur - 1); startAuto(); });
     document.getElementById('next-btn')?.addEventListener('click', () => { goTo(cur + 1); startAuto(); });
@@ -60,8 +58,7 @@
     startAuto();
   }
 
-  /* ── Lazy background images ── */
-  // Defined here so carousel clones can also be registered
+  /* ── Lazy background images (defined early so carousel clones can use it) ── */
   const bgObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -90,114 +87,137 @@
   }, { rootMargin: '200px 0px' });
   document.querySelectorAll('img[data-src]').forEach(img => imgObs.observe(img));
 
-  /* ── Construction Materials infinite carousel ── */
+  /* ══════════════════════════════════════════════════════════════
+     Construction Materials — infinite auto-scroll carousel
+  ══════════════════════════════════════════════════════════════ */
   const matOuter = document.getElementById('mat-outer');
   const matTrack = document.getElementById('mat-track');
 
   if (matOuter && matTrack) {
-    // Clone cards to create seamless loop
     const origCards = Array.from(matTrack.children);
+    const N = origCards.length;
+
+    /* ── Compute card width in px (avoids flex-% ambiguity) ── */
+    function cols() {
+      return window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
+    }
+    function cardPx() {
+      return matOuter.offsetWidth / cols();
+    }
+
+    /* ── Apply pixel widths to every card (original + clones) ── */
+    function applyWidths() {
+      const w = cardPx();
+      Array.from(matTrack.children).forEach(c => {
+        c.style.flex = 'none';
+        c.style.width = w + 'px';
+      });
+    }
+
+    /* ── Clone originals for seamless loop ── */
     origCards.forEach(card => {
       const clone = card.cloneNode(true);
+      clone.setAttribute('draggable', 'false'); // prevent native drag
       matTrack.appendChild(clone);
-      // Register cloned bg divs for lazy loading
       clone.querySelectorAll('[data-bg]').forEach(el => bgObs.observe(el));
     });
+    /* also mark originals as non-draggable */
+    origCards.forEach(c => c.setAttribute('draggable', 'false'));
 
-    let offset    = 0;        // px scrolled from left
+    applyWidths();
+
+    /* Resize: recompute widths, keep offset in bounds */
+    window.addEventListener('resize', () => {
+      applyWidths();
+      const ow = cardPx() * N;
+      if (ow > 0) offset = ((offset % ow) + ow) % ow;
+      applyOffset();
+    }, { passive: true });
+
+    /* ── Scroll state ── */
+    let offset    = 0;   // px from left
     let paused    = false;
-    let rafId     = null;
     let lastTime  = null;
 
-    function cardWidth() {
-      return origCards[0] ? origCards[0].getBoundingClientRect().width : matOuter.offsetWidth / 4;
-    }
-
-    function origWidth() {
-      return cardWidth() * origCards.length;
-    }
-
-    // speed: 1 card = 4 000 ms → px per ms = cardWidth / 4000
-    function speed() {
-      return cardWidth() / 4000;
-    }
+    function totalOrigW() { return cardPx() * N; }
+    function speed()      { return cardPx() / 4000; } // 4 s per card
 
     function applyOffset() {
       matTrack.style.transform = `translateX(${-offset}px)`;
     }
 
-    function raf(ts) {
+    /* ── RAF auto-scroll loop ── */
+    function tick(ts) {
       if (lastTime !== null && !paused) {
-        const dt = Math.min(ts - lastTime, 50); // cap at 50 ms (tab was hidden)
-        offset += speed() * dt;
-        // Wrap seamlessly
-        const ow = origWidth();
-        if (ow > 0 && offset >= ow) offset -= ow;
-        applyOffset();
+        const dt = Math.min(ts - lastTime, 50); // cap so hidden-tab jump doesn't skip
+        const ow = totalOrigW();
+        if (ow > 0) {
+          offset += speed() * dt;
+          if (offset >= ow) offset -= ow;   // seamless forward wrap
+          if (offset < 0)   offset += ow;   // guard negative
+          applyOffset();
+        }
       }
       lastTime = ts;
-      rafId = requestAnimationFrame(raf);
+      requestAnimationFrame(tick);
     }
+    requestAnimationFrame(tick);
 
-    rafId = requestAnimationFrame(raf);
-
-    /* Pause on hover */
-    matOuter.addEventListener('mouseenter', () => { paused = true;  });
+    /* ── Pause on hover ── */
+    matOuter.addEventListener('mouseenter', () => { paused = true; });
     matOuter.addEventListener('mouseleave', () => { paused = false; lastTime = null; });
 
-    /* Mouse wheel scroll */
+    /* ── Mouse-wheel scroll ── */
     matOuter.addEventListener('wheel', e => {
       e.preventDefault();
-      offset += e.deltaY * 0.8;
-      const ow = origWidth();
-      if (ow > 0) {
-        offset = ((offset % ow) + ow) % ow;
-      }
+      const ow = totalOrigW();
+      offset = ow > 0 ? (((offset + e.deltaY * 0.8) % ow) + ow) % ow : offset;
       applyOffset();
     }, { passive: false });
 
-    /* Mouse drag */
-    let dragStartX  = 0;
+    /* ── Mouse drag ── */
+    let dragStartX   = 0;
     let dragStartOff = 0;
-    let dragging    = false;
-    let dragMoved   = false;
+    let isDragging   = false;
+    let hasMoved     = false;
 
     matOuter.addEventListener('mousedown', e => {
-      dragging     = true;
-      dragMoved    = false;
+      e.preventDefault();          // ← STOPS browser's native element drag
+      isDragging   = true;
+      hasMoved     = false;
       dragStartX   = e.clientX;
       dragStartOff = offset;
+      paused       = true;
       matOuter.classList.add('dragging');
-      paused = true;
     });
 
     window.addEventListener('mousemove', e => {
-      if (!dragging) return;
+      if (!isDragging) return;
       const dx = dragStartX - e.clientX;
-      if (Math.abs(dx) > 4) dragMoved = true;
-      offset = dragStartOff + dx;
-      const ow = origWidth();
-      if (ow > 0) offset = ((offset % ow) + ow) % ow;
+      if (Math.abs(dx) > 4) hasMoved = true;
+      const ow = totalOrigW();
+      offset = ow > 0 ? (((dragStartOff + dx) % ow) + ow) % ow : dragStartOff + dx;
       applyOffset();
     });
 
     window.addEventListener('mouseup', () => {
-      if (!dragging) return;
-      dragging = false;
+      if (!isDragging) return;
+      isDragging = false;
       matOuter.classList.remove('dragging');
-      paused = false;
-      lastTime = null;
+      paused    = false;
+      lastTime  = null;
     });
 
-    // Prevent link navigation when user dragged (not clicked)
+    /* Suppress link navigation when user dragged instead of clicked */
     matOuter.addEventListener('click', e => {
-      if (dragMoved) {
+      if (hasMoved) {
         e.preventDefault();
         e.stopPropagation();
+        hasMoved = false;
       }
     }, true);
 
-    /* Touch drag */
+    /* ── Touch drag ── */
     let touchStartX   = 0;
     let touchStartOff = 0;
     let touchMoved    = false;
@@ -212,17 +232,13 @@
     matOuter.addEventListener('touchmove', e => {
       const dx = touchStartX - e.touches[0].clientX;
       if (Math.abs(dx) > 4) touchMoved = true;
-      offset = touchStartOff + dx;
-      const ow = origWidth();
-      if (ow > 0) offset = ((offset % ow) + ow) % ow;
+      const ow = totalOrigW();
+      offset = ow > 0 ? (((touchStartOff + dx) % ow) + ow) % ow : touchStartOff + dx;
       applyOffset();
     }, { passive: true });
 
     matOuter.addEventListener('touchend', e => {
-      if (touchMoved) {
-        // Suppress link if it was a drag
-        e.preventDefault();
-      }
+      if (touchMoved) e.preventDefault();
       paused   = false;
       lastTime = null;
     });
