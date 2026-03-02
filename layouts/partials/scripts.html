@@ -171,7 +171,7 @@
     matOuter.addEventListener('wheel', e => {
       e.preventDefault();
       const ow = totalOrigW();
-      offset = ow > 0 ? (((offset + e.deltaY * 0.8) % ow) + ow) % ow : offset;
+      offset = ow > 0 ? (((offset + Math.sign(e.deltaY) * cardPx()) % ow) + ow) % ow : offset;
       applyOffset();
     }, { passive: false });
 
