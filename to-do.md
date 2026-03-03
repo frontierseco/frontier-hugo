@@ -2,6 +2,8 @@
 fix projects, articles pages missing
 fix hero click doesn't open it's post
 create seo plan 
+remove 'no reviews' by map
+replacce live map with map pic in static
 ## In Progress
 - [ ] Fix broken images — last project edits didn't apply (pictures missing, "The Right Solution" hero slide)
 - [ ] Re-date last 3 articles of the year to lead up to today's date
