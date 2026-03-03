@@ -7,4 +7,5 @@ body: "Opportunity is everywhere for those who can see it, and there is a bit of
 contact_text: "Get your project going, click here to contact Frontier now"
 button_text: "Learn More"
 button_link: "#about"
+slide_link: "/articles/leading-into-opportunity/"
 ---

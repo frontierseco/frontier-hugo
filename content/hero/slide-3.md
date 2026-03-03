@@ -6,4 +6,5 @@ body: "begins with asking the right questions. See the possibilities & build on 
 contact_text: "Get the right eyes on your project today, click here to contact Frontier today"
 button_text: "See More"
 button_link: "#services"
+slide_link: "/articles/call-your-se-early/"
 ---

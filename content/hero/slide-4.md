@@ -6,4 +6,5 @@ body: "Let's not forget why we're here; to enjoy this great place. Frontier hope
 contact_text: "Take the next step forward with your project, click here to contact Frontier now"
 button_text: "Learn More"
 button_link: "#about"
+slide_link: "/articles/solid-platform/"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Value Engineering Structural Systems Without Cutting Corners"
-date: 2026-12-21
+date: 2026-03-02
 featured: false
 categories: ["Articles"]
 summary: "Real value engineering finds structural savings through smarter design, not thinner margins of safety. The difference between the two requires an engineer who understands both the structure and the cost."

@@ -1,18 +1,20 @@
 # To-Do
-go through all articles, remove long dash formatting --, only ai uses this.  format punctuation a more human way
-fix projects, articles pages missing
-fix hero click doesn't open it's post
-create seo plan 
-remove 'no reviews' by map
-replacce live map with map pic in static
+
 ## In Progress
-- [ ] Fix broken images — last project edits didn't apply (pictures missing, "The Right Solution" hero slide)
-- [ ] Re-date last 3 articles of the year to lead up to today's date
+- [ ] Create SEO plan
+- [ ] Go through all articles — remove AI-style double-dash (--) formatting, humanize punctuation
+- [ ] Remove "No reviews" text by map
+- [ ] Replace live Google map embed with a static map image
 
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Re-date last 3 scheduled articles to lead up to today (Jan 26, Feb 16, Mar 2 2026)
+- [x] Fix /projects/ and /articles/ list pages — styled grid/list layouts added
+- [x] Fix hero slides — each slide links to its corresponding article
+- [x] Fix broken images — pictures restored, "The Right Solution" hero slide fixed
+- [x] Projects section redesign — featured card + 3-card grid with location + summary
 - [x] Font sizes audited — material tag bumped to 0.8rem (was 11px, below minimum)
 - [x] Cards fully clickable (project + article cards link anywhere you click, not just title)
 - [x] Section titles link to pages — "Latest Projects" → /projects/, "Articles" → /articles/

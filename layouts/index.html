@@ -27,6 +27,9 @@
     </video>
     {{- end }}
     <div class="slide-overlay"></div>
+    {{- if $s.Params.slide_link }}
+    <a href="{{ $s.Params.slide_link }}" style="position:absolute;inset:0;z-index:1;" aria-label="Read: {{ $s.Title }}"></a>
+    {{- end }}
     <div class="slide-content">
       {{- if eq $i 0 }}
       <h1 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">{{ $s.Title }}</h1>
