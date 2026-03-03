@@ -8,7 +8,8 @@
 -  on bottom right of every card on the website on hover, display "click for more"
 - The articles section needs to be 80% width 
 - update articles section, list 4 latest, make pic small
-- New project info should read: click to add a new project. turn into a button
+- new project section: New project info link should read: click to add a new project. turn into a button
+- add cta box hovering over the left side of the map section, use cta.md
 - turn on seo skill, do deep seo
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
