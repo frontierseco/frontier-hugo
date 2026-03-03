@@ -1,10 +1,8 @@
-baseURL = "https://your-site.netlify.app/"
+baseURL = "https://frontierstructural.com/"
 languageCode = "en-us"
 title = "Frontier Structural Engineering | Serving Colorado and California"
 publishFuture = false
-
-# When you add your custom domain later, change baseURL to:
-# baseURL = "https://frontierstructural.com/"
+enableRobotsTXT = true
 
 [params]
   description  = "Frontier Structural Engineering — experienced structural engineers and drafters partnering with architects, contractors, and developers to bring vision to life."
