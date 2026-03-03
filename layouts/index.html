@@ -1,80 +1,63 @@
 {{ define "main" }}
 
 {{/* ═══════════════════════════════════════════════
-  HERO SLIDER
+  HERO SLIDER — content-driven from content/hero/
+  ── HOW TO ADD / EDIT A SLIDE ─────────────────
+  Create or edit content/hero/slide-N.md with:
+    title, weight, bg_video (opt), poster (opt),
+    bg_image (opt), body (opt), contact_text (opt),
+    button_text (opt), button_link (opt)
+  Save → push → appears automatically.
 ════════════════════════════════════════════════ */}}
+{{- $slides := where .Site.RegularPages "Section" "hero" }}
+{{- $sorted := sort $slides ".Params.weight" }}
 <section class="slider" id="hero" aria-label="Hero slideshow">
 
-  <div class="slide active" id="slide-0" style="background:transparent;">
+  {{- range $i, $s := $sorted }}
+  <div class="slide{{ if eq $i 0 }} active{{ end }}" id="slide-{{ $i }}"
+    {{- if $s.Params.bg_image }} data-bg="{{ $s.Params.bg_image }}"{{ else }} style="background:transparent;"{{ end }}>
+    {{- if $s.Params.bg_video }}
     <video
       class="slide-video"
       autoplay muted loop playsinline
       preload="auto"
-      poster="/articles/jeep-scaled.jpg"
+      {{- if $s.Params.poster }} poster="{{ $s.Params.poster }}"{{ end }}
       style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
-      <source src="/hero/hero.mp4" type="video/mp4">
+      <source src="{{ $s.Params.bg_video }}" type="video/mp4">
     </video>
+    {{- end }}
     <div class="slide-overlay"></div>
     <div class="slide-content">
-      <h1 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">
-        Leading Into Opportunity.
-      </h1>
-      <p style="color:white;font-size:1.05rem;line-height:1.65;max-width:640px;margin:0 0 1rem;">
-        Opportunity is everywhere for those who can see it and there is a bit of an adventurer in each of us
-        who see it and press in. Being at the frontier means going ahead where not many have gone, making the
-        way a little easier for others, making a life where it wasn't possible before.
-      </p>
+      {{- if eq $i 0 }}
+      <h1 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">{{ $s.Title }}</h1>
+      {{- else }}
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">{{ $s.Title }}</h2>
+      {{- end }}
+      {{- if $s.Params.body }}
+      <p style="color:white;font-size:1.05rem;line-height:1.65;max-width:640px;margin:0 0 1rem;">{{ $s.Params.body }}</p>
+      {{- end }}
+      {{- if $s.Params.contact_text }}
       <p style="margin:0 0 1.25rem;">
-        <a href="#contact" style="color:#F05336;font-weight:700;text-underline-offset:3px;">
-          Get your project going, click here to contact Frontier now
+        <a href="{{ $.Site.Params.newProjectURL }}" style="color:#F05336;font-weight:700;text-underline-offset:3px;">
+          {{ $s.Params.contact_text }}
         </a>
       </p>
-      <a href="#about" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2rem;text-decoration:none;">
-        Learn More
+      {{- end }}
+      {{- if and $s.Params.button_text $s.Params.button_link }}
+      <a href="{{ $s.Params.button_link }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2rem;text-decoration:none;">
+        {{ $s.Params.button_text }}
       </a>
+      {{- end }}
     </div>
   </div>
-
-  <div class="slide" id="slide-1" data-bg="/hero/IMG_20200425_195634418.jpg">
-    <div class="slide-overlay"></div>
-    <div class="slide-content">
-      <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">The Right Solution</h2>
-      <p style="color:white;font-size:1.05rem;line-height:1.65;max-width:640px;margin:0 0 1.5rem;">
-        Begins with asking the right questions. See the possibilities and build on experience.
-      </p>
-      <a href="#services" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2rem;text-decoration:none;">Our Services</a>
-    </div>
-  </div>
-
-  <div class="slide" id="slide-2" data-bg="/hero/kids-scaled.jpg">
-    <div class="slide-overlay"></div>
-    <div class="slide-content">
-      <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">Communities We Serve.</h2>
-      <p style="color:white;font-size:1.05rem;line-height:1.65;max-width:640px;margin:0 0 1.5rem;">
-        From recreation facilities to residential decks — Frontier brings precision engineering to every project.
-      </p>
-      <a href="#projects" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2rem;text-decoration:none;">View Projects</a>
-    </div>
-  </div>
-
-  <div class="slide" id="slide-3" data-bg="/hero/open.jpg">
-    <div class="slide-overlay"></div>
-    <div class="slide-content">
-      <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.1;margin:0 0 1rem;">Open for Business.</h2>
-      <p style="color:white;font-size:1.05rem;line-height:1.65;max-width:640px;margin:0 0 1.5rem;">
-        Adaptive reuse, commercial tenant improvements, and expert witness services.
-      </p>
-      <a href="#contact" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2rem;text-decoration:none;">Get in Touch</a>
-    </div>
-  </div>
+  {{- end }}
 
   <button class="s-arrow" id="prev-btn" aria-label="Previous">&#8249;</button>
   <button class="s-arrow" id="next-btn" aria-label="Next">&#8250;</button>
   <div class="slider-dots">
-    <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
-    <button class="dot"        data-slide="1" aria-label="Slide 2"></button>
-    <button class="dot"        data-slide="2" aria-label="Slide 3"></button>
-    <button class="dot"        data-slide="3" aria-label="Slide 4"></button>
+    {{- range $i, $s := $sorted }}
+    <button class="dot{{ if eq $i 0 }} active{{ end }}" data-slide="{{ $i }}" aria-label="Slide {{ add $i 1 }}"></button>
+    {{- end }}
   </div>
 </section>
 
