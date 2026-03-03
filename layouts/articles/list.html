@@ -8,7 +8,7 @@
     </h1>
     <span class="divider"></span>
     <p style="color:rgba(255,255,255,.75);font-size:1.05rem;max-width:600px;margin:0 auto;line-height:1.7;">
-      Structural engineering insights for architects, contractors, and developers — covering design coordination, materials, codes, and field realities.
+      Structural engineering insights for architects, contractors, and developers: design coordination, materials, codes, and field realities.
     </p>
   </div>
 </section>
@@ -20,7 +20,9 @@
 
       <div style="display:flex;flex-direction:column;gap:0;">
         {{- $articles := where .Site.RegularPages "Section" "articles" }}
+        {{- $now := now }}
         {{- range (sort $articles "Date" "desc") }}
+        {{- if le (.Date.Unix) ($now.Unix) }}
         <a href="{{ .RelPermalink }}" class="art-item" style="border-bottom:1px solid #f0f0f0;padding:1.75rem 0;text-decoration:none;color:inherit;">
           {{- if .Params.thumbnail }}
           <img data-src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="art-thumb" loading="lazy">
@@ -40,6 +42,7 @@
             </p>
           </div>
         </a>
+        {{- end }}
         {{- end }}
       </div>
 

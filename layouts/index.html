@@ -248,22 +248,17 @@
       <a href="/articles/" style="text-decoration:none;"><h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:2rem;margin:0 0 .5rem;">Articles</h2></a>
       <span class="divider divider-left"></span>
 
-      <div style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2rem;">
-        {{- $featured := where (where .Site.RegularPages "Section" "articles") "Params.featured" true }}
-        {{- range ($featured | first 4) }}
-        <a href="{{ .RelPermalink }}" class="art-item" style="border-bottom:1px solid #f0f0f0;padding-bottom:2rem;text-decoration:none;color:inherit;">
+      <div style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.1rem;">
+        {{- $articles := where .Site.RegularPages "Section" "articles" }}
+        {{- range (sort $articles "Date" "desc" | first 5) }}
+        <a href="{{ .RelPermalink }}" class="art-item-sm" style="border-bottom:1px solid #f0f0f0;padding-bottom:1.1rem;text-decoration:none;color:inherit;">
           {{- if .Params.thumbnail }}
-          <img data-src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="art-thumb" loading="lazy">
-          {{- else }}
-          <div class="art-thumb" style="background:#e5e7eb;"></div>
+          <img data-src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="art-thumb-sm" loading="lazy">
           {{- end }}
           <div>
-            <h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:1.15rem;line-height:1.3;margin:0 0 .4rem;">{{ .Title }}</h3>
-            <p style="color:#024EA4;font-size:.8rem;font-weight:700;margin:0 0 .5rem;">
-              {{ delimit .Params.categories ", " }}{{ if .Params.featured }}&nbsp;·&nbsp;<span style="color:#F05336;">Featured</span>{{ end }}
-            </p>
-            <p style="color:#555;font-size:.875rem;line-height:1.6;margin:0;">
-              {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
+            <h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:1rem;line-height:1.3;margin:0 0 .2rem;">{{ .Title }}</h3>
+            <p style="color:#024EA4;font-size:.75rem;font-weight:700;margin:0;">
+              {{ delimit .Params.categories ", " }}
             </p>
           </div>
         </a>

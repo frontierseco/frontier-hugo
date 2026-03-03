@@ -175,12 +175,18 @@
   .pcard:hover { box-shadow:0 6px 22px rgba(0,0,0,.14); }
   .pcard:hover .pcard-img { transform:scale(1.06); }
 
-  /* Article items */
+  /* Article items (full list page) */
   .art-item { display:flex; gap:1.25rem; align-items:flex-start; transition:background .2s; border-radius:3px; padding:.4rem; margin:-.4rem; }
   .art-item:hover { background:#f5f5f5; }
   .art-thumb { width:160px; min-width:160px; height:108px; object-fit:cover; background:#e5e7eb; flex-shrink:0; transition:transform .45s ease; }
   .art-item:hover .art-thumb { transform:scale(1.04); }
   @media(max-width:640px){ .art-item { flex-direction:column; } .art-thumb { width:100%; height:160px; } }
+
+  /* Article items (homepage compact) */
+  .art-item-sm { display:flex; gap:.9rem; align-items:center; transition:background .2s; border-radius:3px; padding:.35rem; margin:-.35rem; }
+  .art-item-sm:hover { background:#f5f5f5; }
+  .art-thumb-sm { width:80px; min-width:80px; height:56px; object-fit:cover; background:#e5e7eb; flex-shrink:0; border-radius:3px; }
+  @media(max-width:640px){ .art-thumb-sm { width:60px; min-width:60px; height:42px; } }
 
   /* Footer */
   #site-footer { background:#024EA4; }
