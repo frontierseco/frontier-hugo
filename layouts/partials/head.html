@@ -182,11 +182,18 @@
   .art-item:hover .art-thumb { transform:scale(1.04); }
   @media(max-width:640px){ .art-item { flex-direction:column; } .art-thumb { width:100%; height:160px; } }
 
+  /* Featured article card (homepage) */
+  .art-featured { display:flex; gap:1.1rem; align-items:flex-start; transition:background .2s; border-radius:3px; padding:.5rem; margin:-.5rem; border-bottom:2px solid #F05336; padding-bottom:1.35rem; margin-bottom:.65rem; }
+  .art-featured:hover { background:#f5f5f5; }
+  .art-featured-thumb { width:160px; min-width:160px; height:112px; object-fit:cover; flex-shrink:0; border-radius:3px; transition:transform .45s ease; }
+  .art-featured:hover .art-featured-thumb { transform:scale(1.04); }
+  @media(max-width:640px){ .art-featured { flex-direction:column; } .art-featured-thumb { width:100%; height:180px; min-width:unset; } }
+
   /* Article items (homepage compact) */
-  .art-item-sm { display:flex; gap:.9rem; align-items:center; transition:background .2s; border-radius:3px; padding:.35rem; margin:-.35rem; }
+  .art-item-sm { display:flex; gap:.9rem; align-items:flex-start; transition:background .2s; border-radius:3px; padding:.5rem; margin:-.5rem; border-bottom:1px solid #f0f0f0; padding-bottom:1rem; }
   .art-item-sm:hover { background:#f5f5f5; }
-  .art-thumb-sm { width:80px; min-width:80px; height:56px; object-fit:cover; background:#e5e7eb; flex-shrink:0; border-radius:3px; }
-  @media(max-width:640px){ .art-thumb-sm { width:60px; min-width:60px; height:42px; } }
+  .art-thumb-sm { width:96px; min-width:96px; height:68px; object-fit:cover; background:#e5e7eb; flex-shrink:0; border-radius:3px; }
+  @media(max-width:640px){ .art-thumb-sm { width:72px; min-width:72px; height:52px; } }
 
   /* Footer */
   #site-footer { background:#024EA4; }
@@ -200,7 +207,7 @@
   #services, #projects, #materials, #articles, #about, #contact { scroll-margin-top: 72px; }
 
   /* "Click for more" hover label on cards */
-  .pcard, .pfeatured, .tile, .mat-card, .art-item, .art-item-sm { position:relative; }
+  .pcard, .pfeatured, .tile, .mat-card, .art-item, .art-item-sm, .art-featured { position:relative; }
   .pcard::after, .pfeatured::after, .tile::after, .mat-card::after {
     content:'click for more';
     position:absolute; bottom:.6rem; right:.75rem;
@@ -211,7 +218,7 @@
     opacity:0; transition:opacity .25s;
     pointer-events:none; z-index:5;
   }
-  .art-item::after, .art-item-sm::after {
+  .art-item::after, .art-item-sm::after, .art-featured::after {
     content:'click for more';
     position:absolute; bottom:.4rem; right:.4rem;
     font-family:'Oswald',sans-serif; font-size:.65rem; font-weight:600;
@@ -222,7 +229,7 @@
     pointer-events:none; z-index:5;
   }
   .pcard:hover::after, .pfeatured:hover::after, .tile:hover::after,
-  .mat-card:hover::after, .art-item:hover::after, .art-item-sm:hover::after { opacity:1; }
+  .mat-card:hover::after, .art-item:hover::after, .art-item-sm:hover::after, .art-featured:hover::after { opacity:1; }
 
   /* Desktop: 50% bigger body text, headings excluded */
   @media(min-width:641px) {
@@ -235,14 +242,15 @@
     .mat-card-title { font-size: 22px !important; }
     .pfeatured-body h3 { font-size: 26px !important; }
     .pcard h3 { font-size: 18px !important; }
+    .art-featured h3 { font-size: 20px !important; }
     .art-item h3, .art-item h2, .art-item-sm h3 { font-size: 18px !important; }
     .prose h2 { font-size: 28px !important; }
     /* Keep dividers at pixel size */
     .divider { width:60px; height:3px; }
   }
 
-  /* CTA overlay on map — responsive */
+  /* Article featured card — mobile stack */
   @media(max-width:640px) {
-    .map-cta { position:relative !important; left:0 !important; top:0 !important; transform:none !important; max-width:100% !important; }
+    #articles > div > div { padding:1.5rem; }
   }
 </style>

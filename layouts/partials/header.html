@@ -1,8 +1,11 @@
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white">
-  <nav class="max-w-7xl mx-auto px-4 md:px-8 py-2 flex items-center gap-4">
+  <nav class="px-4 md:px-8 py-2 flex items-center">
 
-    <!-- Centered nav + logo -->
-    <div class="hidden md:flex items-center justify-center flex-1 gap-6">
+    <!-- Left spacer (balances phone button for true centering) -->
+    <div class="flex-1 hidden md:block"></div>
+
+    <!-- Center: logo + nav -->
+    <div class="hidden md:flex items-center justify-center gap-6">
       <a href="/" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Home</a>
       <a href="/#services" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Services</a>
       <a href="/#projects" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Projects</a>
@@ -14,8 +17,10 @@
       <a href="/#contact" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#1a1a1a;" onmouseover="this.style.color='#F05336'" onmouseout="this.style.color='#1a1a1a'">Contact</a>
     </div>
 
-    <!-- Phone CTA: far right -->
-    <a href="tel:7192472928" class="hidden md:inline-flex" style="flex-shrink:0;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:white;background:#F05336;padding:.5rem 1rem;align-items:center;gap:.4rem;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">📞 719 247-2928</a>
+    <!-- Right: phone CTA -->
+    <div class="flex-1 hidden md:flex justify-end">
+      <a href="tel:7192472928" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:white;background:#F05336;padding:.5rem 1rem;display:inline-flex;align-items:center;gap:.4rem;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">&#9742; 719 247-2928</a>
+    </div>
 
     <button id="mobile-btn" class="md:hidden p-2 ml-auto border-0 bg-transparent cursor-pointer" aria-label="Menu" aria-expanded="false">
       <svg width="24" height="24" fill="none" stroke="#1a1a1a" stroke-width="2" viewBox="0 0 24 24">
@@ -32,7 +37,7 @@
       <li><a href="/#articles" onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">Articles</a></li>
       <li><a href="/#about"    onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">About</a></li>
       <li><a href="/#contact"  onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#1a1a1a;display:block;">Contact</a></li>
-      <li><a href="tel:7192472928" onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#F05336;display:block;font-weight:700;">📞 719 247-2928</a></li>
+      <li><a href="tel:7192472928" onclick="closeMob()" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#F05336;display:block;font-weight:700;">&#9742; 719 247-2928</a></li>
     </ul>
   </div>
 </header>
