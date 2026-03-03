@@ -4,7 +4,7 @@ date: 2025-06-01
 categories: ["Residential", "New Construction"]
 location: "Woodland Park, Colorado"
 contractor: "Kessler Inc."
-thumbnail: "/projects/custom-build-woodland.jpg"
+thumbnail: "/projects/vaulted-ceil.jpg"
 summary: "Two-story custom home with vaulted ceiling and open loft, requiring non-traditional wind design including loft bracing and wind girts for the vaulted great room at elevation."
 ---
 
