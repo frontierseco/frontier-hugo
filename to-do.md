@@ -2,13 +2,13 @@
 
 ## In Progress
 - [ ] Fix broken images — last project edits didn't apply (pictures missing, "The Right Solution" hero slide)
-- [ ] Check font sizes vs web standards
 - [ ] Re-date last 3 articles of the year to lead up to today's date
 
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Font sizes audited — material tag bumped to 0.8rem (was 11px, below minimum)
 - [x] Cards fully clickable (project + article cards link anywhere you click, not just title)
 - [x] Section titles link to pages — "Latest Projects" → /projects/, "Articles" → /articles/
 - [x] Non-hero cards zoom on hover — project cards shadow+zoom, article items zoom+highlight
