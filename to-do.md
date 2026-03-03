@@ -1,7 +1,13 @@
 # To-Do
-- update articles section, list 5 latest, make pic small
-- update articles list page, omit articles that haven't been published yet
-- switch webpage frontierstructural.com to point to netlify
+- enhance cta on hero. make large button.  refine to contact Frontier now 
+-cta on header add emoji in button 📞# justify right side of header, and center the rest of header 
+- refine click-through on hero slides. 
+- enlarge The view all projects to be three times as large and change to view all recent projects. 
+- increase font size 50% throughout the website, exception being buttons and headlines 
+-  on bottom right of every card on the website on hover, display "click for more"
+- The articles section needs to be 80% width 
+- update articles section, list 4 latest, make pic small
+- New project info should read: click to add a new project. turn into a button
 - turn on seo skill, do deep seo
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
