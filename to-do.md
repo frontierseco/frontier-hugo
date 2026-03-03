@@ -4,7 +4,7 @@
 - refine click-through on hero slides. 
 - when clicking on the header for services, it should scroll to include the services title.
 - enlarge The view all projects to be three times as large and change to view all recent projects. 
-- increase font size 50% throughout the website, exception being buttons and headlines 
+- Make all the font sizes on my website 50% bigger excluding section headings but in the mobile view leave the font the size that it currently is using CSS breakpoints
 -  on bottom right of every card on the website on hover, display "click for more"
 - The articles section needs to be 80% width 
 - update articles section, list 4 latest, make pic small
