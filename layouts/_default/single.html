@@ -23,7 +23,9 @@
       {{ .Content }}
     </div>
 
-    <div style="margin-top:3rem;padding-top:1.5rem;border-top:2px solid #f0f0f0;">
+    {{ partial "cta.html" . }}
+
+    <div style="margin-top:2rem;padding-top:1.5rem;border-top:2px solid #f0f0f0;">
       <a href="/" style="color:#F05336;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;">
         ← Back to Home
       </a>
