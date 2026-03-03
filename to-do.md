@@ -1,4 +1,6 @@
 # To-Do
+Make sure all cards click to their perspective blog pages
+edits on the last project didn't work.  pictures still don't show up nor the right solution slide 
 
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
