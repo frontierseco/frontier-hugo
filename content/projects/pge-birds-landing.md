@@ -4,7 +4,7 @@ date: 2024-08-01
 categories: ["Commercial", "Civil"]
 location: "Sacramento, California"
 client: "kV Structures Inc."
-thumbnail: "/projects/pge-birds-landing.jpg"
+thumbnail: "/projects/tower-fdn.jpg"
 summary: "Designed a CLSM slurry wall to dewater an excavation in Sacramento River delta soils, enabling construction of a high-voltage transmission tower foundation anchoring a major river crossing."
 ---
 

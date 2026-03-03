@@ -4,7 +4,7 @@ date: 2025-04-01
 categories: ["Residential", "Renovation"]
 location: "Woodland Park, Colorado"
 architect: "Kingdom Design Group"
-thumbnail: "/projects/windflower-addition.jpg"
+thumbnail: "/projects/outdoor-fireplace.jpg"
 summary: "New dining room and covered outdoor fireplace feature connecting to existing steel framing, plus an IEBC-guided structural study to vault the great room ceiling to a dramatic two-story height."
 ---
 
