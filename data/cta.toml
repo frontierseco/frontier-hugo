@@ -1,0 +1,9 @@
+# ─────────────────────────────────────────────
+# Call-to-Action shown at the bottom of every article.
+# Edit this file to update the CTA across the whole site.
+# ─────────────────────────────────────────────
+
+heading     = "Ready to Talk Through Your Project?"
+body        = "Frontier Structural Engineering brings 20 years of commercial and residential design experience to projects across Colorado and California. Whether you're in schematic design or already in the field, we're available."
+button_text = "Call 719 247-2928"
+button_link = "tel:7192472928"
