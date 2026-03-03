@@ -1,4 +1,5 @@
 # To-Do
+go through all articles, remove long dash formatting --, only ai uses this.  format punctuation a more human way
 fix projects, articles pages missing
 fix hero click doesn't open it's post
 create seo plan 
