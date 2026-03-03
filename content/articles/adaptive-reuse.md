@@ -4,16 +4,16 @@ date: 2026-02-26
 featured: false
 categories: ["Articles"]
 thumbnail: "/services/8218807713_d7057c23e6_4k.jpg"
-summary: "Adaptive reuse is one of the most rewarding — and most demanding — types of structural work. Taking a building designed for one purpose and making it work for another requires deep understanding of existing structure, creative problem-solving, and precise engineering."
+summary: "Adaptive reuse is one of the most rewarding, and most demanding, types of structural work. Taking a building designed for one purpose and making it work for another requires deep understanding of existing structure, creative problem-solving, and precise engineering."
 ---
 
-Adaptive reuse is one of the most rewarding — and most demanding — types of structural work. Taking a building designed for one purpose and making it work for another requires deep understanding of existing structure, creative problem-solving, and precise engineering.
+Adaptive reuse is one of the most rewarding, and most demanding, types of structural work. Taking a building designed for one purpose and making it work for another requires deep understanding of existing structure, creative problem-solving, and precise engineering.
 
 ## The Challenge
 
-Existing buildings weren't designed for what you want to do with them. An old warehouse converted to residential lofts has a floor system sized for industrial loads — but now needs to handle occupancy, mechanical equipment, and rooftop amenities while meeting modern code requirements for vibration and deflection. A mid-century office building repurposed for a gym has columns and bays that weren't laid out with fitness equipment in mind.
+Existing buildings weren't designed for what you want to do with them. An old warehouse converted to residential lofts has a floor system sized for industrial loads, but now needs to handle occupancy, mechanical equipment, and rooftop amenities while meeting modern code requirements for vibration and deflection. A mid-century office building repurposed for a gym has columns and bays that weren't laid out with fitness equipment in mind.
 
-Adaptive reuse engineering starts with understanding what's actually there — not what the drawings say, but what was built, how it behaves, and what its actual capacity is.
+Adaptive reuse engineering starts with understanding what's actually there: not what the drawings say, but what was built, how it behaves, and what its actual capacity is.
 
 ## Investigation First
 
@@ -30,10 +30,10 @@ This investigation drives everything. It identifies what can be leveraged, what 
 
 Adaptive reuse often requires structural solutions that wouldn't arise in new construction: supplemental framing threaded through existing bays, new openings cut through existing shear walls with carefully engineered headers and collectors, foundations extended to carry new loads without affecting the existing structure.
 
-These are problems that reward experience and creative thinking — not just code compliance.
+These are problems that reward experience and creative thinking, not just code compliance.
 
 ## Why It's Worth It
 
 Adaptive reuse preserves embodied carbon, honors architectural character, and often delivers a more interesting result than new construction. It also frequently pencils out better economically than demolition and replacement, particularly in urban infill sites.
 
-If you have an existing building you're considering for a new use, Frontier can help you understand the structural opportunity — and the path forward. Reach out to start the conversation.
+If you have an existing building you're considering for a new use, Frontier can help you understand the structural opportunity and the path forward. Reach out to start the conversation.

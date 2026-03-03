@@ -6,13 +6,13 @@ categories: ["Articles"]
 summary: "A structural peer review is an independent engineering evaluation of design documents. Done well, it catches errors, validates assumptions, and protects the owner, the design team, and the contractor."
 ---
 
-Structural peer review is sometimes required and sometimes voluntary. In both cases, the value it provides is the same: an independent set of engineering eyes evaluating the design for accuracy, completeness, and compliance — before construction begins.
+Structural peer review is sometimes required and sometimes voluntary. In both cases, the value it provides is the same: an independent set of engineering eyes evaluating the design for accuracy, completeness, and compliance before construction begins.
 
 Projects that have peer review requirements typically include complex structures, public buildings in high seismic zones, and jurisdictions where the building department requires independent review for certain occupancy or structural categories. But peer review can be valuable on any project where the structural system is complex, the design assumptions are unusual, or the consequences of error are significant.
 
 ## What a Peer Review Is
 
-A structural peer review is an independent evaluation of the structural design documents — calculations, drawings, specifications — performed by a licensed structural engineer who was not involved in the original design. The reviewer evaluates:
+A structural peer review is an independent evaluation of the structural design documents (calculations, drawings, specifications), performed by a licensed structural engineer who was not involved in the original design. The reviewer evaluates:
 
 - Whether the design loads are appropriate and correctly applied
 - Whether the structural system is correctly analyzed and the analysis matches the drawings
@@ -20,11 +20,11 @@ A structural peer review is an independent evaluation of the structural design d
 - Whether the details are constructable and complete
 - Whether there are conditions that appear to have been missed or incorrectly addressed
 
-A peer review is not a design service. The peer reviewer is not responsible for the design — that responsibility remains with the engineer of record. The peer reviewer is checking the work, not producing it.
+A peer review is not a design service. The peer reviewer is not responsible for the design. That responsibility remains with the engineer of record. The peer reviewer is checking the work, not producing it.
 
 ## When Peer Review Is Required
 
-Building departments in high-seismic jurisdictions (Los Angeles, San Francisco, Denver, and others) require independent peer review for certain building types — typically those with irregular structural systems, base isolators, damping systems, or performance-based design approaches. The City of Los Angeles's LADBS peer review program and California's Office of Statewide Health Planning and Development (OSHPD) for hospitals are examples of formalized mandatory peer review programs.
+Building departments in high-seismic jurisdictions (Los Angeles, San Francisco, Denver, and others) require independent peer review for certain building types, typically those with irregular structural systems, base isolators, damping systems, or performance-based design approaches. The City of Los Angeles's LADBS peer review program and California's Office of Statewide Health Planning and Development (OSHPD) for hospitals are examples of formalized mandatory peer review programs.
 
 Outside these requirements, peer review is commonly requested by:
 
@@ -36,7 +36,7 @@ Outside these requirements, peer review is commonly requested by:
 
 **The owner.** An independent review confirms that the design is structurally sound and code-compliant. For owners who don't have in-house engineering expertise to evaluate the work they're receiving, peer review provides assurance they can't get otherwise.
 
-**The engineer of record.** Errors found in peer review are errors found before construction. Errors found during construction or after occupancy are far more consequential — professionally, financially, and potentially legally. Most engineers who have been through a thorough peer review acknowledge the value of the independent check, even when it generates comments that require responses.
+**The engineer of record.** Errors found in peer review are errors found before construction. Errors found during construction or after occupancy are far more consequential: professionally, financially, and potentially legally. Most engineers who have been through a thorough peer review acknowledge the value of the independent check, even when it generates comments that require responses.
 
 **The contractor.** A peer-reviewed design is a validated design. The contractor building from peer-reviewed documents has additional confidence that the design is correct and complete.
 
@@ -46,4 +46,4 @@ The quality of a peer review depends on the reviewer's expertise in the structur
 
 Good peer review generates meaningful comments, and the engineer of record's responses to those comments are substantive. The back-and-forth is where the design is strengthened.
 
-If you're commissioning a project where peer review would add value — and you're not sure whether it's needed — ask your SE. A good structural engineer will give you an honest answer.
+If you're commissioning a project where peer review would add value, and you're not sure whether it's needed, ask your SE. A good structural engineer will give you an honest answer.
