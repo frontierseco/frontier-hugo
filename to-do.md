@@ -1,5 +1,8 @@
 # To-Do
-
+- update articles section, list 5 latest, make pic small
+- update articles list page, omit articles that haven't been published yet
+- switch webpage frontierstructural.com to point to netlify
+- turn on seo skill, do deep seo
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
 
