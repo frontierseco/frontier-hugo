@@ -10,7 +10,7 @@ summary: "Post-tensioned and reinforced concrete systems allow structural depth 
 
 ## Achieving Minimum Structural Depth with Concrete
 
-In multi-story construction, every inch of structural depth costs floor-to-floor height — which translates directly to building cost, facade area, and rentable space. Concrete's versatility makes it uniquely capable of achieving minimum structural depth while maintaining the spans, loads, and performance required.
+In multi-story construction, every inch of structural depth costs floor-to-floor height, which translates directly to building cost, facade area, and rentable space. Concrete's versatility makes it uniquely capable of achieving minimum structural depth while maintaining the spans, loads, and performance required.
 
 Post-tensioned flat plates and flat slabs are among the thinnest practical floor systems available. By applying a pre-compressive force through tensioned cables embedded in the slab, structural depth can be dramatically reduced compared to conventional reinforced concrete systems.
 

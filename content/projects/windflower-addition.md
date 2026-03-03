@@ -12,11 +12,11 @@ summary: "New dining room and covered outdoor fireplace feature connecting to ex
 
 **Location:** Woodland Park, Colorado
 **Architect:** Kingdom Design Group
-**Type:** Residential Addition — Existing Building Modification
+**Type:** Residential Addition, Existing Building Modification
 
-The Windflower project combined a conventional addition scope with a more exploratory structural study — pushing the limits of what the existing building could accommodate and what the International Existing Building Code would allow.
+The Windflower project combined a conventional addition scope with a more exploratory structural study: pushing the limits of what the existing building could accommodate and what the International Existing Building Code would allow.
 
-The immediate scope was a new dining room addition and a covered exterior feature area with a fireplace — a common type of residential expansion in the mountain communities west of Colorado Springs. The more ambitious goal was transforming the existing great room by vaulting its ceiling to a full two-story height, dramatically changing the feel of the space.
+The immediate scope was a new dining room addition and a covered exterior feature area with a fireplace: a common type of residential expansion in the mountain communities west of Colorado Springs. The more ambitious goal was transforming the existing great room by vaulting its ceiling to a full two-story height, dramatically changing the feel of the space.
 
 ## New Dining Room and Exterior Fireplace Addition
 
@@ -24,11 +24,11 @@ The dining room addition required new foundations, floor framing, and a roof str
 
 Connecting new framing to existing steel required careful field investigation to confirm the existing member sizes, connection conditions, and available bearing surfaces. New connections were designed to transfer vertical and lateral loads from the addition into the existing frame without overstressing the original members or requiring their replacement.
 
-## Great Room Ceiling Vault — IEBC Study
+## Great Room Ceiling Vault: IEBC Study
 
 The more technically demanding element of this project was the feasibility study for vaulting the great room ceiling from its original flat or low-slope configuration to a full two-story exposed vault.
 
-Removing a ceiling structure in an existing building is never straightforward. The existing ceiling framing — joists, collar ties, or a diaphragm — may be contributing to the lateral resistance of the building, carrying floor loads from above, or providing the only mechanism preventing the roof rafters from spreading the exterior walls outward.
+Removing a ceiling structure in an existing building is never straightforward. The existing ceiling framing (joists, collar ties, or a diaphragm) may be contributing to the lateral resistance of the building, carrying floor loads from above, or providing the only mechanism preventing the roof rafters from spreading the exterior walls outward.
 
 Frontier conducted an exploratory structural study evaluating:
 

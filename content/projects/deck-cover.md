@@ -4,7 +4,7 @@ date: 2021-10-20
 categories: ["Residential"]
 location: "Colorado Springs, Colorado"
 thumbnail: "/projects/deck-cover-scaled.jpg"
-summary: "Structural design for a covered outdoor living addition over an existing residential deck — new roof structure, posts, and connection to the existing home framing."
+summary: "Structural design for a covered outdoor living addition over an existing residential deck: new roof structure, posts, and connection to the existing home framing."
 ---
 
 ## Project Overview
@@ -16,9 +16,9 @@ A covered deck transforms an outdoor space from a seasonal feature into a year-r
 
 ## Structural Design
 
-Adding a roof to an existing deck is more involved than it might appear. The existing deck structure was designed for the loads of an open deck — people, furniture, and snow accumulation on a flat or low-slope surface. Adding a roof structure introduces new post loads, wind uplift on the roof, and lateral forces from wind that the original deck framing and connections may not have been designed to resist.
+Adding a roof to an existing deck is more involved than it might appear. The existing deck structure was designed for the loads of an open deck: people, furniture, and snow accumulation on a flat or low-slope surface. Adding a roof structure introduces new post loads, wind uplift on the roof, and lateral forces from wind that the original deck framing and connections may not have been designed to resist.
 
-Frontier evaluated the existing deck structure and designed the new covered addition to safely transfer all new loads — vertical post loads, roof uplift, and lateral wind — either through the existing deck framing where adequate, or through new members and connections where reinforcement was required.
+Frontier evaluated the existing deck structure and designed the new covered addition to safely transfer all new loads (vertical post loads, roof uplift, and lateral wind) either through the existing deck framing where adequate, or through new members and connections where reinforcement was required.
 
 ## Connection to the House
 

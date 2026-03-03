@@ -11,4 +11,4 @@ Assembling a Winning Platform.
 
 With the freedom a good investment gives, Frontier started as a question: "What would it take for an engineering business to provide a new level of service, a tighter focus, and better results for clients?"
 
-The answer was building on a solid platform — better tools, sharper processes, and the kind of focus that only comes from doing one thing very well.
+The answer was building on a solid platform: better tools, sharper processes, and the kind of focus that only comes from doing one thing very well.
