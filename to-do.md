@@ -2,14 +2,13 @@
 
 ## In Progress
 - [ ] Create SEO plan
-- [ ] Go through all articles — remove AI-style double-dash (--) formatting, humanize punctuation
-- [ ] Remove "No reviews" text by map
-- [ ] Replace live Google map embed with a static map image
 
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Humanize article punctuation — removed AI-style em dash overuse across all 25 articles
+- [x] Replace Google Maps iframe with static Terrian-Map.jpg (faster, no "No reviews" widget)
 - [x] Re-date last 3 scheduled articles to lead up to today (Jan 26, Feb 16, Mar 2 2026)
 - [x] Fix /projects/ and /articles/ list pages — styled grid/list layouts added
 - [x] Fix hero slides — each slide links to its corresponding article
