@@ -1,13 +1,17 @@
 # To-Do
-Make sure all cards click to their perspective blog posts. see heroes cards
-every section title should go to their page, see projects and articles sections 
-check font sizes vs web standards 
-take the last 3 articles of the year and re-date them leading up to today's date
+
+## In Progress
+- [ ] Fix broken images — last project edits didn't apply (pictures missing, "The Right Solution" hero slide)
+- [ ] Cards in hero section should click through to their blog posts
+- [ ] Section titles (Projects, Articles) should link to their respective pages
+- [ ] Check font sizes vs web standards
+- [ ] Re-date last 3 articles of the year to lead up to today's date
 
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Fix Netlify deployment — removed accidental .claude submodule that blocked CI builds
 - [x] Generate articles — 17 queued every 3 weeks, Mar 2026 – Feb 2027
 - [x] Update projects from resume — 4 new, 6 updated
 - [x] Add call-to-action in titlebar — 719 247-2928 button in nav
