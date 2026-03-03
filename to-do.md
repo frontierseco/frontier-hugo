@@ -1,7 +1,8 @@
 # To-Do
 Make sure all cards click to their perspective blog posts. see heroes cards
 every section title should go to their page, see projects and articles sections 
-edits on the last project didn't work.  pictures still don't show up nor "the right solution" hero slide pic
+check font sizes vs web standards 
+take the last 3 articles of the year and re-date them leading up to today's date
 
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
