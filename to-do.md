@@ -1,6 +1,7 @@
 # To-Do
-Make sure all cards click to their perspective blog pages
-edits on the last project didn't work.  pictures still don't show up nor the right solution slide 
+Make sure all cards click to their perspective blog posts. see heroes cards
+every section title should go to their page, see projects and articles sections 
+edits on the last project didn't work.  pictures still don't show up nor "the right solution" hero slide pic
 
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
