@@ -1,6 +1,7 @@
 # To-Do
 
 ## In Progress
+verify all non hero cards zoom in on hover
 - [ ] Fix broken images — last project edits didn't apply (pictures missing, "The Right Solution" hero slide)
 - [ ] Cards in hero section should click through to their blog posts
 - [ ] Section titles (Projects, Articles) should link to their respective pages
