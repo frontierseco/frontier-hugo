@@ -1,4 +1,10 @@
 # To-Do
+- make phone emoji white in header
+- add white phone emoji to cta.md at bottom of page and posts
+- center logo & header in screen
+- make map sec tall to match pic
+- make cta box 50% wider, and turn into wide section above map responsive in mobile
+
 
 ## Backlog
 - [ ] Turn on SEO skill, do deep SEO
