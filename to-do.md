@@ -1,4 +1,6 @@
 # To-Do
+fix projects, articles pages missing
+fix hero click doesn't open it's post
 create seo plan 
 ## In Progress
 - [ ] Fix broken images — last project edits didn't apply (pictures missing, "The Right Solution" hero slide)
