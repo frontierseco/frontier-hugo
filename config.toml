@@ -6,7 +6,7 @@ enableRobotsTXT = true
 
 [params]
   description  = "Frontier Structural Engineering — experienced structural engineers and drafters partnering with architects, contractors, and developers to bring vision to life."
-  logoURL      = "https://frontierstructural.com/wp-content/uploads/2021/12/Colored-Logo.png"
+  logoURL      = "/Colored-Logo.png"
   newProjectURL = "https://frontierseco.erpnext.com/new-project-inquiry?new=1"
   linkedinURL  = "https://www.linkedin.com/company/frontier-structural-engineering"
   instagramURL = "https://www.instagram.com/frontierstructuralengineering"
