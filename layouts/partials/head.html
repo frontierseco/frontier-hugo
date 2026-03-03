@@ -90,6 +90,15 @@
   @media(max-width:1024px){ .mat-card { flex-basis:50%; } }
   @media(max-width:640px){ .mat-card { flex-basis:100%; height:320px; } }
 
+  /* Featured project card */
+  .pfeatured { display:grid; grid-template-columns:3fr 2fr; background:white; overflow:hidden; text-decoration:none; color:inherit; transition:box-shadow .25s; margin-bottom:1.5rem; }
+  .pfeatured:hover { box-shadow:0 8px 28px rgba(0,0,0,.16); }
+  .pfeatured-img { position:relative; min-height:300px; overflow:hidden; }
+  .pfeatured-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
+  .pfeatured:hover .pfeatured-img img { transform:scale(1.04); }
+  .pfeatured-body { padding:2rem 2.25rem; display:flex; flex-direction:column; justify-content:center; gap:.6rem; }
+  @media(max-width:640px){ .pfeatured { grid-template-columns:1fr; } .pfeatured-img { min-height:200px; } }
+
   /* Project cards */
   .pcard { background:white; overflow:hidden; transition:box-shadow .25s; }
   .pcard-img { width:100%; height:200px; object-fit:cover; display:block; background:#d1d5db; transition:transform .45s ease; }

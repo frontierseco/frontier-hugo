@@ -134,9 +134,32 @@
     <a href="/projects/" style="text-decoration:none;"><h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:clamp(2rem,4vw,3rem);text-align:center;margin:0 0 .5rem;">Latest Projects</h2></a>
     <span class="divider" style="background:white;"></span>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:1.5rem;">
-      {{- $projects := where .Site.RegularPages "Section" "projects" }}
-      {{- range ($projects | first 6) }}
+    {{- $projects := where .Site.RegularPages "Section" "projects" }}
+    {{- $sorted   := sort $projects "Date" "desc" }}
+    {{- $featured := index $sorted 0 }}
+    {{- $rest     := after 1 ($sorted | first 4) }}
+
+    {{/* Featured project — wide card with summary */}}
+    <a href="{{ $featured.RelPermalink }}" class="pfeatured" style="margin-top:1.5rem;">
+      <div class="pfeatured-img">
+        <img data-src="{{ $featured.Params.thumbnail }}" alt="{{ $featured.Title }}" loading="lazy">
+      </div>
+      <div class="pfeatured-body">
+        <p style="color:#F05336;font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0;">{{ delimit $featured.Params.categories " · " }}</p>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:1.6rem;color:#1a1a1a;line-height:1.2;margin:0;">{{ $featured.Title }}</h3>
+        {{- if $featured.Params.location }}
+        <p style="color:#555;font-size:.85rem;margin:0;">📍 {{ $featured.Params.location }}</p>
+        {{- end }}
+        {{- if $featured.Params.summary }}
+        <p style="color:#444;font-size:.9rem;line-height:1.6;margin:0;">{{ $featured.Params.summary | truncate 110 }}</p>
+        {{- end }}
+        <span style="color:#F05336;font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">View Project →</span>
+      </div>
+    </a>
+
+    {{/* Grid: next 3 projects */}}
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+      {{- range $rest }}
       <a href="{{ .RelPermalink }}" class="pcard" style="text-decoration:none;display:block;color:inherit;">
         {{- if .Params.thumbnail }}
         <img data-src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="pcard-img" loading="lazy">
@@ -145,9 +168,12 @@
           <span style="color:#9ca3af;font-size:.875rem;">No image yet</span>
         </div>
         {{- end }}
-        <div style="padding:1rem;">
-          <h3 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:1.15rem;margin:0 0 .3rem;color:#F05336;">{{ .Title }}</h3>
-          <p style="color:#024EA4;font-size:.85rem;margin:0;">{{ delimit .Params.categories ", " }}</p>
+        <div style="padding:.9rem 1rem;">
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:1.1rem;margin:0 0 .2rem;color:#1a1a1a;">{{ .Title }}</h3>
+          {{- if .Params.location }}
+          <p style="color:#555;font-size:.8rem;margin:0 0 .2rem;">📍 {{ .Params.location }}</p>
+          {{- end }}
+          <p style="color:#F05336;font-size:.8rem;font-weight:700;margin:0;">{{ delimit .Params.categories " · " }}</p>
         </div>
       </a>
       {{- end }}
