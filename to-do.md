@@ -1,10 +1,14 @@
 # To-Do
 - make phone emoji white in header
-- add white phone emoji to cta.md at bottom of page and posts
+- add white phone emoji to phone # in cta.md at bottom of page and posts
 - center logo & header in screen
-- make map sec tall to match pic
+- make map sec taller to match pic
 - make cta box 50% wider, and turn into wide section above map responsive in mobile
-
+articles:
+- unify article title and body font sizes to match sections before
+- make cards taller to add body preview of articles
+- make latest article 'featured' twice as tall with 2x thumbnail size
+- change 'view all' button to view latest articles
 
 ## Backlog
 - [ ] Turn on SEO skill, do deep SEO
