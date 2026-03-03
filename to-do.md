@@ -1,22 +1,24 @@
 # To-Do
-- enhance cta on hero. make large button.  refine to contact Frontier now 
--cta on header add emoji in button 📞# justify right side of header, and center the rest of header 
-- refine click-through on hero slides. 
-- when clicking on the header for services, it should scroll to include the services title.
-- enlarge The view all projects to be three times as large and change to view all recent projects. 
-- Make all the font sizes on my website 50% bigger excluding section headings but in the mobile view leave the font the size that it currently is using CSS breakpoints
--  on bottom right of every card on the website on hover, display "click for more"
-- The articles section needs to be 80% width 
-- update articles section, list 4 latest, make pic small
-- new project section: New project info link should read: click to add a new project. turn into a button
-- add cta box hovering over the left side of the map section, use cta.md
-- turn on seo skill, do deep seo
+
 ## Backlog
+- [ ] Turn on SEO skill, do deep SEO
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Hero CTA: large "Contact Frontier Now" button on every slide
+- [x] Header: phone button with 📞 emoji justified right, nav + logo centered
+- [x] Hero slide click-through: transparent overlay with correct z-index
+- [x] Section scroll offset: all sections get scroll-margin-top 72px for fixed header
+- [x] View All Projects: 3x larger button, renamed to "View All Recent Projects"
+- [x] Font sizes: 50% bigger on desktop (html 24px), mobile unchanged, headings pinned
+- [x] Cards: "click for more" label appears bottom-right on hover for all card types
+- [x] Articles section: 4 latest by date, 80% width
+- [x] New project section: orange button reads "Click to Add a New Project"
+- [x] Map: CTA box (from cta.toml) floating over left side of map image
+- [x] Articles list page: omit future-dated articles with explicit date guard
+- [x] Worktree cleanup: removed stale claude/infallible-lovelace branch
 - [x] SEO: canonical, OG tags, Twitter cards, JSON-LD schema, robots.txt, baseURL set to frontierstructural.com
-- [x] Humanize all punctuation: removed all em-dashes across entire content folder (33 files: articles, materials, projects, services)
+- [x] Humanize all punctuation: removed all em-dashes across entire content folder (33 files)
 - [x] Replace Google Maps iframe with static Terrian-Map.jpg (faster, no "No reviews" widget)
 - [x] Re-date last 3 scheduled articles to lead up to today (Jan 26, Feb 16, Mar 2 2026)
 - [x] Fix /projects/ and /articles/ list pages: styled grid/list layouts added
