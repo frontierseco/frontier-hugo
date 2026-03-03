@@ -195,4 +195,54 @@
   .prose { max-width:760px; margin:0 auto; line-height:1.8; font-size:1.05rem; }
   .prose h2 { font-family:'Oswald',sans-serif; color:#F05336; margin-top:2rem; }
   .prose img { max-width:100%; height:auto; margin:1.5rem 0; }
+
+  /* Scroll offset for all sections (accounts for fixed header) */
+  #services, #projects, #materials, #articles, #about, #contact { scroll-margin-top: 72px; }
+
+  /* "Click for more" hover label on cards */
+  .pcard, .pfeatured, .tile, .mat-card, .art-item, .art-item-sm { position:relative; }
+  .pcard::after, .pfeatured::after, .tile::after, .mat-card::after {
+    content:'click for more';
+    position:absolute; bottom:.6rem; right:.75rem;
+    font-family:'Oswald',sans-serif; font-size:.7rem; font-weight:600;
+    letter-spacing:.08em; text-transform:uppercase;
+    color:white; background:rgba(0,0,0,.55);
+    padding:.25rem .6rem; border-radius:2px;
+    opacity:0; transition:opacity .25s;
+    pointer-events:none; z-index:5;
+  }
+  .art-item::after, .art-item-sm::after {
+    content:'click for more';
+    position:absolute; bottom:.4rem; right:.4rem;
+    font-family:'Oswald',sans-serif; font-size:.65rem; font-weight:600;
+    letter-spacing:.08em; text-transform:uppercase;
+    color:#555; background:rgba(0,0,0,.07);
+    padding:.2rem .5rem; border-radius:2px;
+    opacity:0; transition:opacity .25s;
+    pointer-events:none; z-index:5;
+  }
+  .pcard:hover::after, .pfeatured:hover::after, .tile:hover::after,
+  .mat-card:hover::after, .art-item:hover::after, .art-item-sm:hover::after { opacity:1; }
+
+  /* Desktop: 50% bigger body text, headings excluded */
+  @media(min-width:641px) {
+    html { font-size: 24px; }
+    /* Pin section headings at designed pixel sizes */
+    .slide-content h1, .slide-content h2 { font-size: clamp(38px,6vw,72px) !important; }
+    #about h2, #services h2, #projects h2, #materials h2, #contact h2 { font-size: clamp(32px,4vw,48px) !important; }
+    #articles h2 { font-size: 32px !important; }
+    .tile-content h3 { font-size: 24px !important; }
+    .mat-card-title { font-size: 22px !important; }
+    .pfeatured-body h3 { font-size: 26px !important; }
+    .pcard h3 { font-size: 18px !important; }
+    .art-item h3, .art-item h2, .art-item-sm h3 { font-size: 18px !important; }
+    .prose h2 { font-size: 28px !important; }
+    /* Keep dividers at pixel size */
+    .divider { width:60px; height:3px; }
+  }
+
+  /* CTA overlay on map — responsive */
+  @media(max-width:640px) {
+    .map-cta { position:relative !important; left:0 !important; top:0 !important; transform:none !important; max-width:100% !important; }
+  }
 </style>

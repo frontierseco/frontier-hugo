@@ -39,18 +39,9 @@
       {{- if $s.Params.body }}
       <p style="color:white;font-size:1.05rem;line-height:1.65;max-width:640px;margin:0 0 1rem;">{{ $s.Params.body }}</p>
       {{- end }}
-      {{- if $s.Params.contact_text }}
-      <p style="margin:0 0 1.25rem;">
-        <a href="{{ $.Site.Params.newProjectURL }}" style="color:#F05336;font-weight:700;text-underline-offset:3px;">
-          {{ $s.Params.contact_text }}
-        </a>
-      </p>
-      {{- end }}
-      {{- if and $s.Params.button_text $s.Params.button_link }}
-      <a href="{{ $s.Params.button_link }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2rem;text-decoration:none;">
-        {{ $s.Params.button_text }}
+      <a href="/#contact" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:1.2rem;letter-spacing:.12em;text-transform:uppercase;padding:1.1rem 3rem;text-decoration:none;margin-top:.75rem;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">
+        Contact Frontier Now
       </a>
-      {{- end }}
     </div>
   </div>
   {{- end }}
@@ -182,9 +173,9 @@
       {{- end }}
     </div>
 
-    <div style="text-align:right;margin-top:1rem;">
-      <a href="/projects/" style="color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;">
-        View All Projects →
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/projects/" style="display:inline-block;background:white;color:#F05336;font-family:'Oswald',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:1rem 3rem;text-decoration:none;" onmouseover="this.style.background='#ffe8e4'" onmouseout="this.style.background='white'">
+        View All Recent Projects →
       </a>
     </div>
   </div>
@@ -243,14 +234,14 @@
   Save → push → appears automatically. No code changes.
 ════════════════════════════════════════════════ */}}
 <section id="articles" style="padding:5rem 1.5rem;background:#024EA4;">
-  <div style="max-width:900px;margin:0 auto;">
+  <div style="width:80%;max-width:1100px;margin:0 auto;">
     <div style="background:white;padding:2.5rem 3rem;">
       <a href="/articles/" style="text-decoration:none;"><h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:2rem;margin:0 0 .5rem;">Articles</h2></a>
       <span class="divider divider-left"></span>
 
       <div style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.1rem;">
         {{- $articles := where .Site.RegularPages "Section" "articles" }}
-        {{- range (sort $articles "Date" "desc" | first 5) }}
+        {{- range (sort $articles "Date" "desc" | first 4) }}
         <a href="{{ .RelPermalink }}" class="art-item-sm" style="border-bottom:1px solid #f0f0f0;padding-bottom:1.1rem;text-decoration:none;color:inherit;">
           {{- if .Params.thumbnail }}
           <img data-src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="art-thumb-sm" loading="lazy">
@@ -282,20 +273,35 @@
   <div style="max-width:680px;margin:0 auto;">
     <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem;">New Project, Questions?</h2>
     <span class="divider"></span>
-    <p style="color:#024EA4;font-size:1.05rem;line-height:1.7;margin:0 0 1rem;">
-      Feel free to use this link to convey any new project/question information before you call:
+    <p style="color:#024EA4;font-size:1.05rem;line-height:1.7;margin:0 0 1.5rem;">
+      Have a new project or question? Send us the details and we'll get back to you.
     </p>
     <p style="margin:0 0 1rem;">
-      <a href="{{ .Site.Params.newProjectURL }}" style="color:#024EA4;font-weight:700;font-size:1.1rem;text-underline-offset:3px;">
-        New Project Info
+      <a href="{{ .Site.Params.newProjectURL }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2.5rem;text-decoration:none;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">
+        Click to Add a New Project
       </a>
     </p>
     <p style="color:#024EA4;font-size:.95rem;">This information will only be used for your projects and will not be given to anyone else.</p>
   </div>
 </section>
 
-<a href="https://maps.google.com/?q=Downtown+Colorado+Springs,+CO" target="_blank" rel="noopener" style="display:block;line-height:0;">
-  <img src="/Terrian-Map.jpg" alt="Frontier Structural Engineering — Downtown Colorado Springs" width="100%" height="380" style="width:100%;height:380px;object-fit:cover;object-position:center;display:block;" loading="lazy">
-</a>
+{{ with .Site.Data.cta }}
+<div style="position:relative;">
+  <a href="https://maps.google.com/?q=Downtown+Colorado+Springs,+CO" target="_blank" rel="noopener" style="display:block;line-height:0;">
+    <img src="/Terrian-Map.jpg" alt="Frontier Structural Engineering, Downtown Colorado Springs" width="100%" height="380" style="width:100%;height:380px;object-fit:cover;object-position:center;display:block;" loading="lazy">
+  </a>
+  <div class="map-cta" style="position:absolute;top:50%;left:3rem;transform:translateY(-50%);background:rgba(2,78,164,.92);padding:2rem 2.25rem;max-width:380px;z-index:2;">
+    <h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.3rem;letter-spacing:.05em;text-transform:uppercase;margin:0 0 .75rem;">
+      {{ .heading }}
+    </h3>
+    <p style="color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.6;margin:0 0 1.25rem;">
+      {{ .body }}
+    </p>
+    <a href="{{ .button_link }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;padding:.7rem 2rem;text-decoration:none;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">
+      {{ .button_text }}
+    </a>
+  </div>
+</div>
+{{ end }}
 
 {{ end }}
