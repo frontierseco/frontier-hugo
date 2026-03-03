@@ -1,0 +1,7 @@
+# ─────────────────────────────────────────────
+# Single-line banner shown above the photo on every article.
+# Edit text and link here — updates all posts instantly.
+# ─────────────────────────────────────────────
+
+text = "20 years of structural engineering experience across Colorado & California — call 719 247-2928"
+link = "tel:7192472928"

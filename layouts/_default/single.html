@@ -2,6 +2,8 @@
 <article style="padding:4rem 1.5rem; background:white;">
   <div class="prose mx-auto">
 
+    {{ partial "cta-top.html" . }}
+
     {{- if .Params.thumbnail }}
     <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" style="width:100%;height:380px;object-fit:cover;margin-bottom:2rem;">
     {{- end }}
