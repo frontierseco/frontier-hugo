@@ -2,6 +2,7 @@
 - enhance cta on hero. make large button.  refine to contact Frontier now 
 -cta on header add emoji in button 📞# justify right side of header, and center the rest of header 
 - refine click-through on hero slides. 
+- when clicking on the header for services, it should scroll to include the services title.
 - enlarge The view all projects to be three times as large and change to view all recent projects. 
 - increase font size 50% throughout the website, exception being buttons and headlines 
 -  on bottom right of every card on the website on hover, display "click for more"
