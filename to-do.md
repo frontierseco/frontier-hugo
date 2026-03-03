@@ -1,12 +1,10 @@
 # To-Do
 
-## In Progress
-- [ ] Create SEO plan
-
 ## Backlog
 - [ ] Set up a call bot — discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] SEO — canonical, OG tags, Twitter cards, JSON-LD schema, robots.txt, baseURL set to frontierstructural.com
 - [x] Humanize article punctuation — removed AI-style em dash overuse across all 25 articles
 - [x] Replace Google Maps iframe with static Terrian-Map.jpg (faster, no "No reviews" widget)
 - [x] Re-date last 3 scheduled articles to lead up to today (Jan 26, Feb 16, Mar 2 2026)
