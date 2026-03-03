@@ -2,7 +2,7 @@
 title: "Cold-Formed Steel"
 date: 2022-10-12
 weight: 12
-thumbnail: "/materials/cfs.jpg"
+thumbnail: "/materials/alt-cfs.jpg"
 tags: ["Steel"]
 categories: ["Construction"]
 summary: "Cold-formed steel studs and track provide a lightweight, non-combustible framing system for load-bearing and non-load-bearing walls in commercial construction."

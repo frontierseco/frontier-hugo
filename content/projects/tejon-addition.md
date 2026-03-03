@@ -4,7 +4,7 @@ date: 2025-02-01
 categories: ["Residential", "Renovation"]
 location: "Colorado Springs, Colorado"
 architect: "Compass | TDG Architecture"
-thumbnail: "/projects/tejon-addition.jpg"
+thumbnail: "/projects/vaulted-ceil.jpg"
 summary: "Full-height addition with basement to a Victorian-era home, including a new basement wall sister connection to an existing mass stone foundation designed for high overturning loads."
 ---
 
