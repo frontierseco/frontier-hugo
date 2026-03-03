@@ -1,22 +1,14 @@
 # To-Do
-- header:
-- make phone emoji white in header
-- add white phone emoji to phone # in cta.md at bottom of page and posts
-- center logo & header in screen
-- map sec:
-- make map sec taller to match pic
-- make cta box 50% wider, and turn into wide section above map responsive in mobile
-- articles:
-- unify article title and body font sizes to match sections before
-- make cards taller to add body preview of articles
-- make latest article 'featured' twice as tall with 2x thumbnail size
-- change 'view all' button to view latest articles
 
 ## Backlog
 - [ ] Turn on SEO skill, do deep SEO
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Header: ☎ white phone symbol, logo + nav truly centered (3-column flex)
+- [x] CTA phone: ☎ symbol added to cta.toml button text (white on orange button)
+- [x] Map: CTA box 50% wider (570px), still floats over map; map height 380→520px; responsive full-width on mobile
+- [x] Articles: featured card (2× thumbnail 160×112px, body preview); compact cards show summary; "View Latest Articles" button
 - [x] Hero CTA: large "Contact Frontier Now" button on every slide
 - [x] Header: phone button with 📞 emoji justified right, nav + logo centered
 - [x] Hero slide click-through: transparent overlay with correct z-index
