@@ -11,3 +11,6 @@ Thumbs.db
 # Editor directories
 .vscode/
 .idea/
+
+# Claude AI workspace (worktrees, plans, settings)
+.claude/
