@@ -1,11 +1,12 @@
 # To-Do
-- fix mobile hero arrows, they interfere with content 
-- mobile logo in header missing 
+
 ## Backlog
 - [ ] Turn on SEO skill, do deep SEO
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Mobile: logo shown in header on mobile (left of burger)
+- [x] Mobile: hero arrows hidden, swipe left/right to navigate slides
 - [x] Remove 'articles' tag on cards (main page & articles list page)
 - [x] 2 lines body preview in cards, 4 lines in featured article
 - [x] CM section: remove gap between cards in slider
