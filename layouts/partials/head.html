@@ -71,6 +71,48 @@
   "image": {{ .Params.thumbnail | absURL | jsonify }}{{ end }}
 }
 </script>
+{{- else if eq .Section "projects" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $desc | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "author": {
+    "@type": "Organization",
+    "name": "Frontier Structural Engineering",
+    "url": {{ .Site.BaseURL | jsonify }}
+  }{{ if .Params.location }},
+  "locationCreated": {
+    "@type": "Place",
+    "name": {{ .Params.location | jsonify }}
+  }{{ end }}{{ if .Params.thumbnail }},
+  "image": {{ .Params.thumbnail | absURL | jsonify }}{{ end }}
+}
+</script>
+{{- else if eq .Section "services" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $desc | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Frontier Structural Engineering",
+    "url": {{ .Site.BaseURL | jsonify }},
+    "telephone": "+17192472928",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Colorado Springs",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
 {{- end }}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

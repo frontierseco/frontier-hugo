@@ -95,7 +95,7 @@
     {{- else }}
     <div class="tile" style="background-color:{{ if .Params.bgColor }}{{ .Params.bgColor }}{{ else }}#2a3a4a{{ end }};">
     {{- end }}
-      {{- if .Params.thumbnail }}<div class="tile-bg" data-bg="{{ .Params.thumbnail }}"></div>{{- end }}
+      {{- if .Params.thumbnail }}<div class="tile-bg" data-bg="{{ .Params.thumbnail }}" role="img" aria-label="{{ .Title }}"></div>{{- end }}
       <div class="tile-overlay"></div>
       <div class="tile-content">
         <h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:white;font-size:1.5rem;margin:0 0 .4rem;line-height:1.2;">{{ .Title }}</h3>
@@ -201,7 +201,7 @@
       {{- $materials := where .Site.RegularPages "Section" "materials" }}
       {{- range (sort $materials ".Params.weight") }}
       <a href="{{ .RelPermalink }}" class="mat-card">
-        <div class="mat-card-bg" data-bg="{{ .Params.thumbnail }}"></div>
+        <div class="mat-card-bg" data-bg="{{ .Params.thumbnail }}" role="img" aria-label="{{ .Title }}"></div>
         <div class="mat-card-overlay"></div>
         <div class="mat-card-body">
           <h3 class="mat-card-title">{{ .Title }}</h3>

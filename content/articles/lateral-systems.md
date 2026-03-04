@@ -48,3 +48,9 @@ When the center of mass and the center of rigidity of a building don't coincide,
 The fix is distributing resistance symmetrically. This is easier to do at schematic design than after the program is committed.
 
 Lateral systems are invisible in the finished building. They are visible in the plan, if you know what to look for.
+
+---
+
+**Related Articles:**
+- [Snow Loads: What Engineers Actually Design For](/articles/snow-loads/) — How elevation, roof geometry, and drift conditions shape structural design in Colorado.
+- [Seismic Design in the Mountain West](/articles/seismic-mountain-west/) — Why Colorado and the intermountain region require seismic consideration even without major historic earthquakes.

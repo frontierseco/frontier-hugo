@@ -1,7 +1,7 @@
 ---
 title: "Forensic Structural Engineering: When You Need an Expert and What to Expect"
 date: 2026-01-26
-featured: false
+featured: true
 categories: ["Articles"]
 thumbnail: "/articles/forensic-structural.jpg"
 summary: "Forensic structural engineering investigates failures, distress, and disputes. Understanding when to engage a forensic SE, and what the process involves, helps owners, contractors, and attorneys use the service effectively."
@@ -38,3 +38,9 @@ If you're an owner with a structural concern, engage the forensic SE before the 
 If you're an attorney or contractor involved in a dispute, engage the forensic SE early enough that the investigation can be thorough. Last-minute retention before a deadline produces reports that are thinner than they should be.
 
 A forensic structural engineer who is qualified in the structural system in question, communicates clearly, and maintains objectivity is a valuable technical resource. The goal of forensic work is to find out what happened and to document it in a way that holds up to scrutiny.
+
+---
+
+**Related Articles:**
+- [Expert Witness Services](/articles/expert-witness/) — When forensic findings need to be communicated in litigation, deposition, or arbitration.
+- [Do I Need a Structural Engineer?](/articles/do-i-need-a-structural-engineer/) — How to determine when an engineering evaluation is needed versus a contractor inspection.

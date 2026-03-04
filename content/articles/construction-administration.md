@@ -26,3 +26,9 @@ A well-designed structure can still be built poorly. Construction administration
 Skipping CA saves money in the short run and often costs considerably more in the long run. We recommend it for every project we design.
 
 Contact Frontier to discuss construction administration as part of your project scope.
+
+---
+
+**Related Articles:**
+- [From Concept to Construction: Commercial Building Design at Frontier](/articles/commercial-building-design/) — How structural design is developed from schematic through construction documents.
+- [Call Your SE at Schematic Design, Not at Permit](/articles/call-your-se-early/) — Why early SE involvement produces better outcomes than late-stage engagement.

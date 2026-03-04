@@ -32,3 +32,9 @@ We are careful about the cases we take. We form our opinions based on the eviden
 We work with both plaintiff and defense counsel. We're familiar with the pace and demands of litigation, and we respond promptly to requests. Early engagement before litigation is filed is often the most valuable: we can help assess the strength of a technical claim before significant resources are committed.
 
 Contact Frontier for a confidential initial consultation on expert witness services.
+
+---
+
+**Related Articles:**
+- [Forensic Structural Engineering: When You Need an Expert and What to Expect](/articles/forensic-structural/) — The investigation process that precedes expert witness work.
+- [Structural Letters and Reports for Building Permits in Colorado](/articles/structural-letter-building-permit-colorado/) — When a written engineer opinion is needed outside of litigation.
