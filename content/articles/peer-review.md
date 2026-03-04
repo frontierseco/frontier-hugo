@@ -1,9 +1,18 @@
 ---
 title: "Peer Review: What It Is, When to Get One, and What It Protects"
-date: 2026-11-09
+date: 2027-01-04
 featured: false
 categories: ["Articles"]
 summary: "A structural peer review is an independent engineering evaluation of design documents. Done well, it catches errors, validates assumptions, and protects the owner, the design team, and the contractor."
+faqs:
+  - q: "What is a structural peer review?"
+    a: "A structural peer review is an independent evaluation of structural design documents (drawings and calculations) by a licensed engineer who was not involved in the original design. The reviewer checks that loads are correctly applied, the design is code-compliant, and the details are complete and constructable."
+  - q: "When is structural peer review required?"
+    a: "Peer review is required by building departments in many jurisdictions for complex structures, high-seismic buildings, base-isolated or damped structures, and performance-based designs. It is also commonly requested by lenders, owners, and design-build contractors seeking independent validation."
+  - q: "Who benefits from structural peer review?"
+    a: "Owners get confirmation the design is structurally sound. Engineers of record catch errors before construction, when corrections are cheap. Contractors building from peer-reviewed documents have greater confidence the design is correct and complete."
+  - q: "Does the peer reviewer become responsible for the design?"
+    a: "No. The engineer of record retains full responsibility for the structural design. The peer reviewer evaluates the work but does not produce it and is not responsible for design adequacy."
 ---
 
 Structural peer review is sometimes required and sometimes voluntary. In both cases, the value it provides is the same: an independent set of engineering eyes evaluating the design for accuracy, completeness, and compliance before construction begins.
@@ -47,3 +56,20 @@ The quality of a peer review depends on the reviewer's expertise in the structur
 Good peer review generates meaningful comments, and the engineer of record's responses to those comments are substantive. The back-and-forth is where the design is strengthened.
 
 If you're commissioning a project where peer review would add value, and you're not sure whether it's needed, ask your SE. A good structural engineer will give you an honest answer.
+
+---
+
+## Frequently Asked Questions
+
+**What is a structural peer review?**
+An independent evaluation of structural design documents by a licensed engineer not involved in the original design. The reviewer checks load application, code compliance, analysis accuracy, and detail completeness.
+
+**When is peer review required?**
+Building departments in high-seismic jurisdictions require peer review for complex structures, base-isolated buildings, and performance-based designs. It is also requested by lenders, owners, and design-build contractors.
+
+**Who benefits?**
+Owners confirm the design is sound. Engineers catch errors before construction when fixes are cheap. Contractors have greater confidence in the documents they're building from.
+
+**Does the peer reviewer take on design responsibility?**
+No. The engineer of record retains full responsibility. The peer reviewer checks the work; they do not produce it.
+

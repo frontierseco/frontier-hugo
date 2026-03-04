@@ -1,6 +1,6 @@
 ---
 title: "Foundation Types: Matching the System to the Soil Conditions"
-date: 2026-07-06
+date: 2026-08-18
 featured: false
 categories: ["Articles"]
 summary: "The right foundation isn't the cheapest one. It's the one that matches the soil, the load, and the risk tolerance of the project. Understanding the options early keeps cost and schedule on track."

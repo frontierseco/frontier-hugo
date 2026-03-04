@@ -1,7 +1,7 @@
 ---
 title: "Unlocking Stunning Views: How Moment Frames Elevate Modern Design"
-date: 2024-11-01
-featured: true
+date: 2024-10-23
+featured: false
 categories: ["Articles"]
 thumbnail: "/articles/moment-frames-scaled.jpg"
 summary: "In today's architectural landscape, creating buildings with expansive glass facades and unobstructed views is a hallmark of luxury and innovation. At Frontier Structural Engineering, we specialize in moment frame design that makes this possible."

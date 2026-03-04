@@ -1,7 +1,7 @@
 ---
 title: "Do I Need a Structural Engineer? A Homeowner's Guide"
-date: 2026-03-04
-featured: false
+date: 2026-02-12
+featured: true
 categories: ["Articles"]
 thumbnail: "/articles/forensic-structural.jpg"
 summary: "Most homeowners are not sure when a structural engineer is required versus when a contractor or architect is enough. This guide explains the situations where a structural engineer is necessary, when one adds value even if not required, and how the process works."

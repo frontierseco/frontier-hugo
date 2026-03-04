@@ -1,7 +1,7 @@
 ---
 title: "Structural Engineer for Home Additions in Colorado Springs"
-date: 2026-03-11
-featured: false
+date: 2026-02-24
+featured: true
 categories: ["Articles"]
 thumbnail: "/projects/vaulted-ceil.jpg"
 summary: "Adding space to your Colorado Springs home means structural engineering work: foundation review, framing design, and permit-ready drawings. Here is what the process looks like and what to expect."

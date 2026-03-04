@@ -1,6 +1,6 @@
 ---
 title: "What Makes a Good Design-Build Structural Engineer?"
-date: 2026-02-16
+date: 2025-10-08
 featured: false
 categories: ["Articles"]
 summary: "Not every structural engineer is a good design-build partner. The qualities that matter in design-build (speed, cost awareness, communication, field experience) are different from what matters in traditional delivery."

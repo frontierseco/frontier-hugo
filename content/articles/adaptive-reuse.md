@@ -1,6 +1,6 @@
 ---
 title: "Old Buildings, New Purpose: The Engineering of Adaptive Reuse"
-date: 2026-02-26
+date: 2025-12-05
 featured: true
 categories: ["Articles"]
 thumbnail: "/services/adaptive-reuse.jpg"

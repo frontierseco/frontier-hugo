@@ -1,6 +1,6 @@
 ---
 title: "Masonry Isn't Old-Fashioned: When CMU and Brick Are the Right Structural Choice"
-date: 2026-08-17
+date: 2026-10-05
 featured: false
 categories: ["Articles"]
 summary: "Concrete masonry and reinforced brick have real structural advantages in the right applications. The architects and contractors who understand those advantages use masonry where it makes sense and avoid it where it doesn't."

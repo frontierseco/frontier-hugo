@@ -1,6 +1,6 @@
 ---
 title: "Call Your SE at Schematic Design, Not at Permit"
-date: 2026-03-02
+date: 2026-01-05
 featured: true
 categories: ["Articles"]
 thumbnail: "/articles/call-your-se-early.jpg"
@@ -12,6 +12,8 @@ There's a pattern that shows up on projects of every size: the architect has dev
 It doesn't have to work that way.
 
 ## What Early SE Involvement Actually Looks Like
+
+Bringing a structural engineer in at schematic design means structural constraints are identified before they become change orders — the span question gets answered before the floor plan is committed, not after.
 
 At schematic design, a structural engineer isn't producing stamped drawings. They're answering questions like:
 
