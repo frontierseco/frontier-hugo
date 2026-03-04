@@ -1,4 +1,6 @@
 # To-Do
+- adaptive reuse service card should link to the content 
+- match hero links to the right hero content.  update hero content
 
 ## Backlog
 - [ ] Turn on SEO skill, do deep SEO
