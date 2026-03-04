@@ -7,7 +7,7 @@
     {{ .body }}
   </p>
   <style>#cta-call-btn:hover{background:#d94020!important}</style>
-  <a id="cta-call-btn" href="{{ .button_link }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2.25rem;text-decoration:none;">
+  <a id="cta-call-btn" href="{{ .button_link | safeURL }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 2.25rem;text-decoration:none;">
     {{ .button_text }}
   </a>
 </div>
