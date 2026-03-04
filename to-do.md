@@ -8,6 +8,7 @@
 - [ ] Directory listings: ASCE member profile, ACEC Colorado, Yelp, Angi, BBB (NAP must match schema)
 
 ## Done
+- [x] Map image: center on mobile (object-position shift at ≤640px)
 - [x] SEO quick wins: site title, meta description, 4 articles featured, sitemap
 - [x] Landing pages: /structural-engineer-colorado-springs/, /structural-engineer-california/, /residential-structural-engineering/
 - [x] New articles: do-i-need-a-structural-engineer, home-addition-colorado-springs, structural-letter-building-permit, structural-engineering-glossary
