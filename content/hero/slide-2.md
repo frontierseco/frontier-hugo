@@ -2,7 +2,7 @@
 title: "Proven Support."
 weight: 2
 bg_image: "/hero/open.jpg"
-body: "You provide the roof in the elements for your employees and customers, weathering storms of all kinds; your presence supports a great life in our community. Having a plan for your plans puts it on the right foot. Consultation, coordination of plans and details, services for contractors, and more, Frontier provides the support required. See below for more."
+body: "A well-designed structure can still be built poorly. Construction administration is how the engineer's design intent survives contact with the field: submittals reviewed, RFIs answered, site visits made. Skipping CA saves money in the short run and often costs considerably more in the long run."
 contact_text: "Get the support your project deserves, click here to contact Frontier now"
 slide_link: "/articles/construction-administration/"
 ---
