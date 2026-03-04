@@ -3,7 +3,7 @@ title: "Construction Support, Temporary Structures & Shoring"
 date: 2022-01-01
 categories: ["Construction Administration", "Commercial"]
 location: "Colorado & California"
-thumbnail: "/projects/temp-structure-scaled.jpg"
+thumbnail: "/projects/construction-support.jpg"
 summary: "Temporary structure and shoring design to keep construction projects moving safely: falsework, shoring towers, bracing for partially constructed elements, and excavation support systems."
 ---
 

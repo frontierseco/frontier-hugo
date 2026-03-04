@@ -3,7 +3,7 @@ title: "Deck Replacement"
 date: 2021-10-15
 categories: ["Residential"]
 location: "Colorado Springs, Colorado"
-thumbnail: "/projects/deck-scaled.jpg"
+thumbnail: "/projects/deck-replacement.jpg"
 summary: "Structural assessment and full replacement design for a deteriorated residential deck: new framing, connections, and guardrail system sized for current code loads and the specific site conditions."
 ---
 
