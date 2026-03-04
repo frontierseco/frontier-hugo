@@ -1,10 +1,24 @@
 # To-Do
 
 ## Backlog
-- [ ] Turn on SEO skill, do deep SEO
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
+- [ ] About/Team page: engineer name, PE license numbers, photo, ASCE membership (needed for E-E-A-T / AI citations)
+- [ ] Google Business Profile: claim, add address/phone/hours/photos, set "Structural Engineer" category
+- [ ] Google Search Console: verify ownership, submit sitemap
+- [ ] Directory listings: ASCE member profile, ACEC Colorado, Yelp, Angi, BBB (NAP must match schema)
 
 ## Done
+- [x] SEO quick wins: site title, meta description, 4 articles featured, sitemap
+- [x] Landing pages: /structural-engineer-colorado-springs/, /structural-engineer-california/, /residential-structural-engineering/
+- [x] New articles: do-i-need-a-structural-engineer, home-addition-colorado-springs, structural-letter-building-permit, structural-engineering-glossary
+- [x] Article dates: 29 articles spaced ~3 weeks apart, centered on today, weekdays only
+- [x] Featured articles rebalanced for SEO (8 featured: forensic, commercial, adaptive-reuse, call-your-se-early, colorado, expert-witness, do-i-need, home-addition)
+- [x] AI/GEO: FAQPage JSON-LD schema (forensic, expert-witness, peer-review, consultation); direct-answer sentences in top 5 articles; author byline support
+- [x] JSON-LD expanded: Service schema on service pages, CreativeWork on project pages, memberOf + sameAs on homepage
+- [x] Internal links: related-article links across 7 articles
+- [x] aria-label on tile-bg and mat-card-bg background image divs
+- [x] Hero slides: slide-2 body updated for CA article, slide-4 linked to /articles/colorado/
+- [x] Adaptive reuse service card: fixed link from .jpg to /articles/adaptive-reuse/
 - [x] Mobile: logo shown in header on mobile (left of burger)
 - [x] Mobile: hero arrows hidden, swipe left/right to navigate slides
 - [x] Remove 'articles' tag on cards (main page & articles list page)
