@@ -5,7 +5,7 @@ _Audit date: March 2026_
 
 ## Quick Wins (do this week)
 
-- [ ] **Fix empty Articles section** — open any 4 articles in `content/articles/` and add `featured: true` to their front matter. The homepage Articles section currently renders blank for every visitor.
+- [x] **Fix empty Articles section** — ~~add `featured: true` to front matter~~ — resolved: homepage now shows the 4 most recent articles by date automatically. No action needed.
 
 - [ ] **Fix site title** — in `config.toml`, change:
   ```
