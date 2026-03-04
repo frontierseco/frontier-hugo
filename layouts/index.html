@@ -253,9 +253,8 @@
         <div>
           <h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:1.2rem;line-height:1.3;margin:0 0 .4rem;">{{ .Title }}</h3>
           {{- if .Params.summary }}
-          <p style="color:#555;font-size:.875rem;line-height:1.55;margin:0 0 .4rem;">{{ .Params.summary | truncate 140 }}</p>
+          <p class="art-summary-featured" style="color:#555;font-size:.875rem;line-height:1.55;margin:0;">{{ .Params.summary }}</p>
           {{- end }}
-          <p style="color:#024EA4;font-size:.75rem;font-weight:700;margin:0;">{{ delimit .Params.categories ", " }}</p>
         </div>
       </a>
       {{- end }}
