@@ -1,6 +1,6 @@
 ---
 title: "Safe by Design: Engineering Temporary Structures and Shoring"
-date: 2026-02-18
+date: 2026-06-11
 featured: false
 categories: ["Articles"]
 thumbnail: "/services/temp-structures-scaled.jpg"

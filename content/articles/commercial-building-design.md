@@ -1,6 +1,6 @@
 ---
 title: "From Concept to Construction: Commercial Building Design at Frontier"
-date: 2026-02-01
+date: 2026-03-19
 featured: true
 categories: ["Articles"]
 thumbnail: "/articles/commercial-building-design.jpg"

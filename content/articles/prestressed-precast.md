@@ -1,6 +1,6 @@
 ---
 title: "Prestressed Precast Concrete: Span Long, Build Fast"
-date: 2026-07-27
+date: 2027-04-22
 featured: false
 categories: ["Articles"]
 summary: "Prestressed precast concrete offers long spans and fast erection, but it requires early coordination between the SE, the precast producer, and the rest of the design team to deliver its advantages."

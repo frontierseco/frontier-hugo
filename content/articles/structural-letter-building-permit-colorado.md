@@ -1,6 +1,6 @@
 ---
 title: "Structural Letters and Reports for Building Permits in Colorado"
-date: 2026-03-18
+date: 2026-11-26
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/consultation.jpg"

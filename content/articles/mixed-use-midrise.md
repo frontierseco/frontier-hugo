@@ -1,6 +1,6 @@
 ---
 title: "Mixed-Use Mid-Rise: Structural Strategies That Work"
-date: 2026-11-30
+date: 2027-08-26
 featured: false
 categories: ["Articles"]
 summary: "Mixed-use mid-rise is one of the most structurally complex building types, with different occupancies, different loads, different column grids, and often different structural systems stacked on top of each other."

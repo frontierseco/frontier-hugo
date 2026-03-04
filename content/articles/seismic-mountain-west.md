@@ -1,6 +1,6 @@
 ---
 title: "Seismic Design in the Mountain West: What's Different About Colorado and California Projects"
-date: 2026-04-13
+date: 2027-01-07
 featured: false
 categories: ["Articles"]
 summary: "Seismic design in the Mountain West isn't just about fault lines. It's about how soil conditions, building systems, and code requirements interact in ways that catch unfamiliar teams off guard."

@@ -1,6 +1,6 @@
 ---
 title: "How to Read a Structural Drawing: A Contractor's Guide"
-date: 2026-09-28
+date: 2027-06-24
 featured: false
 categories: ["Articles"]
 summary: "Structural drawings communicate information that affects every trade on a project. Contractors who can read them fluently catch problems early and build more confidently."
