@@ -1,6 +1,6 @@
 ---
 title: "Peer Review: What It Is, When to Get One, and What It Protects"
-date: 2027-08-05
+date: 2027-07-26
 featured: false
 categories: ["Articles"]
 summary: "A structural peer review is an independent engineering evaluation of design documents. Done well, it catches errors, validates assumptions, and protects the owner, the design team, and the contractor."

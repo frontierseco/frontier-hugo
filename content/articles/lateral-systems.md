@@ -1,6 +1,6 @@
 ---
 title: "Lateral Systems: The Part of the Building Most Architects Never See"
-date: 2027-07-15
+date: 2027-07-13
 featured: false
 categories: ["Articles"]
 summary: "Wind and seismic loads are invisible until something goes wrong. The lateral system (shear walls, moment frames, braced frames) resists those loads, and its location affects everything about the architectural plan."

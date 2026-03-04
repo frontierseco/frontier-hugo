@@ -1,6 +1,6 @@
 ---
 title: "The Real Cost of Structural Surprises During Construction"
-date: 2027-06-03
+date: 2027-05-24
 featured: false
 categories: ["Articles"]
 summary: "Structural problems discovered during construction are expensive, not just because of the fix, but because of the schedule impact, the subcontractor disruption, and the owner relationship damage that follows."

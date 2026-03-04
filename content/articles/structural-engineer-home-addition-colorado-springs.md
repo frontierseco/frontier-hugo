@@ -1,6 +1,6 @@
 ---
 title: "Structural Engineer for Home Additions in Colorado Springs"
-date: 2026-10-15
+date: 2026-09-15
 featured: false
 categories: ["Articles"]
 thumbnail: "/projects/vaulted-ceil.jpg"

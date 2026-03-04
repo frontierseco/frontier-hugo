@@ -1,6 +1,6 @@
 ---
 title: "Do I Need a Structural Engineer? A Homeowner's Guide"
-date: 2026-09-24
+date: 2026-09-03
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/forensic-structural.jpg"
