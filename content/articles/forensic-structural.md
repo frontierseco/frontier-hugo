@@ -3,6 +3,7 @@ title: "Forensic Structural Engineering: When You Need an Expert and What to Exp
 date: 2026-01-26
 featured: false
 categories: ["Articles"]
+thumbnail: "/articles/forensic-structural.jpg"
 summary: "Forensic structural engineering investigates failures, distress, and disputes. Understanding when to engage a forensic SE, and what the process involves, helps owners, contractors, and attorneys use the service effectively."
 ---
 

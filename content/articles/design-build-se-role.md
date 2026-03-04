@@ -3,6 +3,7 @@ title: "How Design-Build Changes the Structural Engineer's Role"
 date: 2026-05-25
 featured: false
 categories: ["Articles"]
+thumbnail: "/articles/design-build-se-role.jpg"
 summary: "In design-build delivery, the structural engineer isn't just a designer. They're a cost driver, a schedule lever, and a risk manager. The teams that use SE expertise well outperform those that don't."
 ---
 

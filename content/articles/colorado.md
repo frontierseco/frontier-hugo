@@ -3,7 +3,7 @@ title: "Engineering Colorado's Future: Structural Design for a Growing State"
 date: 2026-01-15
 featured: false
 categories: ["Articles"]
-thumbnail: "/services/pexels-pixabay-221502.jpg"
+thumbnail: "/articles/colorado.jpg"
 summary: "Colorado is one of the fastest-growing states in the country. From the Denver metro to mountain communities, demand for new facilities is accelerating. Activity centers, mixed-use destinations, commercial hubs: Frontier is built to meet that demand."
 ---
 

@@ -3,7 +3,7 @@ title: "Uncovering the Truth: Forensic Structural Engineering"
 date: 2026-02-12
 featured: false
 categories: ["Articles"]
-thumbnail: "/services/wall-crack-scaled.jpg"
+thumbnail: "/articles/forensic.jpg"
 summary: "A crack in the wall. A door that no longer closes. A floor that bounces in a way it never used to. Sometimes the cause is obvious. Often it isn't. Forensic structural engineering is the discipline of finding out: objectively, rigorously, and without a predetermined answer."
 ---
 

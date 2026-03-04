@@ -3,7 +3,7 @@ title: "From Concept to Construction: Commercial Building Design at Frontier"
 date: 2026-02-01
 featured: false
 categories: ["Articles"]
-thumbnail: "/services/8218807713_d7057c23e6_4k.jpg"
+thumbnail: "/articles/commercial-building-design.jpg"
 summary: "Commercial buildings carry more than loads. They carry the expectations of owners, the ambitions of architects, the schedules of contractors, and the daily lives of the people who work and gather inside them. Frontier designs with all of that in mind."
 ---
 

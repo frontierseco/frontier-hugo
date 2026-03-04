@@ -3,7 +3,7 @@ title: "Keeping Projects on Track: The Role of Construction Administration"
 date: 2026-02-08
 featured: false
 categories: ["Articles"]
-thumbnail: "/services/pexels-pixabay-221502.jpg"
+thumbnail: "/articles/construction-administration.jpg"
 summary: "The permit is approved. The contractor is mobilized. Now what? For many engineering firms, the answer is: not much. For Frontier, construction administration is a core part of the service, not an afterthought."
 ---
 

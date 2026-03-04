@@ -3,7 +3,7 @@ title: "Old Buildings, New Purpose: The Engineering of Adaptive Reuse"
 date: 2026-02-26
 featured: false
 categories: ["Articles"]
-thumbnail: "/services/8218807713_d7057c23e6_4k.jpg"
+thumbnail: "/services/adaptive-reuse.jpg"
 summary: "Adaptive reuse is one of the most rewarding, and most demanding, types of structural work. Taking a building designed for one purpose and making it work for another requires deep understanding of existing structure, creative problem-solving, and precise engineering."
 ---
 

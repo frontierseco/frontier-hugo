@@ -3,6 +3,7 @@ title: "Call Your SE at Schematic Design, Not at Permit"
 date: 2026-03-02
 featured: false
 categories: ["Articles"]
+thumbnail: "/articles/call-your-se-early.jpg"
 summary: "Bringing a structural engineer in early isn't just an added cost. It's how you avoid the expensive surprises that show up at 90% construction documents."
 ---
 

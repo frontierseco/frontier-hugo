@@ -3,7 +3,7 @@ title: "The Value of Early Engineering Consultation"
 date: 2026-01-20
 featured: false
 categories: ["Articles"]
-thumbnail: "/services/note-scaled.jpg"
+thumbnail: "/articles/consultation.jpg"
 summary: "The most expensive structural problems are the ones discovered late. A conversation with a structural engineer early in a project, before the design is locked in, is one of the highest-return investments an owner or architect can make."
 ---
 
