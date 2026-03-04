@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontier — Content Image Search</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: #1a2535; color: #ddd; padding: 2rem; }
+  h1 { color: #F05336; font-size: 1.4rem; margin-bottom: .3rem; }
+  .subtitle { color: #aaa; font-size: .85rem; margin-bottom: 2rem; }
+
+  /* Legend */
+  .legend { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 2rem; padding: .9rem 1rem;
+            background: #111c2a; border: 1px solid #2a3a4a; border-radius: 4px; align-items: center; }
+  .legend-title { width: 100%; font-size: .7rem; color: #888; text-transform: uppercase;
+                  letter-spacing: .1em; margin-bottom: .1rem; }
+  .legend-item { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: #ccc; }
+
+  /* Groups */
+  .group { margin-bottom: 2.5rem; }
+  .group-title { color: #F05336; font-size: .75rem; font-weight: 700; letter-spacing: .12em;
+                 text-transform: uppercase; margin-bottom: .6rem; padding-bottom: .4rem;
+                 border-bottom: 1px solid #2a3a4a; }
+
+  table { width: 100%; border-collapse: collapse; }
+  tr:hover td { background: #1f2e40; }
+  tr.missing { background: rgba(220,40,40,.07); }
+  tr.missing:hover td { background: rgba(220,40,40,.13); }
+  tr.shared  { background: rgba(245,158,11,.05); }
+  tr.shared:hover td  { background: rgba(245,158,11,.1); }
+  td { padding: .55rem .7rem; font-size: .85rem; border-bottom: 1px solid #1e2d3e; vertical-align: middle; }
+  .col-file  { color: #7ecfff; font-family: monospace; font-size: .75rem; white-space: nowrap; width: 200px; }
+  .col-title { color: #ccc; font-size: .82rem; width: 260px; }
+  .col-dest  { color: #a78bfa; font-family: monospace; font-size: .73rem; white-space: nowrap; width: 210px; }
+  .col-hint  { color: #94a3b8; font-size: .75rem; font-style: italic; width: 200px; }
+  .col-links { line-height: 2.2; }
+
+  /* Status badges */
+  .badge-ok      { background:#14532d; color:#4ade80; font-size:.67rem; font-weight:700;
+                   padding:.15rem .45rem; border-radius:3px; letter-spacing:.05em; white-space:nowrap; }
+  .badge-missing { background:#7f1d1d; color:#fca5a5; font-size:.67rem; font-weight:700;
+                   padding:.15rem .45rem; border-radius:3px; letter-spacing:.05em; white-space:nowrap; }
+  .badge-shared  { background:#78350f; color:#fcd34d; font-size:.67rem; font-weight:700;
+                   padding:.15rem .45rem; border-radius:3px; letter-spacing:.05em; white-space:nowrap; }
+
+  /* Buttons */
+  a.btn { display:inline-block; padding:.22rem .6rem; border-radius:3px; font-size:.72rem;
+          font-weight:600; margin:.1rem .2rem .1rem 0; text-decoration:none; white-space:nowrap; }
+  a.btn:hover { opacity:.8; }
+  .btn-pexels     { background:#05a081; color:#fff; }
+  .btn-dreamstime { background:#0055b3; color:#fff; }
+  .btn-unsplash   { background:#4a4a4a; color:#fff; }
+  .btn-pixabay    { background:#1c9a3a; color:#fff; }
+</style>
+</head>
+<body>
+
+<h1>Frontier Structural — Content Image Search</h1>
+<p class="subtitle">All content files, grouped by section. Search queries are tuned to what actually exists in stock libraries — not just the article title.</p>
+
+<div class="legend">
+  <div class="legend-title">Status key</div>
+  <div class="legend-item"><span class="badge-ok">HAS IMAGE</span> Thumbnail set in front matter</div>
+  <div class="legend-item"><span class="badge-shared">SHARED</span> Has thumbnail but reusing another file's image — candidate for upgrade</div>
+  <div class="legend-item"><span class="badge-missing">MISSING</span> No thumbnail in front matter — row highlighted red</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+  ARTICLES
+════════════════════════════════════════ -->
+<div class="group">
+<div class="group-title">Articles — content/articles/ → static/articles/</div>
+<table>
+<thead>
+  <tr>
+    <td class="col-file"><b>File</b></td>
+    <td class="col-title"><b>Title</b></td>
+    <td class="col-dest"><b>Save to</b></td>
+    <td class="col-hint"><b>What to look for</b></td>
+    <td class="col-links"><b>Search links</b></td>
+  </tr>
+</thead>
+<tbody>
+
+<tr>
+  <td class="col-file">adaptive-reuse.md</td>
+  <td class="col-title">Old Buildings, New Purpose: The Engineering of Adaptive Reuse <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/adaptive-reuse.jpg</td>
+  <td class="col-hint">old brick warehouse with modern glass addition, industrial loft conversion</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/brick+warehouse+renovation/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/brick-warehouse-modern-renovation.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/brick-warehouse-renovation" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">call-your-se-early.md</td>
+  <td class="col-title">Call Your SE at Schematic Design, Not at Permit <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/call-your-se-early.jpg</td>
+  <td class="col-hint">architect and engineer leaning over blueprints at a table, early design phase meeting</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/architect+engineer+blueprints+meeting/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/architects-reviewing-blueprints-table.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/architect-blueprints-meeting" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">colorado.md</td>
+  <td class="col-title">Engineering Colorado's Future: Structural Design for a Growing State <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/colorado.jpg</td>
+  <td class="col-hint">Denver or Colorado Springs skyline, construction crane against mountain backdrop</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/Colorado+Springs+downtown+skyline/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/colorado-springs-downtown-aerial.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/denver-skyline-construction" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">commercial-building-design.md</td>
+  <td class="col-title">From Concept to Construction: Commercial Building Design <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/commercial-building-design.jpg</td>
+  <td class="col-hint">commercial building steel frame under construction, exposed structural skeleton, crane on job site</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/commercial+building+steel+frame+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/commercial-building-steel-frame-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/commercial+building+construction+frame/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">construction-administration.md</td>
+  <td class="col-title">Keeping Projects on Track: Construction Administration <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/construction-administration.jpg</td>
+  <td class="col-hint">engineer with hard hat holding rolled plans on active job site, site inspection visit</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/engineer+hard+hat+construction+site+inspection/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/engineer-hard-hat-blueprints-site-inspection.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/engineer-construction-site-inspection" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">consultation.md</td>
+  <td class="col-title">The Value of Early Engineering Consultation <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/consultation.jpg</td>
+  <td class="col-hint">two people at desk reviewing technical drawings, notepad and laptop, professional meeting</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/engineer+client+meeting+consultation+drawings/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/engineer-client-consultation-meeting-desk.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/engineering-consultation-meeting" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">design-build-se-role.md</td>
+  <td class="col-title">How Design-Build Changes the Structural Engineer's Role <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/design-build-se-role.jpg</td>
+  <td class="col-hint">collaborative team around a table with drawings and architectural models, contractor architect engineer together</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/architect+contractor+team+meeting+drawings/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/design-build-team-construction-meeting.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/design-build-team-meeting" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="shared">
+  <td class="col-file">do-i-need-a-structural-engineer.md</td>
+  <td class="col-title">Do I Need a Structural Engineer? A Homeowner's Guide <span class="badge-shared">SHARED</span> <span style="color:#666;font-size:.7rem">(reusing forensic-structural.jpg)</span></td>
+  <td class="col-dest">/articles/homeowner-structural.jpg</td>
+  <td class="col-hint">homeowner examining crack in drywall or foundation, concerned person looking at damaged wall, home inspector with clipboard</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/homeowner+wall+crack+inspection/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/homeowner-wall-crack-inspection.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/home+inspection+crack+wall/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">expert-witness.md</td>
+  <td class="col-title">Engineering Expertise in the Courtroom: Expert Witness Services <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/expert-witness.jpg</td>
+  <td class="col-hint">gavel on legal books, courtroom interior, law and justice setting — NOT people</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/gavel+courtroom+law+justice/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/gavel-legal-books-courtroom.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/gavel-courtroom" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">forensic-structural.md</td>
+  <td class="col-title">Forensic Structural Engineering: When You Need an Expert <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/forensic-structural.jpg</td>
+  <td class="col-hint">close-up of large crack in concrete wall or foundation, structural damage, settlement cracking</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/concrete+wall+crack+structural+damage/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/structural-damage-concrete-wall-crack.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/building+crack+structural+damage/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">forensic.md</td>
+  <td class="col-title">Uncovering the Truth: Forensic Structural Engineering <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/forensic.jpg</td>
+  <td class="col-hint">engineer examining damaged structure with flashlight, brick wall failure, leaning or cracked masonry</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/engineer+inspecting+building+damage/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/building-damage-forensic-structural-inspection.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/engineer+inspecting+damage/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">foundation-systems.md</td>
+  <td class="col-title">Foundation Types: Matching the System to the Soil Conditions <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/foundation-systems.jpg</td>
+  <td class="col-hint">concrete footing being poured into excavated trench, rebar cage in footing form, slab-on-grade under construction</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/concrete+footing+foundation+construction+rebar/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/concrete-foundation-footing-rebar-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/concrete+foundation+footing+construction/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">good-design-build-se.md</td>
+  <td class="col-title">What Makes a Good Design-Build Structural Engineer? <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/good-design-build-se.jpg</td>
+  <td class="col-hint">engineer in collared shirt reviewing structural drawings at a desk or light table, professional portrait</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/civil+engineer+reviewing+blueprints+desk/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/structural-engineer-reviewing-blueprints-desk.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/engineer-blueprints-desk" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">lateral-systems.md</td>
+  <td class="col-title">Lateral Systems: The Part of the Building Most Architects Never See <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/lateral-systems.jpg</td>
+  <td class="col-hint">steel X-bracing or diagonal bracing on a building frame under construction, cross-brace visible on industrial structure</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/steel+building+diagonal+bracing+frame/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/steel-building-bracing-frame-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/steel+building+frame+bracing/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">leading-into-opportunity.md</td>
+  <td class="col-title">Leading Into Opportunity <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/jeep-scaled.jpg</td>
+  <td class="col-hint">jeep or 4x4 on mountain trail, offroad adventure, rocky mountain pass</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/jeep+off+road+mountain+trail/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/jeep-offroad-mountain-trail.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/jeep-off-road-mountain" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">masonry-structural.md</td>
+  <td class="col-title">Masonry Isn't Old-Fashioned: When CMU and Brick Are the Right Choice <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/masonry-structural.jpg</td>
+  <td class="col-hint">bricklayer laying bricks with mortar, close-up of mason trowel and brick courses, CMU block wall under construction</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/bricklayer+masonry+wall+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/bricklayer-mason-laying-bricks-wall.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/bricklayer+masonry+construction/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">mixed-use-midrise.md</td>
+  <td class="col-title">Mixed-Use Mid-Rise: Structural Strategies That Work <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/mixed-use-midrise.jpg</td>
+  <td class="col-hint">5–8 story mixed-use building with retail at street level and apartments or offices above, urban block, contemporary facade</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/mixed+use+building+urban+retail+apartments/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/mixed-use-midrise-urban-building.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/mixed-use-building-urban" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">moment-frames.md</td>
+  <td class="col-title">Unlocking Stunning Views: How Moment Frames Elevate Modern Design <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/moment-frames-scaled.jpg</td>
+  <td class="col-hint">modern house or cabin with floor-to-ceiling glass wall, panoramic mountain view through large windows, open floor plan</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/modern+home+floor+ceiling+windows+mountain+view/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/modern-home-large-windows-mountain-view.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/modern-house-large-windows-mountain" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">peer-review.md</td>
+  <td class="col-title">Peer Review: What It Is, When to Get One, and What It Protects <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/peer-review.jpg</td>
+  <td class="col-hint">two engineers side by side reviewing structural drawings, red pen markups on blueprints, close-up of annotated plan</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/engineers+reviewing+blueprints+together/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/engineering-drawing-review-markup-red-pen.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/blueprint+review+engineers/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">post-tensioned-slabs.md</td>
+  <td class="col-title">Post-Tensioned Slabs: What Architects Need to Know <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/post-tensioned-slabs.jpg</td>
+  <td class="col-hint">PT tendon cables visible in concrete slab formwork before pour, bundled post-tension strands, flat plate construction</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/post+tension+concrete+slab+cables+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/post-tensioned-concrete-slab-cables.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/post+tensioned+concrete+construction/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">prestressed-precast.md</td>
+  <td class="col-title">Prestressed Precast Concrete: Span Long, Build Fast <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/prestressed-precast.jpg</td>
+  <td class="col-hint">precast concrete double-T beams or hollow-core planks being set by crane, precast parking deck, precast wall panels lifted on site</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/precast+concrete+crane+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/precast-concrete-panels-crane-installation.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/precast+concrete+crane+building/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">reading-structural-drawings.md</td>
+  <td class="col-title">How to Read a Structural Drawing: A Contractor's Guide <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/reading-structural-drawings.jpg</td>
+  <td class="col-hint">contractor in hard hat and vest studying large rolled blueprints on job site, pointing at plans, drawings spread on table</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/contractor+blueprints+construction+drawings+hard+hat/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/contractor-reading-blueprints-construction-site.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/contractor+blueprints+plans/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">seismic-mountain-west.md</td>
+  <td class="col-title">Seismic Design in the Mountain West <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/seismic-mountain-west.jpg</td>
+  <td class="col-hint">seismic isolator or base isolation pad under a building column, or cracked building after earthquake, or Rocky Mountain range</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/seismic+isolator+earthquake+building+base/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/seismic-isolation-building-earthquake-colorado.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/rocky-mountains-construction" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">snow-loads.md</td>
+  <td class="col-title">Snow Drift, Unbalanced Load, and Sliding Snow <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/snow-loads.jpg</td>
+  <td class="col-hint">heavy snow drift piled against parapet wall on flat commercial roof, snow accumulated on low roof adjacent to taller building, Colorado winter roof</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/heavy+snow+flat+roof+drift+accumulation/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/snow-drift-roof-accumulation-winter.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/snow+drift+commercial+roof/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">solid-platform.md</td>
+  <td class="col-title">A Solid Platform <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/articles/solid-platform-scaled.jpg</td>
+  <td class="col-hint">mountain summit view, wide horizon, confident forward-looking imagery</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/mountain+summit+horizon+wide+view/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/mountain-summit-panoramic-view.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/mountain-summit-horizon" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="shared">
+  <td class="col-file">structural-engineer-home-addition-colorado-springs.md</td>
+  <td class="col-title">Structural Engineer for Home Additions in Colorado Springs <span class="badge-shared">SHARED</span> <span style="color:#666;font-size:.7rem">(reusing vaulted-ceil.jpg)</span></td>
+  <td class="col-dest">/articles/home-addition-cs.jpg</td>
+  <td class="col-hint">wood frame addition being built onto existing house, new room framing attached to existing structure, residential construction addition</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/house+addition+wood+framing+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/home-addition-framing-construction-residential.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/home+addition+construction+framing/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">structural-engineering-glossary.md</td>
+  <td class="col-title">Structural Engineering Terms: A Plain-Language Glossary <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/structural-engineering-glossary.jpg</td>
+  <td class="col-hint">open engineering reference book with structural diagrams, or engineer's desk with pen and technical manual, detailed beam diagram</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/engineering+textbook+technical+reference+desk/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/engineering-reference-book-structural-drawings.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/engineering-textbook-desk" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="shared">
+  <td class="col-file">structural-letter-building-permit-colorado.md</td>
+  <td class="col-title">Structural Letters and Reports for Building Permits in Colorado <span class="badge-shared">SHARED</span> <span style="color:#666;font-size:.7rem">(reusing consultation.jpg)</span></td>
+  <td class="col-dest">/articles/structural-letter-permit.jpg</td>
+  <td class="col-hint">building permit paperwork on desk, official stamped document with engineer's seal, permit application forms, county permit counter</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/building+permit+documents+official+stamp/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/building-permit-documents-engineer-stamp.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/permit+documents+stamp+official/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">structural-surprises-cost.md</td>
+  <td class="col-title">The Real Cost of Structural Surprises During Construction <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/structural-surprises-cost.jpg</td>
+  <td class="col-hint">contractor or engineer discovering unexpected condition behind opened wall, rotted floor joist exposed, surprised worker with demo rubble</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/construction+unexpected+problem+exposed+wall/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/construction-problem-unexpected-structural.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/construction+problem+exposed+framing/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">temporary-structures.md</td>
+  <td class="col-title">Safe by Design: Engineering Temporary Structures and Shoring <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/temp-structures-scaled.jpg</td>
+  <td class="col-hint">steel shoring towers or post-shores under concrete formwork, scaffolding system, falsework supporting a structure during construction</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/shoring+scaffolding+temporary+support+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/shoring-scaffolding-temporary-structure-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/scaffolding+construction+shoring/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">timber-steel-concrete.md</td>
+  <td class="col-title">Timber vs. Steel vs. Concrete: A Structural Engineer's Honest Take <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/timber-steel-concrete.jpg</td>
+  <td class="col-hint">exposed wood beam ceiling in modern building, or side-by-side shot of lumber, steel beam, and concrete — or hybrid building frame showing all three</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/exposed+timber+steel+hybrid+building+structure/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/wood-steel-concrete-hybrid-building-structure.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/mass-timber-steel-hybrid-building" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">value-engineering.md</td>
+  <td class="col-title">Value Engineering Structural Systems Without Cutting Corners <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/articles/value-engineering.jpg</td>
+  <td class="col-hint">engineer marking up drawings with red pen, cost estimate spreadsheet next to blueprints, construction budget review with plans on table</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/engineer+cost+review+blueprints+construction+budget/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/value-engineering-cost-review-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/construction+budget+engineer+plans/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+  PROJECTS
+════════════════════════════════════════ -->
+<div class="group">
+<div class="group-title">Projects — content/projects/ → static/projects/</div>
+<table>
+<tbody>
+
+<tr>
+  <td class="col-file">construction-support.md</td>
+  <td class="col-title">Construction Support, Temporary Structures & Shoring <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/temp-structure-scaled.jpg</td>
+  <td class="col-hint">vertical shoring shores under elevated concrete deck, heavy-duty pipe shores in tight basement space</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/concrete+formwork+shoring+support+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/construction-shoring-support-formwork.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/concrete+formwork+shoring/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="shared">
+  <td class="col-file">custom-build-woodland-park.md</td>
+  <td class="col-title">Custom Build Residence, Woodland Park CO <span class="badge-shared">SHARED</span> <span style="color:#666;font-size:.7rem">(reusing vaulted-ceil.jpg)</span></td>
+  <td class="col-dest">/projects/custom-build-woodland-park.jpg</td>
+  <td class="col-hint">custom mountain home exterior, timber frame or log home in pines, Colorado mountain residential, Pikes Peak foothills setting</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/custom+mountain+home+colorado+pine+trees/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/mountain-home-custom-build-colorado-pines.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/mountain-home-colorado-custom" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">deck-cover.md</td>
+  <td class="col-title">Covered Deck Addition <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/deck-cover-scaled.jpg</td>
+  <td class="col-hint">covered patio or pergola attached to house, wood or aluminum roof over deck, outdoor living space with ceiling</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/covered+patio+pergola+deck+attached+house/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/covered-deck-patio-pergola-house-addition.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/covered+deck+patio+pergola/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">deck-replacement.md</td>
+  <td class="col-title">Deck Replacement <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/deck-scaled.jpg</td>
+  <td class="col-hint">new composite deck being framed, fresh lumber deck attached to house, or finished new deck with railing</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/new+deck+construction+lumber+framing+residential/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/deck-replacement-construction-residential.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/deck+construction+lumber+railing/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">denver-multi-use.md</td>
+  <td class="col-title">Denver Multi-Use Development <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/denver-scaled.jpg</td>
+  <td class="col-hint">Denver urban infill building, RiNo or LoDo streetscape, contemporary multi-story mixed-use facade</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/denver+urban+mixed+use+building+contemporary/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/denver-colorado-urban-mixed-use-building.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/denver-urban-mixed-use-building" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">gripstone-climbing-gym.md</td>
+  <td class="col-title">Gripstone Climbing Gym Expansion <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/Gripstone-scaled.jpg</td>
+  <td class="col-hint">indoor rock climbing gym with climbing walls, bouldering area, colorful holds on tall wall, warehouse conversion interior</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/indoor+climbing+gym+bouldering+wall/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/indoor-climbing-gym-bouldering-wall.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/indoor+climbing+gym+wall/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">pge-birds-landing.md</td>
+  <td class="col-title">PG&E Birds Landing Anchor Tower Foundation <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/tower-fdn.jpg</td>
+  <td class="col-hint">high voltage power transmission tower base and concrete foundation at grade, drilled pier foundation for utility tower, lattice tower footing</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/power+transmission+tower+foundation+concrete/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/transmission-tower-foundation-concrete-base.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/power+tower+foundation+utility/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">sasquatch-cookies.md</td>
+  <td class="col-title">Sasquatch Cookies <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/sasquatch-scaled.jpg</td>
+  <td class="col-hint">small retail storefront or bakery exterior, commercial tenant improvement, cozy local shop facade with signage</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/small+retail+storefront+bakery+exterior/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/small-retail-bakery-storefront-exterior.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/retail+storefront+small+business/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr class="shared">
+  <td class="col-file">tejon-addition.md</td>
+  <td class="col-title">Tejon Addition, Colorado Springs <span class="badge-shared">SHARED</span> <span style="color:#666;font-size:.7rem">(reusing vaulted-ceil.jpg)</span></td>
+  <td class="col-dest">/projects/tejon-addition.jpg</td>
+  <td class="col-hint">residential addition exterior showing new room bump-out, or interior of room addition with new framing visible, Colorado Springs neighborhood home</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/residential+addition+home+room+exterior/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/residential-room-addition-exterior-colorado.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/home+addition+exterior+residential/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">windflower-addition.md</td>
+  <td class="col-title">Windflower Addition <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/outdoor-fireplace.jpg</td>
+  <td class="col-hint">outdoor patio fireplace built into stucco or stone wall, covered patio with masonry fireplace, Colorado outdoor living</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/outdoor+patio+fireplace+masonry+stone/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/outdoor-fireplace-patio-stone-masonry.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/outdoor+fireplace+patio+stone/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+  SERVICES
+════════════════════════════════════════ -->
+<div class="group">
+<div class="group-title">Services — content/services/ → static/services/</div>
+<table>
+<tbody>
+
+<tr class="missing">
+  <td class="col-file">adaptive-reuse.md</td>
+  <td class="col-title">Adaptive Reuse (service tile) <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/services/adaptive-reuse.jpg</td>
+  <td class="col-hint">dramatic before/after of industrial building converted to modern use, old brick factory with new glass entry, warehouse loft in progress</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/old+brick+building+modern+renovation+adaptive+reuse/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/industrial-building-adaptive-reuse-renovation.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/industrial-building-renovation-loft" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">colorado.md</td>
+  <td class="col-title">Colorado (service tile / geography) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/pexels-pixabay-221502.jpg</td>
+  <td class="col-hint">Pikes Peak with city or plains in foreground, Colorado mountain skyline, Garden of the Gods with buildings</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/pikes+peak+colorado+springs+aerial/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/pikes-peak-colorado-springs-aerial.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/pikes-peak-colorado-springs" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">commercial-building-design.md</td>
+  <td class="col-title">Commercial Building Design (service tile) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/8218807713_d7057c23e6_4k.jpg</td>
+  <td class="col-hint">dramatic upward angle of modern commercial building facade, glass and steel office building exterior, contemporary commercial architecture</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/modern+commercial+office+building+glass+steel/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/modern-commercial-building-glass-facade.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/commercial-building-glass-facade" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr class="missing">
+  <td class="col-file">construction-administration.md</td>
+  <td class="col-title">Construction Administration (service tile) <span class="badge-missing">MISSING</span></td>
+  <td class="col-dest">/services/construction-administration.jpg</td>
+  <td class="col-hint">engineer with hard hat and vest on active job site with framing or steel structure visible behind them, site observation visit</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/engineer+hard+hat+construction+site+observation/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/engineer-site-observation-hard-hat-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/construction+site+engineer+inspection/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">consultation.md</td>
+  <td class="col-title">Consultation (service tile) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/note-scaled.jpg</td>
+  <td class="col-hint">notepad and pen on desk beside blueprints or laptop, early planning session, handwritten notes and technical drawings together</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/notepad+blueprints+planning+desk/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/notepad-blueprints-planning-engineering-desk.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/notepad-blueprints-desk" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">expert-witness.md</td>
+  <td class="col-title">Expert Witness (service tile) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/gavel-scaled.jpg</td>
+  <td class="col-hint">gavel on wood surface, legal scales of justice, courtroom setting — clean and authoritative</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/gavel+legal+justice+law+court/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/gavel-law-justice-court.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/gavel-legal" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">forensic.md</td>
+  <td class="col-title">Forensic (service tile) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/forensic.jpg</td>
+  <td class="col-hint">cracked plaster or concrete wall, masonry deterioration, water staining on structural element — damage not people</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/cracked+concrete+wall+structural+damage/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/cracked-wall-concrete-structural-damage.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/cracked+wall+structural+damage/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">temporary-structures.md</td>
+  <td class="col-title">Temporary Structures and Construction Support (service tile) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/services/temp-structures-scaled.jpg</td>
+  <td class="col-hint">scaffolding system or shoring towers on construction site, temporary support frames, formwork shoring</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/scaffolding+shoring+construction+support/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/scaffolding-construction-shoring-temporary.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/scaffolding+construction+shoring/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+  MATERIALS
+════════════════════════════════════════ -->
+<div class="group">
+<div class="group-title">Materials — content/materials/ → static/materials/</div>
+<table>
+<tbody>
+
+<tr>
+  <td class="col-file">brick-masonry.md</td>
+  <td class="col-title">Brick Masonry <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/brick-masonry.jpg</td>
+  <td class="col-hint">close-up of red brick wall with tight mortar joints, running bond pattern, new masonry construction</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/red+brick+wall+mortar+close+up/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/red-brick-wall-mortar-joints.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/brick+wall+masonry+close/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">cast-in-place-concrete.md</td>
+  <td class="col-title">Cast-in-Place Concrete <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/cast-in-place.jpg</td>
+  <td class="col-hint">concrete being poured from chute into wall forms, workers with vibrator during pour, concrete walls with formwork tie holes</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/concrete+pour+formwork+wall+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/concrete-pour-wall-formwork-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/concrete+pour+formwork/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">cfs.md</td>
+  <td class="col-title">Cold-Formed Steel <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/alt-cfs.jpg</td>
+  <td class="col-hint">light gauge steel framing (studs and tracks) in a wall or floor assembly, CFS stud wall with metal tracks, light metal framing for interior</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/light+gauge+steel+framing+studs+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/cold-formed-steel-framing-studs-wall.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/steel+stud+framing+light+gauge/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">cmu-block.md</td>
+  <td class="col-title">Concrete Masonry Unit (CMU) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/cmu-block.jpg</td>
+  <td class="col-hint">CMU block wall being laid, grey concrete block with open cores, mason laying concrete block with mortar, CMU construction in progress</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/cmu+concrete+block+wall+construction/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/concrete-block-cmu-wall-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/concrete+block+wall+cmu/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">concrete-over-deck.md</td>
+  <td class="col-title">Concrete over Metal Deck <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/concrete-decking.jpg</td>
+  <td class="col-hint">corrugated metal deck with concrete being poured on top, composite deck construction, welded wire mesh on metal deck before pour</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/metal+deck+concrete+pour+composite+floor/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/metal-deck-concrete-pour-composite-floor.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/metal+deck+concrete+floor/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">engineered-wood.md</td>
+  <td class="col-title">Engineered Wood Products (LVL, I-Joists) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/engineered-wood.jpg</td>
+  <td class="col-hint">LVL beam or wood I-joist floor framing, engineered lumber in residential construction, parallel strand lumber beam</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/LVL+beam+engineered+wood+floor+joist/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/engineered-wood-lvl-beam-floor-joist.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/engineered+wood+floor+joist+lvl/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">existing-materials.md</td>
+  <td class="col-title">Existing Materials (mass stone, full-size lumber) <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/mass-stone.jpg</td>
+  <td class="col-hint">rubble stone foundation wall in old building, massive stone masonry, historic thick stone wall in basement or renovation</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/stone+masonry+rubble+old+foundation+wall/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/rubble-stone-foundation-wall-historic.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/stone+wall+rubble+masonry+foundation/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">metal-decking.md</td>
+  <td class="col-title">Metal Decking <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/metal-decking.jpg</td>
+  <td class="col-hint">bare corrugated metal deck (no concrete yet) on steel joists, looking across the ribbed steel deck of a floor or roof before pour</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/corrugated+metal+deck+steel+joists+building/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/corrugated-metal-decking-steel-joists.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/metal+decking+corrugated+steel/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">owsj.md</td>
+  <td class="col-title">Open Web Steel Joists <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/owsj.jpg</td>
+  <td class="col-hint">row of open web steel joists spanning between beams, triangulated steel web pattern, warehouse or commercial roof framing from below</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/open+web+steel+joist+roof+framing/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/open-web-steel-joist-roof-framing.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/steel+joist+open+web+framing/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">precast-concrete.md</td>
+  <td class="col-title">Precast Concrete <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/precast-concrete.jpg</td>
+  <td class="col-hint">precast concrete wall panel being lifted by crane on site, stack of precast hollow-core planks, tilt-up or precast panel erection</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/precast+concrete+panel+crane+lifting/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/precast-concrete-panel-crane-installation.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/precast+concrete+panel+crane/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">shotcrete.md</td>
+  <td class="col-title">Shotcrete <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/shotcrete.jpg</td>
+  <td class="col-hint">worker spraying shotcrete onto rebar-covered slope or retaining wall, pneumatic concrete spray application, tunnel or slope stabilization</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/shotcrete+spray+concrete+application+rebar/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/shotcrete-spray-concrete-application.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/shotcrete+spray+concrete/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">steel-framing.md</td>
+  <td class="col-title">Steel Framing <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/steel-framing.jpg</td>
+  <td class="col-hint">structural steel frame of building under construction, wide flange beams and columns, ironworker connecting steel members, steel skeleton of building</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/structural+steel+frame+building+ironworker/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/structural-steel-frame-building-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/structural+steel+frame+building/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">timber-framing.md</td>
+  <td class="col-title">Timber Framing <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/materials/timber-framing.jpg</td>
+  <td class="col-hint">heavy timber frame with mortise and tenon joinery, large exposed timber beams and columns, post and beam structure, barn raising style</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/heavy+timber+frame+post+beam+structure/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/heavy-timber-frame-post-beam-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/timber-frame-heavy-post-beam" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">reinforced-masonry.md</td>
+  <td class="col-title">Reinforced Masonry <span class="badge-shared">SHARED</span> <span style="color:#666;font-size:.7rem">(reusing masonry.jpg)</span></td>
+  <td class="col-dest">/materials/reinforced-masonry.jpg</td>
+  <td class="col-hint">rebar visible in CMU block cells before grouting, vertical rebar in block wall cores, grouting CMU wall cores with concrete</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/rebar+cmu+block+wall+grout+cores/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/reinforced-masonry-cmu-rebar-grout.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-pixabay" href="https://pixabay.com/images/search/reinforced+masonry+rebar+block/" target="_blank">Pixabay</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+  LANDING PAGES
+════════════════════════════════════════ -->
+<div class="group">
+<div class="group-title">Landing Pages — content/*.md → static/projects/ or static/services/</div>
+<table>
+<tbody>
+
+<tr class="shared">
+  <td class="col-file">residential-structural-engineering.md</td>
+  <td class="col-title">Residential Structural Engineering Colorado Springs <span class="badge-shared">SHARED</span> <span style="color:#666;font-size:.7rem">(reusing vaulted-ceil.jpg)</span></td>
+  <td class="col-dest">/services/residential-structural.jpg</td>
+  <td class="col-hint">Colorado Springs residential neighborhood, single-family home exterior in Front Range setting, Pikes Peak backdrop with houses</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/colorado+springs+residential+neighborhood+homes/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/colorado-springs-residential-neighborhood-homes.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/colorado-springs-homes-residential" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">structural-engineer-california.md</td>
+  <td class="col-title">Structural Engineer California <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/birds-landing-1.jpg</td>
+  <td class="col-hint">California coastal construction, San Francisco or Sacramento buildings, California urban development, seismic retrofit work</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/california+urban+building+construction+san+francisco/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/california-urban-building-construction.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/california-urban-construction" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="col-file">structural-engineer-colorado-springs.md</td>
+  <td class="col-title">Structural Engineer Colorado Springs <span class="badge-ok">HAS IMAGE</span></td>
+  <td class="col-dest">/projects/gripstone-1.jpg</td>
+  <td class="col-hint">Colorado Springs skyline or Pikes Peak with construction or commercial building in foreground, downtown CS aerial</td>
+  <td class="col-links">
+    <a class="btn btn-pexels" href="https://www.pexels.com/search/colorado+springs+downtown+pikes+peak+skyline/" target="_blank">Pexels</a>
+    <a class="btn btn-dreamstime" href="https://www.dreamstime.com/photos-images/colorado-springs-downtown-pikes-peak.html" target="_blank">Dreamstime</a>
+    <a class="btn btn-unsplash" href="https://unsplash.com/s/photos/colorado-springs-pikes-peak-downtown" target="_blank">Unsplash</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<p style="color:#555;font-size:.75rem;margin-top:3rem;padding-top:1rem;border-top:1px solid #2a3a4a;">
+  Frontier Structural Engineering — internal use only · content-pic-search.html
+</p>
+</body>
+</html>
