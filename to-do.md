@@ -1,4 +1,8 @@
 # To-Do
+- titleblock shows 2 cta call buttons, update for responsive keep 1 for wide, 1 for mobile\
+- 'click for more' on hover cm sec title
+- conc over mtl deck tag should be 'concrete'
+- change cmu tag in cm md's to 'masonry'
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
