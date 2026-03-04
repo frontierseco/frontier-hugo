@@ -1,16 +1,16 @@
 # To-Do
-- remove 'articles' tag on card in main pg and art list pg
-- 2 lines of body preview in cards, 4 lines featured article
-- cm sec: remove gap between cards in slider
-- map pic link to this exact zoom and location: https://www.google.com/maps/place/Frontier+Structural+Engineering/@38.8374101,-104.8310174,15.83z/data=!3m1!5s0x87134535977722e9:0x2eeed356e5fa0f58!4m14!1m7!3m6!1s0x871345c81e92ff17:0xdde365fd7484e2f8!2sFrontier+Structural+Engineering!8m2!3d38.8419661!4d-104.8243886!16s%2Fg%2F11k3ml1rqy!3m5!1s0x871345c81e92ff17:0xdde365fd7484e2f8!8m2!3d38.8419661!4d-104.8243886!16s%2Fg%2F11k3ml1rqy?hl=en&entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D
-- make cta-top.md a list of slogans citing experience and empathy, a new slogan cta shows up every time it appears, remove em- and put call & # in new line
-- create static html my use only of all content wether or not it already has a pic
 
 ## Backlog
 - [ ] Turn on SEO skill, do deep SEO
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
 
 ## Done
+- [x] Remove 'articles' tag on cards (main page & articles list page)
+- [x] 2 lines body preview in cards, 4 lines in featured article
+- [x] CM section: remove gap between cards in slider
+- [x] Map pic: link to exact Frontier SE Google Maps zoom/location
+- [x] cta-top: rotating slogans (experience & empathy), phone on new line, no em-dashes
+- [x] /all-content/ internal page listing all articles, projects, services, materials (noindex)
 - [x] Header: ☎ white phone symbol, logo + nav truly centered (3-column flex)
 - [x] CTA phone: ☎ symbol added to cta.toml button text (white on orange button)
 - [x] Map: CTA box 50% wider (570px), still floats over map; map height 380→520px; responsive full-width on mobile
