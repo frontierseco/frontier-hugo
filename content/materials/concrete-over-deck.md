@@ -2,8 +2,8 @@
 title: "Concrete over Metal Deck"
 date: 2022-10-14
 weight: 14
-thumbnail: "/materials/concrete-over-deck.jpg"
-tags: ["Steel"]
+thumbnail: "/materials/concrete-decking.jpg"
+tags: ["Concrete","Steel"]
 categories: ["Construction"]
 summary: "Composite concrete-over-deck floor systems combine the speed of steel erection with the stiffness and mass of a concrete slab: the standard floor system for most commercial steel buildings."
 ---
