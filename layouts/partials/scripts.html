@@ -56,6 +56,14 @@
     hero?.addEventListener('mouseenter', () => clearInterval(autoplay));
     hero?.addEventListener('mouseleave', startAuto);
     startAuto();
+
+    /* ── Touch swipe for mobile hero ── */
+    let heroTouchX = 0;
+    hero?.addEventListener('touchstart', e => { heroTouchX = e.touches[0].clientX; }, { passive: true });
+    hero?.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - heroTouchX;
+      if (Math.abs(dx) > 50) { goTo(cur + (dx < 0 ? 1 : -1)); startAuto(); }
+    }, { passive: true });
   }
 
   /* ── Lazy background images (defined early so carousel clones can use it) ── */

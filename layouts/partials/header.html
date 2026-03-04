@@ -22,7 +22,12 @@
       <a href="tel:7192472928" style="text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:white;background:#F05336;padding:.5rem 1rem;display:inline-flex;align-items:center;gap:.4rem;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">&#9742; 719 247-2928</a>
     </div>
 
-    <button id="mobile-btn" class="md:hidden p-2 ml-auto border-0 bg-transparent cursor-pointer" aria-label="Menu" aria-expanded="false">
+    <!-- Mobile: logo -->
+    <a href="/" class="md:hidden flex-1" style="line-height:0;">
+      <img src="{{ .Site.Params.logoURL }}" alt="Frontier Structural Engineering" style="height:44px;width:auto;display:block;">
+    </a>
+
+    <button id="mobile-btn" class="md:hidden p-2 border-0 bg-transparent cursor-pointer" aria-label="Menu" aria-expanded="false">
       <svg width="24" height="24" fill="none" stroke="#1a1a1a" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
