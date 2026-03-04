@@ -1,7 +1,7 @@
 ---
 title: "Engineering Expertise in the Courtroom: Expert Witness Services"
 date: 2025-11-21
-featured: false
+featured: true
 categories: ["Articles"]
 thumbnail: "/services/expert-witness.jpg"
 summary: "Structural disputes, including construction defects, property damage claims, and personal injury cases involving building failures, require technical expertise that attorneys, judges, and juries can understand. That's what an engineering expert witness provides."
