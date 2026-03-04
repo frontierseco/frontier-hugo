@@ -1,6 +1,6 @@
 ---
 title: "Engineering Expertise in the Courtroom: Expert Witness Services"
-date: 2026-06-12
+date: 2025-11-21
 featured: false
 categories: ["Articles"]
 thumbnail: "/services/expert-witness.jpg"

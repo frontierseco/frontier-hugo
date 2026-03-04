@@ -1,6 +1,6 @@
 ---
 title: "Post-Tensioned Slabs: What Architects Need to Know Before Design Begins"
-date: 2026-11-09
+date: 2026-04-20
 featured: false
 categories: ["Articles"]
 summary: "Post-tensioned concrete offers real advantages in span, depth, and cost, but it comes with constraints that need to be understood at the start of design, not the end."

@@ -1,6 +1,6 @@
 ---
 title: "Timber vs. Steel vs. Concrete: A Structural Engineer's Honest Take"
-date: 2027-02-08
+date: 2026-07-20
 featured: false
 categories: ["Articles"]
 summary: "There's no universally best structural material. Each system has genuine strengths and real limitations, and the right choice depends on span, height, site, schedule, and who's building it."

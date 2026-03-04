@@ -1,6 +1,6 @@
 ---
 title: "How Design-Build Changes the Structural Engineer's Role"
-date: 2027-01-19
+date: 2026-06-30
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/design-build-se-role.jpg"

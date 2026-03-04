@@ -1,6 +1,6 @@
 ---
 title: "The Value of Early Engineering Consultation"
-date: 2026-01-30
+date: 2025-07-09
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/consultation.jpg"

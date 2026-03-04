@@ -1,6 +1,6 @@
 ---
 title: "Uncovering the Truth: Forensic Structural Engineering"
-date: 2026-04-13
+date: 2025-09-22
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/forensic.jpg"

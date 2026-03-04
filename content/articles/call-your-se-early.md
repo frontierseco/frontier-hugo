@@ -1,6 +1,6 @@
 ---
 title: "Call Your SE at Schematic Design, Not at Permit"
-date: 2026-07-27
+date: 2026-01-05
 featured: true
 categories: ["Articles"]
 thumbnail: "/articles/call-your-se-early.jpg"

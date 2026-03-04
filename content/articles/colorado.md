@@ -1,6 +1,6 @@
 ---
 title: "Engineering Colorado's Future: Structural Design for a Growing State"
-date: 2026-01-15
+date: 2025-06-24
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/colorado.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Structural Engineering Terms: A Plain-Language Glossary"
-date: 2026-09-29
+date: 2026-03-10
 featured: false
 categories: ["Articles"]
 summary: "Clear definitions of the structural engineering terms that come up most often in conversations between engineers, architects, contractors, and building owners."

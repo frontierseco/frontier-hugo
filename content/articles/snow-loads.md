@@ -1,6 +1,6 @@
 ---
 title: "Snow Drift, Unbalanced Load, and Sliding Snow: The Roof Loading Risks Most Architects Miss"
-date: 2026-12-21
+date: 2026-06-01
 featured: false
 categories: ["Articles"]
 summary: "Flat ground snow load is only the beginning. The localized conditions that cause real structural problems (drifts, sliding accumulations, ponding) require specific attention from both architect and engineer."

@@ -1,6 +1,6 @@
 ---
 title: "Keeping Projects on Track: The Role of Construction Administration"
-date: 2026-03-23
+date: 2025-09-01
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/construction-administration.jpg"

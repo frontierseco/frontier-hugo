@@ -1,6 +1,6 @@
 ---
 title: "Forensic Structural Engineering: When You Need an Expert and What to Expect"
-date: 2026-02-11
+date: 2025-07-21
 featured: true
 categories: ["Articles"]
 thumbnail: "/articles/forensic-structural.jpg"
