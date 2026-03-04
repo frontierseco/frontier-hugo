@@ -39,3 +39,9 @@ Flat or low-slope roofs that accumulate snow can also accumulate meltwater, part
 None of these conditions are exotic. They show up on standard commercial and institutional projects throughout Colorado and other high-snow states. The architect who understands them can shape roof geometry to reduce drift fetch, locate mechanical equipment thoughtfully, and position entries outside slide zones. The contractor who understands them knows what to watch for during construction and operation.
 
 Snow loads reward early coordination between architect and engineer. The alternative is designing to a single map value and hoping the winter cooperates.
+
+---
+
+**Related Articles:**
+- [Lateral Systems: Wind, Seismic, and the Structural Spine of Every Building](/articles/lateral-systems/) — How horizontal loads from wind and earthquakes are resisted, and why lateral design is a design conversation as much as an engineering one.
+- [Structural Surprises and Their Cost](/articles/structural-surprises-cost/) — What happens when structural conditions discovered late in a project drive up costs.

@@ -1,7 +1,7 @@
 ---
 title: "From Concept to Construction: Commercial Building Design at Frontier"
 date: 2026-02-01
-featured: false
+featured: true
 categories: ["Articles"]
 thumbnail: "/articles/commercial-building-design.jpg"
 summary: "Commercial buildings carry more than loads. They carry the expectations of owners, the ambitions of architects, the schedules of contractors, and the daily lives of the people who work and gather inside them. Frontier designs with all of that in mind."
@@ -30,3 +30,9 @@ Frontier's commercial design work spans a wide range of structural materials: st
 Our work includes restaurants, retail, mixed-use, office, industrial, recreation, and institutional buildings across Colorado and neighboring states. We understand the local codes, the local soils, and the local expectations, and we bring that knowledge to every project.
 
 Reach out to discuss your commercial building project.
+
+---
+
+**Related Articles:**
+- [Construction Administration: Why the Engineer Should Stay Involved](/articles/construction-administration/) — What CA actually covers and why skipping it often costs more than it saves.
+- [Lateral Systems: Wind, Seismic, and the Structural Spine of Every Building](/articles/lateral-systems/) — How lateral resistance is designed into commercial buildings.

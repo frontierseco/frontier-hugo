@@ -41,3 +41,9 @@ Ignoring expansive soils, or designing to conventional spread footings when expa
 The SE can't make good foundation recommendations without geotechnical data. A geotechnical investigation (test borings, lab testing, and a written report) provides the information needed to select and design the foundation system. Investing in a geotech report early in design is almost always worth it. The cost of the investigation is small relative to the cost of a foundation redesign discovered at permit or, worse, a foundation failure discovered after construction.
 
 Get the soils report early. Design the foundation to match what the soils actually are.
+
+---
+
+**Related Articles:**
+- [Do I Need a Structural Engineer?](/articles/do-i-need-a-structural-engineer/) — Including when foundation concerns warrant a professional evaluation.
+- [Structural Surprises and Their Cost](/articles/structural-surprises-cost/) — How unexpected foundation conditions drive project costs.
