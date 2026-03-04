@@ -12,6 +12,8 @@ Understanding lateral systems is not about becoming a structural engineer. It's 
 
 ## Why Lateral Systems Matter to Architects
 
+The location of shear walls and moment frames directly determines where you can and cannot have open space, large glazing, or flexible floor plans — making lateral system placement an architectural decision as much as a structural one.
+
 A building under lateral load (wind pressure, seismic ground motion) behaves like a cantilevered column fixed at its base. The base is the foundation; the "column" is the building. Forces at the top of the building (wind) or distributed throughout its height (seismic) must be transferred through the floor and roof diaphragms to the vertical elements that resist them, and then carried down to the foundations.
 
 Those vertical elements (shear walls, moment frames, braced frames) are the lateral system. They need to be:

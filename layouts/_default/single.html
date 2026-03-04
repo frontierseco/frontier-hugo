@@ -1,4 +1,26 @@
 {{ define "main" }}
+
+{{- if .Params.faqs }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $faq := .Params.faqs }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $faq.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $faq.a | jsonify }}
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
+
 <article style="padding:4rem 1.5rem; background:white;">
   <div class="prose mx-auto">
 
@@ -18,7 +40,7 @@
     </h1>
 
     <p style="color:#888;font-size:.85rem;margin:0 0 2rem;">
-      {{ .Date.Format "January 2, 2006" }}
+      {{ .Date.Format "January 2, 2006" }}{{- if .Params.author }} &nbsp;·&nbsp; {{ .Params.author }}{{- end }}
     </p>
 
     <div style="color:#333;line-height:1.8;font-size:1.05rem;">

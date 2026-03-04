@@ -11,6 +11,8 @@ Commercial buildings carry more than loads. They carry the expectations of owner
 
 ## The Structural Design Process
 
+Commercial structural design advances through three phases — schematic, design development, and construction documents — with each phase locking in decisions that the next phase builds on.
+
 Good commercial building design doesn't happen all at once. It evolves through a sequence of increasingly refined decisions.
 
 **Schematic Phase:** We establish the structural concept: the framing strategy, the lateral system, the foundation approach. This is where big decisions get made, and we make them with full awareness of what they mean for cost, schedule, and architectural flexibility.

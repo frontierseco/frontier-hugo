@@ -13,6 +13,8 @@ It doesn't have to work that way.
 
 ## What Early SE Involvement Actually Looks Like
 
+Bringing a structural engineer in at schematic design means structural constraints are identified before they become change orders — the span question gets answered before the floor plan is committed, not after.
+
 At schematic design, a structural engineer isn't producing stamped drawings. They're answering questions like:
 
 - Can this floor plate span the way you've drawn it, or do we need a transfer beam?

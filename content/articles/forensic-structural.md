@@ -5,11 +5,24 @@ featured: true
 categories: ["Articles"]
 thumbnail: "/articles/forensic-structural.jpg"
 summary: "Forensic structural engineering investigates failures, distress, and disputes. Understanding when to engage a forensic SE, and what the process involves, helps owners, contractors, and attorneys use the service effectively."
+faqs:
+  - q: "What does a forensic structural engineer do?"
+    a: "A forensic structural engineer investigates structural failures, distress, and disputes. They evaluate the cause of cracking, settlement, collapse, or construction defects, document their findings, and produce written reports. They may also serve as expert witnesses in litigation."
+  - q: "When do I need a forensic structural engineer?"
+    a: "You need a forensic structural engineer when a building shows signs of structural distress (foundation cracks, wall movement, floor sag), when a structure has partially or fully failed, when a construction dispute requires independent technical evidence, or when you are involved in litigation related to a building failure."
+  - q: "How much does a forensic structural engineering investigation cost?"
+    a: "Forensic investigation fees depend on the scope and complexity of the case. A limited site visit and report for a residential property may run a few thousand dollars. Complex litigation support involving multiple site visits, testing, and expert reports will be substantially more."
+  - q: "Can a forensic structural engineer serve as an expert witness?"
+    a: "Yes. Forensic structural engineers who are licensed PEs are qualified to serve as expert witnesses in construction litigation, arbitration, and insurance disputes. Their role is to provide objective, technically sound opinions based on physical evidence and engineering analysis."
+  - q: "What is the difference between a forensic structural engineer and a home inspector?"
+    a: "A home inspector identifies observable deficiencies but is not licensed to determine structural adequacy or root causes. A forensic structural engineer is a licensed PE who performs engineering analysis, identifies root causes, and provides opinions that hold up to technical and legal scrutiny."
 ---
 
 Forensic structural engineering is investigation work. When a building exhibits distress, a structure partially or fully fails, or a construction dispute requires technical evidence, a forensic structural engineer evaluates the condition, identifies the cause, and documents the findings. The work requires the same engineering knowledge as design, plus a different set of skills in documentation, objective analysis, and communication.
 
 ## When Forensic Structural Engineering Is Needed
+
+A forensic structural engineer is needed when the cause of structural distress, failure, or a construction dispute requires independent, licensed engineering analysis — not just observation.
 
 **Structural distress.** Cracks in concrete or masonry, deflections that exceed expected values, settlement that appears non-uniform, or any condition where the structural behavior of a building is in question may warrant forensic investigation. The investigation determines whether the distress is cosmetic (common in concrete and masonry due to normal shrinkage and temperature movement) or structurally significant.
 
@@ -38,6 +51,22 @@ If you're an owner with a structural concern, engage the forensic SE before the 
 If you're an attorney or contractor involved in a dispute, engage the forensic SE early enough that the investigation can be thorough. Last-minute retention before a deadline produces reports that are thinner than they should be.
 
 A forensic structural engineer who is qualified in the structural system in question, communicates clearly, and maintains objectivity is a valuable technical resource. The goal of forensic work is to find out what happened and to document it in a way that holds up to scrutiny.
+
+---
+
+## Frequently Asked Questions
+
+**What does a forensic structural engineer do?**
+A forensic structural engineer investigates structural failures, distress, and disputes — evaluating the cause of cracking, settlement, collapse, or construction defects. They document findings in written reports and may serve as expert witnesses in litigation.
+
+**When do I need a forensic structural engineer?**
+When a building shows structural distress, when a structure has partially or fully failed, when a construction dispute requires independent technical evidence, or when you are involved in litigation related to a building failure.
+
+**What is the difference between a forensic SE and a home inspector?**
+A home inspector identifies observable deficiencies but is not licensed to determine structural adequacy or root causes. A forensic structural engineer is a licensed PE who performs engineering analysis and provides opinions that hold up to technical and legal scrutiny.
+
+**Can a forensic structural engineer serve as an expert witness?**
+Yes. Licensed PE forensic engineers are qualified to provide expert witness testimony in construction litigation, arbitration, and insurance disputes.
 
 ---
 

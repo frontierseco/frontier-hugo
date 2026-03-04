@@ -10,11 +10,13 @@ Snow load design in mountain states comes with a number of subtleties that don't
 
 ## Ground Snow Load Is Not the Roof Snow Load
 
-ASCE 7 and the IBC convert ground snow load to a roof snow load using factors for slope, exposure, and thermal conditions. A well-exposed commercial roof in Colorado might see a significant reduction from the ground snow value. But that reduction doesn't apply everywhere, and applying it incorrectly can produce a non-conservative design.
+Ground snow load is not the design value for roofs — ASCE 7 converts it using slope, exposure, and thermal factors that can reduce or amplify the actual roof load significantly. ASCE 7 and the IBC convert ground snow load to a roof snow load using factors for slope, exposure, and thermal conditions. A well-exposed commercial roof in Colorado might see a significant reduction from the ground snow value. But that reduction doesn't apply everywhere, and applying it incorrectly can produce a non-conservative design.
 
 In areas with regular drifting, common in mountain communities and high plains locations, the exposure factor may not be appropriate if the building is in a sheltered location or surrounded by terrain that concentrates drift. An engineer who knows the local conditions can make this judgment. One who just applies the table value may not.
 
 ## Drift Loading: Where the Real Numbers Are
+
+Snow drift loads are the governing roof load case on most Colorado mountain buildings, often 2–3× the balanced snow value and concentrated over a limited area.
 
 Snow drift loads are the governing case on many roofs, higher in magnitude than the balanced load and concentrated over a limited area. Drift accumulates:
 
