@@ -317,7 +317,8 @@
     <p style="color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.65;margin:0 0 1.4rem;">
       {{ .body }}
     </p>
-    <a href="{{ .button_link }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;padding:.8rem 2.25rem;text-decoration:none;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">
+    <style>#map-cta-btn:hover{background:#d94020!important}</style>
+    <a id="map-cta-btn" href="{{ .button_link | safeURL }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;padding:.8rem 2.25rem;text-decoration:none;">
       {{ .button_text }}
     </a>
   </div>
