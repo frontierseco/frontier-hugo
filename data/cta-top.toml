@@ -1,7 +1,25 @@
-# ─────────────────────────────────────────────
-# Single-line banner shown above the photo on every article.
-# Edit text and link here — updates all posts instantly.
-# ─────────────────────────────────────────────
-
-text = "Experience matters, 20 yrs Colorado & California — call 719 247-2928"
 link = "tel:7192472928"
+
+[[slogans]]
+line1 = "20 years of Colorado and California structural experience"
+line2 = "Call 719 247-2928"
+
+[[slogans]]
+line1 = "We listen first, design second"
+line2 = "Call 719 247-2928"
+
+[[slogans]]
+line1 = "Your project, your vision, our expertise"
+line2 = "Call 719 247-2928"
+
+[[slogans]]
+line1 = "Engineers who understand what you are building and why"
+line2 = "Call 719 247-2928"
+
+[[slogans]]
+line1 = "Decades of experience, built on empathy for every client"
+line2 = "Call 719 247-2928"
+
+[[slogans]]
+line1 = "Trusted structural partners for architects and contractors across Colorado"
+line2 = "Call 719 247-2928"

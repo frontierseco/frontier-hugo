@@ -1,5 +1,15 @@
 {{ with index .Site.Data "cta-top" }}
-<a href="{{ .link }}" style="display:block;background:#024EA4;color:white;text-align:center;font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:.65rem 1rem;margin-bottom:2rem;" onmouseover="this.style.background='#013a7a'" onmouseout="this.style.background='#024EA4'">
-  {{ .text }}
+{{ if .slogans }}
+<a href="{{ .link }}" id="cta-top-bar" style="display:block;background:#024EA4;color:white;text-align:center;font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:.65rem 1rem;margin-bottom:2rem;line-height:1.6;" onmouseover="this.style.background='#013a7a'" onmouseout="this.style.background='#024EA4'">
+  <span id="cta-top-line1"></span><br><span id="cta-top-line2"></span>
 </a>
+<script>
+(function(){
+  var slogans = {{ .slogans | jsonify }};
+  var s = slogans[Math.floor(Math.random() * slogans.length)];
+  document.getElementById('cta-top-line1').textContent = s.line1;
+  document.getElementById('cta-top-line2').textContent = s.line2;
+})();
+</script>
+{{ end }}
 {{ end }}
