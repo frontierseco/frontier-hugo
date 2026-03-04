@@ -1,6 +1,6 @@
 ---
 title: "A Solid Platform: Better resources, sharper focus, new fire."
-date: 2023-04-01
+date: 2023-04-14
 featured: false
 categories: ["Articles"]
 thumbnail: "/articles/solid-platform-scaled.jpg"

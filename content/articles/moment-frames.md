@@ -1,6 +1,6 @@
 ---
 title: "Unlocking Stunning Views: How Moment Frames Elevate Modern Design"
-date: 2024-11-01
+date: 2024-10-23
 featured: true
 categories: ["Articles"]
 thumbnail: "/articles/moment-frames-scaled.jpg"
