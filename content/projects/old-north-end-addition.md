@@ -1,5 +1,5 @@
 ---
-title: "Tejon Addition"
+title: "Old North End Addition"
 date: 2025-02-01
 categories: ["Residential", "Renovation"]
 location: "Colorado Springs, Colorado"
@@ -10,7 +10,7 @@ summary: "Full-height addition with basement to a Victorian-era home, including 
 
 ## Project Overview
 
-**Location:** Colorado Springs, Colorado
+**Location:** Old North End, Colorado Springs, Colorado
 **Architect:** Compass | TDG Architecture
 **Type:** Residential Addition, Existing Building Interface
 
