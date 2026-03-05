@@ -1,16 +1,16 @@
 # To-Do
-- [x] hero slides: removed auto advance, removed loop, pauses at last frame
 - [ ] video optimization: file is 13MB — needs re-encode (scale 1280px, CRF 28, faststart moov atom) for faster initial load
-- [x] update linkedin in footer to https://www.linkedin.com/company/73937044/
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
-- [ ] About/Team page: engineer name, PE license numbers, photo, ASCE membership (needed for E-E-A-T / AI citations)
 - [ ] Google Business Profile: claim, add address/phone/hours/photos, set "Structural Engineer" category
 - [ ] Google Search Console: verify ownership, submit sitemap
 - [ ] Directory listings: ASCE member profile, ACEC Colorado, Yelp, Angi, BBB (NAP must match schema)
 
 ## Done
+- [x] About/Team page: Jon Talley SE/PE profile, licenses, history, memberships, Person JSON-LD schema at /about/
+- [x] Hero slides: removed auto-advance, removed video loop, pauses at last frame
+- [x] LinkedIn footer URL updated to https://www.linkedin.com/company/73937044/
 - [x] Titleblock: 2 CTA call buttons fixed for responsive — 1 for wide (cta-top bar), 1 for mobile (header ☎ Call)
 - [x] 'click for more' on hover CM section title
 - [x] conc over mtl deck tag changed to 'concrete'
