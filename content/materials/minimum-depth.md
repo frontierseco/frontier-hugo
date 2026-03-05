@@ -2,7 +2,7 @@
 title: "Minimum Depth"
 date: 2022-10-05
 weight: 30
-thumbnail: "/materials/concrete-decking.jpg"
+thumbnail: "/materials/minimum-depth.jpg"
 tags: ["Concrete"]
 categories: ["Construction"]
 summary: "Post-tensioned and reinforced concrete systems allow structural depth to be minimized, unlocking ceiling height and design flexibility."
