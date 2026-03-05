@@ -1,4 +1,7 @@
 # To-Do
+- hero slides remove auto advance, don't loop video, typ pause at last frame
+- check if video is optimized for playing at 10% initial load, typ
+- update linkned in at footer https://www.linkedin.com/company/73937044/
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
