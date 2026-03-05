@@ -1,10 +1,4 @@
 # To-Do
-- titleblock shows 2 cta call buttons, update for responsive keep 1 for wide, 1 for mobile\
-- 'click for more' on hover cm sec title
-- conc over mtl deck tag should be 'concrete'
-- change cmu tag in cm md's to 'masonry'
-- update services md's as individual posts, change description to 'summary', each md to have their own long form writing to open on card click, matching picture.
-- background image lpes in projects section, full height & width, keep orange background and faintly show image behind the cards
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
@@ -14,6 +8,12 @@
 - [ ] Directory listings: ASCE member profile, ACEC Colorado, Yelp, Angi, BBB (NAP must match schema)
 
 ## Done
+- [x] Titleblock: 2 CTA call buttons fixed for responsive — 1 for wide (cta-top bar), 1 for mobile (header ☎ Call)
+- [x] 'click for more' on hover CM section title
+- [x] conc over mtl deck tag changed to 'concrete'
+- [x] CMU material tags changed to 'masonry' (cmu-block, brick-masonry, masonry, reinforced-masonry)
+- [x] Services updated as individual posts: description→summary, long-form body content, link to own page
+- [x] Projects section: LPES.png faint background image (10% opacity) over orange
 - [x] Map image: center on mobile (object-position shift at ≤640px)
 - [x] SEO quick wins: site title, meta description, 4 articles featured, sitemap
 - [x] Landing pages: /structural-engineer-colorado-springs/, /structural-engineer-california/, /residential-structural-engineering/
