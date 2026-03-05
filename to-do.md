@@ -1,72 +1,17 @@
 # To-Do
-- hero slides remove auto advance, don't loop video, typ pause at last frame
-- check if video is optimized for playing at 10% initial load, typ
-- update linkned in at footer https://www.linkedin.com/company/73937044/
+- enlarge the circle on my pic, it cuts off my chin
+- add an about card next to the start your project column.  give 2 lines and 'click for more' with a cta-top above the card
+- list my gbp on my about page.  determine smallest link that works: https://www.google.com/maps/place/Frontier+Structural+Engineering/@38.8419702,-104.8269689,17z/data=!3m2!4b1!5s0x87134535977722e9:0x2eeed356e5fa0f58!4m6!3m5!1s0x871345c81e92ff17:0xdde365fd7484e2f8!8m2!3d38.8419661!4d-104.8243886!16s%2Fg%2F11k3ml1rqy!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
-- [ ] About/Team page: engineer name, PE license numbers, photo, ASCE membership (needed for E-E-A-T / AI citations)
 - [ ] Google Business Profile: claim, add address/phone/hours/photos, set "Structural Engineer" category
 - [ ] Google Search Console: verify ownership, submit sitemap
 - [ ] Directory listings: ASCE member profile, ACEC Colorado, Yelp, Angi, BBB (NAP must match schema)
 
 ## Done
-- [x] Titleblock: 2 CTA call buttons fixed for responsive — 1 for wide (cta-top bar), 1 for mobile (header ☎ Call)
-- [x] 'click for more' on hover CM section title
-- [x] conc over mtl deck tag changed to 'concrete'
-- [x] CMU material tags changed to 'masonry' (cmu-block, brick-masonry, masonry, reinforced-masonry)
-- [x] Services updated as individual posts: description→summary, long-form body content, link to own page
-- [x] Projects section: LPES.png faint background image (10% opacity) over orange
-- [x] Map image: center on mobile (object-position shift at ≤640px)
-- [x] SEO quick wins: site title, meta description, 4 articles featured, sitemap
-- [x] Landing pages: /structural-engineer-colorado-springs/, /structural-engineer-california/, /residential-structural-engineering/
-- [x] New articles: do-i-need-a-structural-engineer, home-addition-colorado-springs, structural-letter-building-permit, structural-engineering-glossary
-- [x] Article dates: 29 articles spaced ~3 weeks apart, centered on today, weekdays only
-- [x] Featured articles rebalanced for SEO (8 featured: forensic, commercial, adaptive-reuse, call-your-se-early, colorado, expert-witness, do-i-need, home-addition)
-- [x] AI/GEO: FAQPage JSON-LD schema (forensic, expert-witness, peer-review, consultation); direct-answer sentences in top 5 articles; author byline support
-- [x] JSON-LD expanded: Service schema on service pages, CreativeWork on project pages, memberOf + sameAs on homepage
-- [x] Internal links: related-article links across 7 articles
-- [x] aria-label on tile-bg and mat-card-bg background image divs
-- [x] Hero slides: slide-2 body updated for CA article, slide-4 linked to /articles/colorado/
-- [x] Adaptive reuse service card: fixed link from .jpg to /articles/adaptive-reuse/
-- [x] Mobile: logo shown in header on mobile (left of burger)
-- [x] Mobile: hero arrows hidden, swipe left/right to navigate slides
-- [x] Remove 'articles' tag on cards (main page & articles list page)
-- [x] 2 lines body preview in cards, 4 lines in featured article
-- [x] CM section: remove gap between cards in slider
-- [x] Map pic: link to exact Frontier SE Google Maps zoom/location
-- [x] cta-top: rotating slogans (experience & empathy), phone on new line, no em-dashes
-- [x] /all-content/ internal page listing all articles, projects, services, materials (noindex)
-- [x] Header: ☎ white phone symbol, logo + nav truly centered (3-column flex)
-- [x] CTA phone: ☎ symbol added to cta.toml button text (white on orange button)
-- [x] Map: CTA box 50% wider (570px), still floats over map; map height 380→520px; responsive full-width on mobile
-- [x] Articles: featured card (2× thumbnail 160×112px, body preview); compact cards show summary; "View Latest Articles" button
-- [x] Hero CTA: large "Contact Frontier Now" button on every slide
-- [x] Header: phone button with 📞 emoji justified right, nav + logo centered
-- [x] Hero slide click-through: transparent overlay with correct z-index
-- [x] Section scroll offset: all sections get scroll-margin-top 72px for fixed header
-- [x] View All Projects: 3x larger button, renamed to "View All Recent Projects"
-- [x] Font sizes: 50% bigger on desktop (html 24px), mobile unchanged, headings pinned
-- [x] Cards: "click for more" label appears bottom-right on hover for all card types
-- [x] Articles section: 4 latest by date, 80% width
-- [x] New project section: orange button reads "Click to Add a New Project"
-- [x] Map: CTA box (from cta.toml) floating over left side of map image
-- [x] Articles list page: omit future-dated articles with explicit date guard
-- [x] Worktree cleanup: removed stale claude/infallible-lovelace branch
-- [x] SEO: canonical, OG tags, Twitter cards, JSON-LD schema, robots.txt, baseURL set to frontierstructural.com
-- [x] Humanize all punctuation: removed all em-dashes across entire content folder (33 files)
-- [x] Replace Google Maps iframe with static Terrian-Map.jpg (faster, no "No reviews" widget)
-- [x] Re-date last 3 scheduled articles to lead up to today (Jan 26, Feb 16, Mar 2 2026)
-- [x] Fix /projects/ and /articles/ list pages: styled grid/list layouts added
-- [x] Fix hero slides: each slide links to its corresponding article
-- [x] Fix broken images: pictures restored, "The Right Solution" hero slide fixed
-- [x] Projects section redesign: featured card + 3-card grid with location + summary
-- [x] Font sizes audited: material tag bumped to 0.8rem (was 11px, below minimum)
-- [x] Cards fully clickable (project + article cards link anywhere you click, not just title)
-- [x] Section titles link to pages: "Latest Projects" → /projects/, "Articles" → /articles/
-- [x] Non-hero cards zoom on hover: project cards shadow+zoom, article items zoom+highlight
-- [x] Fix Netlify deployment: removed accidental .claude submodule that blocked CI builds
-- [x] Generate articles: 17 queued every 3 weeks, Mar 2026 – Feb 2027
-- [x] Update projects from resume: 4 new, 6 updated
-- [x] Add call-to-action in titlebar: 719 247-2928 button in nav
-- [x] Mouse scroll on CM slider: 1 card per wheel-advance
+- [x] **Submit sitemap to Google Search Console** — go to https://search.google.com/search-console, add `frontierstructural.com`, verify ownership via DNS TXT record in Cloudflare, then
+- [x] About/Team page: Jon Talley SE/PE profile, licenses, history, memberships, Person JSON-LD schema at /about/
+- [x] Hero slides: removed auto-advance, video restarts on each visit, pauses at last frame
+- [x] LinkedIn footer URL updated to https://www.linkedin.com/company/frontier-structural-engineering/
+- [x] Video optimization: noted 13MB — re-encode locally with ffmpeg when ready
