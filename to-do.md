@@ -1,4 +1,5 @@
 # To-Do
+- pics to zoom 10%: everything but hero.  logo, portrait, map, anything that clicking will follow link 
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
