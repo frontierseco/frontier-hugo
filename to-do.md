@@ -16,4 +16,3 @@
 - [x] Hero slides: removed auto-advance, video restarts on each visit, pauses at last frame
 - [x] LinkedIn footer URL updated to https://www.linkedin.com/company/frontier-structural-engineering/
 - [x] Video optimization: noted 13MB — re-encode locally with ffmpeg when ready
-
