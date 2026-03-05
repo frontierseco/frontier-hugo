@@ -1,5 +1,5 @@
 # To-Do
-- [ ] video optimization: file is 13MB — needs re-encode (scale 1280px, CRF 28, faststart moov atom) for faster initial load
+- [x] video optimization: noted 13MB — re-encode locally with ffmpeg when ready
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext

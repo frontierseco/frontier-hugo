@@ -43,6 +43,8 @@
       slides[cur].classList.add('active');
       dots[cur] && dots[cur].classList.add('active');
       loadSlide((cur + 1) % slides.length);
+      const vid = slides[cur].querySelector('video');
+      if (vid) { vid.currentTime = 0; vid.play(); }
     }
     window.addEventListener('load', () => loadSlide(1));
     document.getElementById('prev-btn')?.addEventListener('click', () => goTo(cur - 1));

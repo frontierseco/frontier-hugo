@@ -8,7 +8,7 @@ enableRobotsTXT = true
   description  = "Frontier Structural Engineering — Colorado Springs structural engineers serving architects, contractors, and homeowners. Commercial design, forensic, expert witness, adaptive reuse."
   logoURL      = "/Colored-Logo.png"
   newProjectURL = "https://frontierseco.erpnext.com/new-project-inquiry?new=1"
-  linkedinURL  = "https://www.linkedin.com/company/73937044/"
+  linkedinURL  = "https://www.linkedin.com/company/frontier-structural-engineering/"
   instagramURL = "https://www.instagram.com/frontierstructuralengineering"
 
 [taxonomies]
