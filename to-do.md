@@ -3,6 +3,7 @@
 - 'click for more' on hover cm sec title
 - conc over mtl deck tag should be 'concrete'
 - change cmu tag in cm md's to 'masonry'
+- update services md's as individual posts, change description to 'summary', each md to have their own long form writing to open on card click, matching picture.
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
