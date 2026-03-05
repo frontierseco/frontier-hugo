@@ -2,7 +2,7 @@
 title: "Adaptive Reuse"
 weight: 8
 bgColor: "#2a1c10"
-thumbnail: "/articles/adaptive-reuse.jpg"
+thumbnail: "/services/adaptive-reuse.jpg"
 summary: "Breathe new life into existing structures: transition older properties into modern, functional spaces with full structural support."
 ---
 
