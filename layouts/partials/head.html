@@ -255,6 +255,18 @@
   /* Scroll offset for all sections (accounts for fixed header) */
   #services, #projects, #materials, #articles, #about, #contact { scroll-margin-top: 72px; }
 
+  /* Projects section: faint full-bleed background image over orange */
+  #projects { position: relative; overflow: hidden; }
+  #projects::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url('/LPES.png') center/cover no-repeat;
+    opacity: 0.10;
+    z-index: 0;
+    pointer-events: none;
+  }
+  #projects > div { position: relative; z-index: 1; }
+
   /* "Click for more" hover label on cards */
   .pcard, .pfeatured, .tile, .mat-card, .art-item, .art-item-sm, .art-featured { position:relative; }
   .pcard::after, .pfeatured::after, .tile::after, .mat-card::after {
@@ -279,6 +291,20 @@
   }
   .pcard:hover::after, .pfeatured:hover::after, .tile:hover::after,
   .mat-card:hover::after, .art-item:hover::after, .art-item-sm:hover::after, .art-featured:hover::after { opacity:1; }
+
+  /* CM section title hover label */
+  .cm-title-lnk { position:relative; display:inline-block; }
+  .cm-title-lnk::after {
+    content:'click for more';
+    position:absolute; bottom:-.1rem; right:0;
+    font-family:'Oswald',sans-serif; font-size:.65rem; font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase;
+    color:white; background:rgba(240,83,54,.75);
+    padding:.2rem .55rem; border-radius:2px;
+    opacity:0; transition:opacity .25s;
+    pointer-events:none;
+  }
+  .cm-title-lnk:hover::after { opacity:1; }
 
   /* Desktop: 50% bigger body text, headings excluded */
   @media(min-width:641px) {
@@ -310,5 +336,7 @@
     #articles > div > div { padding:1.5rem; }
     /* Hero arrows hidden on mobile — swipe to navigate instead */
     .s-arrow { display:none; }
+    /* cta-top hidden on mobile — header Call button handles that breakpoint */
+    #cta-top-bar { display:none !important; }
   }
 </style>

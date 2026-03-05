@@ -3,7 +3,7 @@ title: "Reinforced Masonry"
 date: 2022-11-12
 weight: 43
 thumbnail: "/materials/masonry.jpg"
-tags: ["CMU"]
+tags: ["masonry"]
 categories: ["Construction"]
 summary: "Reinforced masonry combines the compressive strength of masonry units with the tensile capacity of steel reinforcing: creating a composite structural system designed to TMS 402 for both gravity and lateral demands."
 ---

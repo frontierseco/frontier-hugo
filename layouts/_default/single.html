@@ -39,9 +39,11 @@
       {{ .Title }}
     </h1>
 
+    {{- if gt .Date.Year 2000 }}
     <p style="color:#888;font-size:.85rem;margin:0 0 2rem;">
       {{ .Date.Format "January 2, 2006" }}{{- if .Params.author }} &nbsp;·&nbsp; {{ .Params.author }}{{- end }}
     </p>
+    {{- end }}
 
     <div style="color:#333;line-height:1.8;font-size:1.05rem;">
       {{ .Content }}

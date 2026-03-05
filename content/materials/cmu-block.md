@@ -3,7 +3,7 @@ title: "Concrete Masonry Unit (CMU)"
 date: 2022-11-11
 weight: 42
 thumbnail: "/materials/cmu-block.jpg"
-tags: ["CMU"]
+tags: ["masonry"]
 categories: ["Construction"]
 summary: "CMU block walls are the most widely used masonry structural system in commercial construction: economical, fire-resistant, and readily reinforced for load-bearing and shear wall applications."
 ---
