@@ -1,6 +1,8 @@
 # To-Do
 - enlarge the circle on my pic, it cuts off my chin
 - add an about card next to the start your project column.  give 2 lines and 'click for more' with a cta-top above the card
+- list my gbp on my about page.  determine smallest link that works: https://www.google.com/maps/place/Frontier+Structural+Engineering/@38.8419702,-104.8269689,17z/data=!3m2!4b1!5s0x87134535977722e9:0x2eeed356e5fa0f58!4m6!3m5!1s0x871345c81e92ff17:0xdde365fd7484e2f8!8m2!3d38.8419661!4d-104.8243886!16s%2Fg%2F11k3ml1rqy!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D
+- 
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
