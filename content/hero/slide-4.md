@@ -1,10 +1,9 @@
 ---
-title: "Enjoy, and Give Richly."
+title: "Colorado Is Building. Your Projects Should Too."
 weight: 4
 bg_image: "/hero/kids-scaled.jpg"
-body: "Colorado is growing fast. From Colorado Springs to Denver to the mountain communities, new buildings, adaptive projects, and complex renovations are happening everywhere. Frontier is built for this moment, with deep roots in the state and the technical range to take it on."
-contact_text: "Take the next step forward with your project, click here to contact Frontier now"
-button_text: "Learn More"
-button_link: "#about"
+body: "From Colorado Springs to Denver to the mountain communities, complex projects are everywhere. When your structural engineer shows up, communicates, and gets it right — you get to focus on delivering. That's the project Frontier wants to be part of."
+button_text: "See Our Work"
+button_link: "#projects"
 slide_link: "/articles/colorado/"
 ---

@@ -42,6 +42,10 @@
       <a href="/#contact" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:1.2rem;letter-spacing:.12em;text-transform:uppercase;padding:1.1rem 3rem;text-decoration:none;margin-top:.75rem;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">
         Contact Frontier Now
       </a>
+      {{- if $s.Params.next_hook }}
+      <br>
+      <button class="slide-hook" onclick="document.getElementById('next-btn').click()" aria-label="Next: {{ $s.Params.next_hook }}">{{ $s.Params.next_hook }}</button>
+      {{- end }}
     </div>
   </div>
   {{- end }}
