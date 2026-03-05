@@ -1,4 +1,6 @@
 # To-Do
+- enlarge the circle on my pic, it cuts off my chin
+- add an about card next to the start your project column.  give 2 lines and 'click for more' with a cta-top above the card
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
