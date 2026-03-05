@@ -1,11 +1,48 @@
-# SEO To-Do — Frontier Structural Engineering
-_Audit date: March 2026_
+This to-do list is designed for **Claude** to act as your SEO/Marketing assistant. You can copy/paste this entire block into a new Claude chat to begin the "Co-work" session.
 
----
+The list is prioritized by **Ease of Implementation** + **E-E-A-T Impact** + **AIO Performance.**
+
+***
+
+# 🏗️ Frontier Structural: Growth & SEO Task List
+
+## 🟢 Part 1: Claude's Action Items (High Impact / Low Effort)
+*Claude can generate these for you immediately. You just need to provide the "seed" info.*
+
+- [ ] **Task 1: SEO Meta Title & Description Optimization**
+    - **Goal:** Increase CTR (Click-Through Rate) in Google Search Console.
+    - **Claude's Job:** Rewrite Meta Titles/Descriptions for Home, Services, and Contact pages focusing on "Structural Engineer Colorado Springs" and "SEAC Member."
+    - **Input Needed:** Provide Claude with your current page URLs or a copy-paste of your current headlines.
+
+- [ ] **Task 2: Schema Markup Generation (JSON-LD)**
+    - **Goal:** Tell Google and AI (Gemini) that you are a "Professional Service" and a "MemberOf" SEAC/ASCE.
+    - **Claude's Job:** Generate the specific code block for `LocalBusiness` and `Organization` schema, including your SEAC membership details.
+    - **Outcome:** You paste this code into your website's header.
+
+- [ ] **Task 3: Google Business Profile (GBP) "Update" Posts**
+    - **Goal:** Signal to Google that Frontier Structural is active.
+    - **Claude's Job:** Write 4 "Local Engineering" posts (1 month of content). Topics: Drainage/Foundations in the Springs, the value of a PE, and the 2024 SEAC guidelines.
+    - **Input Needed:** Tell Claude about 2-3 recent project types (e.g., "deck inspection," "cracked foundation").
+
+- [ ] **Task 4: Service Page Content Expansion**
+    - **Goal:** Rank for "Long-tail" keywords that homeowners actually search.
+    - **Claude's Job:** Draft 300-word descriptions for specific services: *Structural Observation Reports, Foundation Design, and Residential Beam Calculations.*
+
+***
+
+## 🔵 Part 3: Monthly Maintenance (Claude & You)
+
+- [ ] **Task 9: GSC Query Review**
+    - **Frequency:** Monthly.
+    - **Co-work:** Export your "Queries" from Google Search Console to a CSV. Upload it to Claude. 
+    - **Claude's Job:** "Analyze these keywords. Which ones am I ranking #12 for that I could push to #1?"
+
+- [ ] **Task 10: Technical Blog (The "Springs" Authority)**
+    - **Frequency:** Monthly.
+    - **Co-work:** Tell Claude about a specific structural issue common in Colorado Springs (e.g., expansive soils). 
+    - **Claude's Job:** Write a 500-word authoritative blog post that proves you are the local expert.
 
 ## Quick Wins (do this week)
-
-- [x] **Fix empty Articles section** — ~~add `featured: true` to front matter~~ — resolved: homepage now shows the 4 most recent articles by date automatically. No action needed.
 
 - [ ] **Fix site title** — in `config.toml`, change:
   ```
@@ -20,10 +57,6 @@ _Audit date: March 2026_
   ```
   description = "Frontier Structural Engineering — Colorado Springs structural engineers serving architects, contractors, and homeowners. Commercial design, forensic, expert witness, adaptive reuse."
   ```
-
-- [ ] **Claim Google Business Profile** — go to https://business.google.com, claim "Frontier Structural Engineering," add address, phone, hours, and photos. Select **"Structural Engineer"** as the primary category. This is the #1 local ranking factor and will immediately improve visibility for "structural engineer Colorado Springs" searches.
-
-- [ ] **Submit sitemap to Google Search Console** — go to https://search.google.com/search-console, add `frontierstructural.com`, verify ownership via DNS TXT record in Cloudflare, then submit `https://frontierstructural.com/sitemap.xml`.
 
 ---
 
@@ -65,3 +98,4 @@ _Audit date: March 2026_
 - 29 articles is more content depth than all local competitors combined — leverage this.
 - Biggest gap vs. competitors: no local/transactional landing pages. Level Engineering ranks for "structural engineer Colorado Springs" purely because they have a dedicated URL for it.
 - GBP + site title fix + sitemap submission are the three highest-ROI actions available right now.
+
