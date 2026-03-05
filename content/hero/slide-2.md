@@ -1,8 +1,8 @@
 ---
-title: "Your Design Deserves to Survive the Field."
+title: "Structural Problems Found in the Field Cost 2–5× More."
 weight: 2
 bg_image: "/hero/open.jpg"
-body: "A well-designed structure can still be built poorly. Construction administration is how the engineer's design intent survives contact with the field: submittals reviewed, RFIs answered, site visits made. Skipping CA saves money in the short run and often costs considerably more in the long run."
-next_hook: "How do you get Frontier on your project?"
+body: "Field-discovered structural issues mean change orders, schedule delays, and calls you don't want to make. Construction administration is how the engineer's design intent survives the build — submittals reviewed, RFIs answered, site visits made when it matters."
+next_hook: "Ready to see how we work?"
 slide_link: "/articles/construction-administration/"
 ---

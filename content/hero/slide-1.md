@@ -1,11 +1,11 @@
 ---
-title: "Build It Right the First Time."
+title: "Structural Engineering That Shows Up."
 weight: 1
 bg_video: "/hero/hero.mp4"
 # poster: "/articles/jeep-scaled.jpg"
-body: "Structural surprises mid-construction are expensive. Frontier partners with architects, contractors, and owners from schematic design through construction closeout — so problems get solved on paper, not in the field."
-next_hook: "What goes wrong when the engineer isn't on site?"
-button_text: "How We Work"
-button_link: "#services"
+body: "Architects, contractors, and owners shouldn't have to chase their SE. Frontier works with your team from schematic design through construction closeout — communicating, responding, and staying on your project until the building is done."
+next_hook: "What happens when the engineer disappears after permit?"
+button_text: "Start Your Project"
+button_link: "/#contact"
 slide_link: "/articles/leading-into-opportunity/"
 ---
