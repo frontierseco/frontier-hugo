@@ -304,21 +304,46 @@
 {{/* ═══════════════════════════════════════════════
   CONTACT
 ════════════════════════════════════════════════ */}}
-<section id="contact" style="padding:5rem 1.5rem;background:white;text-align:center;">
-  <div style="max-width:680px;margin:0 auto;">
-    <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem;">Ready to Start Your Project?</h2>
-    <span class="divider"></span>
-    <p style="color:#024EA4;font-size:1.05rem;line-height:1.7;margin:0 0 1.5rem;">
-      Tell us about your project — scope, location, timeline, team. We'll respond quickly and tell you how we can help.
-    </p>
-    <p style="margin:0 0 1rem;">
-      <a href="{{ .Site.Params.newProjectURL }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2.5rem;text-decoration:none;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">
-        Start Your Project
-      </a>
-    </p>
-    <p style="color:#024EA4;font-size:.95rem;">Your project details are confidential and will never be shared.</p>
+<section id="contact" style="padding:5rem 1.5rem;background:white;">
+  <div style="max-width:960px;margin:0 auto;">
+
+    {{ partial "cta-top.html" . }}
+
+    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+
+      {{/* Left: project CTA */}}
+      <div style="text-align:center;">
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem;">Ready to Start Your Project?</h2>
+        <span class="divider"></span>
+        <p style="color:#024EA4;font-size:1.05rem;line-height:1.7;margin:0 0 1.5rem;">
+          Tell us about your project — scope, location, timeline, team. We'll respond quickly and tell you how we can help.
+        </p>
+        <p style="margin:0 0 1rem;">
+          <a href="{{ .Site.Params.newProjectURL }}" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2.5rem;text-decoration:none;" onmouseover="this.style.background='#d94020'" onmouseout="this.style.background='#F05336'">
+            Start Your Project
+          </a>
+        </p>
+        <p style="color:#024EA4;font-size:.95rem;">Your project details are confidential and will never be shared.</p>
+      </div>
+
+      {{/* Right: about card */}}
+      <div style="background:#f8f9fb;padding:2rem;text-align:center;">
+        <img src="/Portrait-JLT.jpg" alt="Jon Talley, SE PE — Frontier Structural Engineering" style="width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:50% -16px;margin:0 auto .85rem;display:block;">
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:1.3rem;margin:0 0 .2rem;">Jon Talley, SE, PE</h3>
+        <p style="color:#F05336;font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 .85rem;">Founder &amp; Principal Engineer</p>
+        <p style="color:#444;font-size:.9rem;line-height:1.6;margin:0 0 .5rem;">20 years of structural experience across California and Colorado.</p>
+        <p style="color:#444;font-size:.9rem;line-height:1.6;margin:0 0 1.25rem;">Licensed SE and PE — commercial, forensic, adaptive reuse, expert witness.</p>
+        <a href="/about/" style="display:inline-block;background:#024EA4;color:white;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.75rem;text-decoration:none;" onmouseover="this.style.background='#013a7a'" onmouseout="this.style.background='#024EA4'">Meet Jon &rarr;</a>
+      </div>
+
+    </div>
   </div>
 </section>
+<style>
+  @media(max-width:700px) {
+    .contact-grid { grid-template-columns:1fr !important; gap:2.5rem !important; }
+  }
+</style>
 
 {{ with .Site.Data.cta }}
 <div style="position:relative;">
