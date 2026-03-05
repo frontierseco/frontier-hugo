@@ -1,13 +1,22 @@
 # To-Do
+- hero slides remove auto advance, don't loop video, typ pause at last frame
+- check if video is optimized for playing at 10% initial load, typ
+- update linkned in at footer https://www.linkedin.com/company/73937044/
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
-- [x] About/Team page: Jon Talley SE/PE profile, license numbers, history, memberships, Person JSON-LD schema at /about/
+- [ ] About/Team page: engineer name, PE license numbers, photo, ASCE membership (needed for E-E-A-T / AI citations)
 - [ ] Google Business Profile: claim, add address/phone/hours/photos, set "Structural Engineer" category
 - [ ] Google Search Console: verify ownership, submit sitemap
 - [ ] Directory listings: ASCE member profile, ACEC Colorado, Yelp, Angi, BBB (NAP must match schema)
 
 ## Done
+- [x] Titleblock: 2 CTA call buttons fixed for responsive — 1 for wide (cta-top bar), 1 for mobile (header ☎ Call)
+- [x] 'click for more' on hover CM section title
+- [x] conc over mtl deck tag changed to 'concrete'
+- [x] CMU material tags changed to 'masonry' (cmu-block, brick-masonry, masonry, reinforced-masonry)
+- [x] Services updated as individual posts: description→summary, long-form body content, link to own page
+- [x] Projects section: LPES.png faint background image (10% opacity) over orange
 - [x] Map image: center on mobile (object-position shift at ≤640px)
 - [x] SEO quick wins: site title, meta description, 4 articles featured, sitemap
 - [x] Landing pages: /structural-engineer-colorado-springs/, /structural-engineer-california/, /residential-structural-engineering/
