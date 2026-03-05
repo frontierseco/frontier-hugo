@@ -2,7 +2,7 @@
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
-- [ ] About/Team page: engineer name, PE license numbers, photo, ASCE membership (needed for E-E-A-T / AI citations)
+- [x] About/Team page: Jon Talley SE/PE profile, license numbers, history, memberships, Person JSON-LD schema at /about/
 - [ ] Google Business Profile: claim, add address/phone/hours/photos, set "Structural Engineer" category
 - [ ] Google Search Console: verify ownership, submit sitemap
 - [ ] Directory listings: ASCE member profile, ACEC Colorado, Yelp, Angi, BBB (NAP must match schema)

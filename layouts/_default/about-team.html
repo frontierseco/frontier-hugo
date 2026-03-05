@@ -1,0 +1,152 @@
+{{ define "main" }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ .Params.name | jsonify }},
+  "jobTitle": "Structural Engineer, Professional Engineer",
+  "honorificSuffix": "SE, PE",
+  "email": {{ .Params.email | jsonify }},
+  "telephone": {{ .Params.phone | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "sameAs": [
+    {{ .Params.linkedin_url | jsonify }},
+    {{ .Params.portfolio_url | jsonify }}
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "California State University, Chico"
+  },
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional License", "name": "PE 73966 — California" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional License", "name": "SE 6299 — California" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional License", "name": "PE 55764 — Colorado" }
+  ],
+  "memberOf": [
+    { "@type": "Organization", "name": "Structural Engineers Association of Colorado" }
+  ],
+  "worksFor": {
+    "@type": "ProfessionalService",
+    "name": "Frontier Structural Engineering",
+    "url": {{ .Site.BaseURL | jsonify }}
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "512 W Pikes Peak Ave",
+    "addressLocality": "Colorado Springs",
+    "addressRegion": "CO",
+    "postalCode": "80905",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<section style="padding:5rem 1.5rem 3rem;background:white;text-align:center;">
+  <div style="max-width:760px;margin:0 auto;">
+    <h1 style="font-family:'Oswald',sans-serif;font-weight:700;color:#F05336;font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem;">
+      About Frontier Structural Engineering
+    </h1>
+    <span class="divider"></span>
+    <p style="color:#024EA4;font-size:1.05rem;line-height:1.75;margin:0;">
+      A vision of experienced structural engineers partnering with architects, contractors, and developers to bring vision to life. Success is in serving well.
+    </p>
+  </div>
+</section>
+
+<section style="padding:0 1.5rem 5rem;background:white;">
+  <div style="max-width:960px;margin:0 auto;">
+
+    {{/* Team card */}}
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start;background:#f8f9fb;padding:2.5rem;">
+
+      {{/* Left column: credentials */}}
+      <div style="text-align:center;">
+        <div style="width:160px;height:160px;border-radius:50%;background:#024EA4;margin:0 auto 1.25rem;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Oswald',sans-serif;font-size:2.5rem;font-weight:700;color:white;letter-spacing:.05em;">JT</span>
+        </div>
+
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:1.6rem;margin:0 0 .2rem;">
+          {{ .Params.name }}
+        </h2>
+        <p style="font-family:'Oswald',sans-serif;color:#F05336;font-size:1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 1.5rem;">
+          {{ .Params.credentials }}
+        </p>
+
+        <div style="text-align:left;border-top:2px solid #F05336;padding-top:1.25rem;margin-top:.25rem;">
+
+          <h3 style="font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#888;margin:0 0 .6rem;">Licenses</h3>
+          {{- range .Params.licenses }}
+          <div style="margin-bottom:.5rem;">
+            <span style="font-family:'Oswald',sans-serif;font-weight:700;color:#024EA4;font-size:.9rem;">{{ .label }}</span><br>
+            <span style="color:#555;font-size:.8rem;">{{ .detail }}</span>
+          </div>
+          {{- end }}
+
+          <h3 style="font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#888;margin:1.25rem 0 .6rem;">Education</h3>
+          {{- range .Params.education }}
+          <div style="margin-bottom:.5rem;">
+            <span style="font-family:'Oswald',sans-serif;font-weight:700;color:#024EA4;font-size:.85rem;">{{ .school }}</span><br>
+            <span style="color:#333;font-size:.8rem;">{{ .degree }}</span><br>
+            <span style="color:#F05336;font-size:.8rem;font-weight:700;">{{ .honors }}, {{ .year }}</span>
+          </div>
+          {{- end }}
+
+          <h3 style="font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#888;margin:1.25rem 0 .6rem;">Memberships</h3>
+          {{- range .Params.memberships }}
+          <p style="color:#333;font-size:.8rem;margin:0 0 .3rem;">{{ . }}</p>
+          {{- end }}
+
+        </div>
+      </div>
+
+      {{/* Right column: bio + history + links */}}
+      <div>
+        <div style="color:#333;font-size:1rem;line-height:1.8;margin-bottom:2rem;">
+          {{ .Content }}
+        </div>
+
+        <h3 style="font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#888;margin:0 0 1rem;border-top:2px solid #F05336;padding-top:1.25rem;">Professional History</h3>
+        <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem;">
+          {{- range .Params.history }}
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #eee;padding-bottom:.5rem;">
+            <span style="font-family:'Oswald',sans-serif;font-weight:700;color:#1a1a1a;font-size:.95rem;">{{ .employer }}</span>
+            <span style="color:#888;font-size:.8rem;white-space:nowrap;margin-left:1rem;">{{ .years }}</span>
+          </div>
+          {{- end }}
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:.75rem;">
+          <a href="{{ .Params.linkedin_url }}" target="_blank" rel="noopener" style="display:inline-block;background:#0077b5;color:white;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;text-decoration:none;">
+            LinkedIn
+          </a>
+          <a href="{{ .Params.portfolio_url }}" target="_blank" rel="noopener" style="display:inline-block;background:#024EA4;color:white;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;text-decoration:none;">
+            Portfolio
+          </a>
+          <a href="{{ .Params.resume_url }}" target="_blank" rel="noopener" style="display:inline-block;background:#F05336;color:white;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;text-decoration:none;">
+            Resume
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="margin-top:2rem;">
+      <a href="/" style="color:#F05336;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;">
+        &larr; Back to Home
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media(max-width:640px) {
+    .about-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+<script>
+  document.querySelector('[style*="grid-template-columns:280px"]').classList.add('about-grid');
+</script>
+
+{{ end }}
