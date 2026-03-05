@@ -4,6 +4,7 @@
 - conc over mtl deck tag should be 'concrete'
 - change cmu tag in cm md's to 'masonry'
 - update services md's as individual posts, change description to 'summary', each md to have their own long form writing to open on card click, matching picture.
+- background image lpes in projects section, full height & width, keep orange background and faintly show image behind the cards
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
