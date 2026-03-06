@@ -6,7 +6,7 @@
 - articles title match style of other section titles (center, larger, with separator, orange color)
 - articles list page, if md has no pic remove pic box from card and center
 - mobile carousel drag scrolls 3x speed and highlights the "click for more" in the header
-- change orange section header titles and separators to white when on blue or dark background 
+- change orange section header titles and separators to white when on blue background, apply to list pages too 
 
 ## Backlog
 - [ ] Set up a call bot: discuss new projects, give estimate range/timeline, update ERPNext
