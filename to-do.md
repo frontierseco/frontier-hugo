@@ -1,6 +1,7 @@
 # To-Do
 - pics to zoom 10%: everything but hero.  logo, portrait, map, anything that clicking will follow link
 - I've noticed that hero slides have a hard to read title, fix, maybe add shadow in banner text background
+- at the end of a video on the hero slide when the end freezes the video, give the slide a bump slide preview as a prompt for the viewer that there is more content on the next slide, maybe by moving the slide over 50px
 - center the header on screen, don't account for cta off to the side
 - const mat title & separator white
 - articles title match style of other section titles (center, larger, with separator, orange color)
